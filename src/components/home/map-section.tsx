@@ -18,7 +18,7 @@ const MapComponent = dynamic(
 
 export function MapSection() {
   return (
-    <section className="w-full min-h-screen flex flex-col bg-white text-black px-6 md:px-[50px] py-12 md:py-16">
+    <section className="w-full flex flex-col bg-white text-black p-[50px]">
       {/* Header Map Section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-10 shrink-0">
         <h2 className="text-5xl md:text-6xl lg:text-[80px] font-bold max-w-3xl leading-[0.9] tracking-tighter">

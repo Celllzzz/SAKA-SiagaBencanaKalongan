@@ -38,6 +38,32 @@ function FitBounds({ coords }: { coords: [number, number][][] }) {
   return null;
 }
 
+function RecenterButton({ coords }: { coords: [number, number][][] }) {
+  const map = useMap();
+  
+  const handleRecenter = () => {
+    if (coords.length > 0 && coords[0].length > 0) {
+      const bounds = L.latLngBounds(coords[0]);
+      map.flyToBounds(bounds, { padding: [0, 0], duration: 1.5 });
+    }
+  };
+
+  return (
+    <div className="absolute top-[90px] left-[10px] z-[1000] border-2 border-[rgba(0,0,0,0.2)] rounded-[4px] bg-clip-padding overflow-hidden" style={{ boxShadow: '0 1px 5px rgba(0,0,0,0.65)' }}>
+      <button 
+        onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleRecenter(); }}
+        className="flex items-center justify-center w-[30px] h-[30px] bg-white text-black hover:bg-[#f4f4f4] transition-colors cursor-pointer"
+        title="Fokus ke Basemap Kalongan"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/>
+        </svg>
+      </button>
+    </div>
+  );
+}
+
 export default function MapComponent() {
   const [polygonCoords, setPolygonCoords] = useState<[number, number][][]>([]);
   const [center, setCenter] = useState<[number, number] | null>(null);
@@ -97,6 +123,7 @@ export default function MapComponent() {
         url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
       />
       <FitBounds coords={polygonCoords} />
+      <RecenterButton coords={polygonCoords} />
       
       <Polygon 
         positions={polygonCoords} 
