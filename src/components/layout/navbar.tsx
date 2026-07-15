@@ -17,7 +17,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-[50px] text-white">
+    <nav className="absolute top-0 left-1/2 transform -translate-x-1/2 z-50 py-6 text-white pointer-events-auto w-full max-w-[1440px] px-6 md:px-[50px] flex items-center justify-between">
       {/* Logo */}
       <div className="flex-shrink-0">
         <Link href="/">
@@ -45,16 +45,16 @@ export function Navbar() {
       </div>
 
       {/* Right Side / Mobile Menu */}
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center">
         <Button
           variant="secondary"
-          className="hidden sm:inline-flex rounded-full px-6 font-semibold bg-white text-black hover:bg-gray-200"
+          className="hidden sm:inline-flex rounded-full px-8 py-6 text-sm font-semibold bg-white text-black hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer"
         >
           HUBUNGI KAMI
         </Button>
 
         {/* Mobile Hamburger Menu */}
-        <div className="md:hidden">
+        <div className="md:hidden ml-4">
           <Sheet>
             <SheetTrigger className="text-white hover:bg-white/20 inline-flex items-center justify-center rounded-md p-2 transition-colors">
               <Menu className="h-6 w-6" />
@@ -83,7 +83,7 @@ export function Navbar() {
                 ))}
                 <Button
                   variant="secondary"
-                  className="rounded-full font-semibold bg-white text-black hover:bg-gray-200 mt-4"
+                  className="rounded-full px-8 py-6 text-sm font-semibold bg-white text-black hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer mt-4 w-fit"
                 >
                   HUBUNGI KAMI
                 </Button>

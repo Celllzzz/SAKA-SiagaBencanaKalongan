@@ -24,13 +24,13 @@ export function MapSection() {
         <h2 className="text-5xl md:text-6xl lg:text-[80px] font-bold max-w-3xl leading-[0.9] tracking-tighter">
           PETA DESA<br />KALONGAN
         </h2>
-        <div className="mt-8 md:mt-0 text-xs md:text-sm font-semibold tracking-widest uppercase shrink-0">
+        <div className="mt-8 md:mt-0 text-xs md:text-sm font-semibold tracking-widest uppercase shrink-0 animate-bounce-slow">
           (SCROLL DOWN)
         </div>
       </div>
 
       {/* Map Container */}
-      <div className="w-full h-[65vh] md:h-[80vh] overflow-hidden rounded-sm relative">
+      <div className="w-full h-[65vh] md:h-[80vh] overflow-hidden relative">
         <MapComponent />
       </div>
     </section>

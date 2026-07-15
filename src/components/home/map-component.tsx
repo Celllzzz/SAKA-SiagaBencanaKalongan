@@ -21,15 +21,19 @@ proj4.defs("EPSG:32748", "+proj=utm +zone=48 +south +datum=WGS84 +units=m +no_de
 function FitBounds({ coords }: { coords: [number, number][][] }) {
   const map = useMap();
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
     if (coords.length > 0 && coords[0].length > 0) {
       const bounds = L.latLngBounds(coords[0]);
       // Beri sedikit waktu agar container peta selesai me-render sebelum fitBounds
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         if (map) {
           map.fitBounds(bounds, { padding: [0, 0] });
         }
       }, 200);
     }
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, [coords, map]);
   return null;
 }
@@ -87,12 +91,12 @@ export default function MapComponent() {
       scrollWheelZoom={false}
       style={{ width: "100%", height: "100%" }}
     >
-      <FitBounds coords={polygonCoords} />
       {/* Esri World Imagery (Satellite) */}
       <TileLayer
         attribution='&copy; <a href="https://www.esri.com/">Esri</a>'
         url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
       />
+      <FitBounds coords={polygonCoords} />
       
       <Polygon 
         positions={polygonCoords} 

@@ -121,10 +121,29 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
+}
+
+@keyframes bounce-slow {
+
+  0%,
+  85%,
+  100% {
+    transform: translateY(0);
+  }
+
+  92.5% {
+    transform: translateY(-20%);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
 }
