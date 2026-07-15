@@ -22,9 +22,9 @@ export function HeroSection() {
       />
 
       {/* Radial Gradient Overlay */}
-      <div 
-        className="absolute inset-0 z-10 pointer-events-none" 
-        style={{ background: 'radial-gradient(114.38% 160.84% at 50% 50%, rgba(0, 0, 0, 0) 40%, #000000 67.79%)' }} 
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{ background: 'radial-gradient(114.38% 160.84% at 50% 50%, rgba(0, 0, 0, 0) 40%, #000000 67.79%)' }}
       />
 
       {/* Navigation Bar */}
@@ -32,9 +32,9 @@ export function HeroSection() {
 
       {/* Content Container */}
       <div className="absolute inset-0 z-20 flex flex-col justify-end pb-12 md:justify-center md:pb-0 text-white h-full pointer-events-none">
-        
+
         {/* Middle Feature Links (Hidden on Mobile) */}
-        <div className="hidden md:flex w-full max-w-[1440px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 px-6 md:px-[50px] justify-between items-center pointer-events-auto">
+        <div className="hidden md:flex w-full max-w-[1440px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 px-[50px] justify-between items-center pointer-events-auto">
           {featureLinks.map((link, index) => (
             <Link
               key={index}
@@ -47,11 +47,11 @@ export function HeroSection() {
         </div>
 
         {/* Bottom Text */}
-        <div className="flex flex-col md:flex-row justify-between items-end w-full max-w-[1440px] absolute bottom-9 left-1/2 transform -translate-x-1/2 px-6 md:px-[50px] pointer-events-auto">
+        <div className="flex flex-col md:flex-row justify-between items-end w-full max-w-[1440px] absolute bottom-[50px] left-1/2 transform -translate-x-1/2 px-[50px] pointer-events-auto">
           <h1 className="text-xl md:text-[30px] font-medium leading-snug md:leading-[1.35] max-w-4xl tracking-[-0.045em] text-[#FCFCFC]">
             Pusat informasi terpadu pemetaan rawan<br />
             longsor, panduan prosedur mitigasi, dan<br />
-            persiapan tas siaga darurat untuk warga desa.
+            persiapan tas siaga darurat untuk warga Desa Kalongan.
           </h1>
           <div className="mt-8 md:mt-0 text-[14px] md:text-[16px] font-semibold tracking-[-0.09em] uppercase text-[#F1F5F9] shrink-0 animate-bounce-slow">
             (SCROLL DOWN)

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetClose } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 export function Navbar() {
@@ -17,7 +17,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="absolute top-0 left-1/2 transform -translate-x-1/2 z-50 py-6 text-white pointer-events-auto w-full max-w-[1440px] px-6 md:px-[50px] flex items-center justify-between">
+    <nav className="absolute top-0 left-1/2 transform -translate-x-1/2 z-50 pt-[50px] pb-6 text-white pointer-events-auto w-full max-w-[1440px] px-[50px] flex items-center justify-between">
       {/* Logo */}
       <div className="flex-shrink-0">
         <Link href="/">
@@ -32,7 +32,7 @@ export function Navbar() {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-6 text-sm font-medium tracking-wide">
+      <div className="hidden lg:flex items-center space-x-6 text-sm font-medium tracking-wide">
         {navLinks.map((link) => (
           <Link
             key={link.label}
@@ -48,45 +48,56 @@ export function Navbar() {
       <div className="flex items-center">
         <Button
           variant="secondary"
-          className="hidden sm:inline-flex rounded-full px-8 py-6 text-sm font-semibold bg-white text-black hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer"
+          className="hidden lg:inline-flex rounded-full px-8 py-6 text-sm font-semibold bg-white text-black hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer"
         >
           HUBUNGI KAMI
         </Button>
 
         {/* Mobile Hamburger Menu */}
-        <div className="md:hidden ml-4">
+        <div className="lg:hidden ml-4">
           <Sheet>
             <SheetTrigger className="text-white hover:bg-white/20 inline-flex items-center justify-center rounded-md p-2 transition-colors">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle Menu</span>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-zinc-950 text-white border-zinc-800">
-              <SheetTitle className="mb-8 flex justify-start">
-                <span className="sr-only">SAKA</span>
-                <Image
-                  src="/logo/white saka.png"
-                  alt="SAKA Logo"
-                  width={120}
-                  height={40}
-                  className="object-contain"
-                />
-              </SheetTitle>
-              <div className="flex flex-col space-y-6">
+            <SheetContent side="right" showCloseButton={false} className="bg-[#111111] text-white border-none w-full sm:max-w-md h-[100dvh] flex flex-col pt-8 pb-10 px-8 shadow-2xl">
+              <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
+              {/* Top Bar: Logo & Close Icon */}
+              <div className="flex justify-between items-start mb-16">
+                {/* SAKA Logo */}
+                <Link href="/" className="text-4xl font-extrabold tracking-tight leading-none uppercase">
+                  SAKA
+                </Link>
+                {/* Close Button */}
+                <SheetClose className="text-gray-400 hover:text-white transition-colors mt-1 focus:outline-none">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="sr-only">Close menu</span>
+                </SheetClose>
+              </div>
+
+              {/* Navigation Links */}
+              <nav className="flex-grow flex flex-col gap-y-10">
                 {navLinks.map((link) => (
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="cursor-pointer relative w-fit text-lg font-medium after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:bg-white after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 transition-colors"
+                    className="text-lg font-bold uppercase tracking-wider hover:text-gray-300 transition-colors w-fit"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <Button
-                  variant="secondary"
-                  className="rounded-full px-8 py-6 text-sm font-semibold bg-white text-black hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer mt-4 w-fit"
+              </nav>
+
+              {/* Bottom Action Button */}
+              <div className="mt-12">
+                <Link
+                  href="#"
+                  className="inline-flex items-center justify-center bg-white text-black font-bold uppercase text-sm tracking-wide py-4 px-8 rounded-full hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111111] focus:ring-white w-auto self-start"
                 >
-                  HUBUNGI KAMI
-                </Button>
+                  Hubungi Kami
+                </Link>
               </div>
             </SheetContent>
           </Sheet>

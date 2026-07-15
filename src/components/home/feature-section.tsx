@@ -40,7 +40,7 @@ export function FeatureSection() {
           <h2 className="text-[clamp(24px,7.36vw,106px)] font-medium leading-none tracking-[-0.045em] uppercase whitespace-nowrap">
             Cegah resiko
           </h2>
-          <h2 className="text-[clamp(24px,7.36vw,106px)] font-medium leading-none tracking-[-0.045em] uppercase ml-0 md:ml-[clamp(50px,22.7vw,327px)] mt-2 md:mt-0 whitespace-nowrap">
+          <h2 className="text-[clamp(24px,7.36vw,106px)] font-medium leading-none tracking-[-0.045em] uppercase w-full text-right mt-2 md:mt-0 whitespace-nowrap">
             Saling melindungi
           </h2>
 
@@ -72,11 +72,11 @@ export function FeatureSection() {
               </div>
 
               {/* Title & Number */}
-              <div className="flex flex-row justify-between items-center w-full mt-4">
-                <span className="text-[14px] md:text-[16px] font-semibold tracking-[-0.09em]">
+              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4">
+                <span className="text-[14px] md:text-[16px] font-semibold tracking-[-0.09em] shrink-0 mt-0.5">
                   {item.num}
                 </span>
-                <h3 className="text-[14px] md:text-[16px] font-semibold tracking-[-0.05em] uppercase">
+                <h3 className="text-[14px] md:text-[16px] font-semibold tracking-[-0.05em] uppercase text-right leading-tight">
                   {item.title}
                 </h3>
               </div>

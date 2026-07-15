@@ -83,7 +83,7 @@ export function AboutSection() {
           </div>
 
           {/* Tab Content */}
-          <div className="flex flex-col items-start flex-1 min-h-[300px]">
+          <div key={activeTab} className="flex flex-col items-start flex-1 min-h-[300px] animate-fade-in-up">
             {activeContent?.image && (
               <div className="w-full relative h-[250px] md:h-[357px] mb-8 overflow-hidden">
                 <Image
