@@ -14,7 +14,7 @@ export function HeroSection() {
     <div className="relative w-full h-screen overflow-hidden bg-black">
       {/* Background Image */}
       <Image
-        src="/assets/foto_hero.webp"
+        src="/assets/home/foto_hero.webp"
         alt="Foto Hero Siaga Bencana Kalongan"
         fill
         priority

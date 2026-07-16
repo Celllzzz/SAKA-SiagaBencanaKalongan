@@ -8,25 +8,25 @@ const features = [
   {
     num: "(01)",
     title: "PEMETAAN DUSUN RAWAN BENCANA",
-    image: "/assets/pemetaan_home.webp",
+    image: "/assets/home/pemetaan_home.webp",
     aspect: "aspect-[3/2] md:aspect-[628/415]",
   },
   {
     num: "(02)",
     title: "BUKU SAKU MANUAL PROSEDUR",
-    image: "/assets/bukusaku_home.webp",
+    image: "/assets/home/bukusaku_home.webp",
     aspect: "aspect-square md:aspect-[662/664]",
   },
   {
     num: "(03)",
     title: "TAS SIAGA BENCANA",
-    image: "/assets/tassiagabencana_home.webp",
+    image: "/assets/home/tassiagabencana_home.webp",
     aspect: "aspect-square md:aspect-[662/664]",
   },
   {
     num: "(04)",
     title: "DOKUMENTASI KEGIATAN & SOSIALISASI",
-    image: "/assets/dokumentasikegiatan_home.webp",
+    image: "/assets/home/dokumentasikegiatan_home.webp",
     aspect: "aspect-[3/2] md:aspect-[628/415]",
   },
 ];
