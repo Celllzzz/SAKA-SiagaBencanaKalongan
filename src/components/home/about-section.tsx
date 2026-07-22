@@ -39,7 +39,7 @@ export function AboutSection() {
   const activeContent = aboutData.find((data) => data.id === activeTab);
 
   return (
-    <section className="w-full bg-[#3B2215] text-white px-[50px] py-[30px]">
+    <section className="w-full bg-[#3B2215] text-white px-[50px] py-[50px]" data-theme="dark" data-bg="#3B2215">
       <div className="max-w-[1440px] mx-auto">
         {/* Top Section */}
         <div className="flex flex-col mb-10 md:mb-[50px] w-full">

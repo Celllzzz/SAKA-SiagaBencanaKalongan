@@ -18,7 +18,7 @@ const MapComponent = dynamic(
 
 export function MapSection() {
   return (
-    <section className="w-full bg-[#FAE3C7] flex justify-center">
+    <section className="w-full bg-[#FAE3C7] flex justify-center" data-theme="light" data-bg="#FAE3C7">
       <div className="w-full max-w-[1440px] flex flex-col p-[50px] overflow-hidden">
         {/* Header Map Section */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end mb-[46px] shrink-0">

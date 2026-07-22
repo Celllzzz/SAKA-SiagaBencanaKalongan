@@ -11,14 +11,14 @@ export function HeroSection() {
   ];
 
   return (
-    <div className="relative w-full h-[780px] overflow-hidden bg-[#3B2215]">
+    <div className="relative w-full h-[780px] overflow-hidden bg-[#3B2215]" data-theme="dark" data-bg="#3B2215">
       {/* Background Image */}
       <Image
         src="/assets/home/foto_hero.webp"
         alt="Foto Hero Siaga Bencana Kalongan"
         fill
         priority
-        className="object-cover object-center opacity-50"
+        className="object-cover object-center opacity-50 animate-zoom-out-slow"
       />
 
       {/* Radial Gradient Overlay */}
@@ -34,7 +34,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-20 flex flex-col justify-end pb-[35px] text-white h-full pointer-events-none">
 
         {/* Middle Feature Links (Hidden on Mobile) */}
-        <div className="hidden md:flex w-full max-w-[1440px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 px-[50px] justify-between items-center pointer-events-auto">
+        <div className="hidden md:flex w-full max-w-[1440px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 px-[50px] justify-between items-center pointer-events-auto animate-fade-in-up delay-300">
           {featureLinks.map((link, index) => (
             <Link
               key={index}
@@ -47,7 +47,7 @@ export function HeroSection() {
         </div>
 
         {/* Bottom Text */}
-        <div className="flex flex-col md:flex-row justify-between items-end w-full max-w-[1440px] absolute bottom-[35px] left-1/2 transform -translate-x-1/2 px-[50px] pointer-events-auto">
+        <div className="flex flex-col md:flex-row justify-between items-end w-full max-w-[1440px] absolute bottom-[35px] left-1/2 transform -translate-x-1/2 px-[50px] pointer-events-auto animate-fade-in-up delay-500">
           <h1 className="text-xl md:text-[30px] font-medium leading-snug md:leading-[1.35] max-w-[624px] tracking-[-0.045em] text-[#FCFCFC]">
             Pusat informasi terpadu pemetaan rawan longsor, panduan prosedur mitigasi, dan persiapan tas siaga darurat untuk warga desa.
           </h1>

@@ -51,7 +51,7 @@ export function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-[#FAE3C7] text-black px-[50px] py-[30px] overflow-hidden">
+    <section className="w-full bg-[#FAE3C7] text-black px-[50px] py-[30px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
       <div className="max-w-[1440px] mx-auto relative flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col relative w-full mb-[30px]">

@@ -187,7 +187,7 @@ export function TestimonialSection() {
 
   return (
     <>
-      <section className="w-full bg-[#3B2215] text-white p-[50px] relative overflow-hidden">
+      <section className="w-full bg-[#3B2215] text-white p-[50px] relative overflow-hidden" data-theme="dark" data-bg="#3B2215">
         <div className="max-w-[1440px] mx-auto relative">
           {/* Opening Quote is moved inside the title container */}
 

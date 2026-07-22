@@ -29,14 +29,14 @@ const galleryItems = [
 
 export function GallerySection() {
   return (
-    <section className="w-full bg-[#FFF3E5] text-[#3B2215] p-[50px] overflow-hidden">
+    <section className="w-full bg-[#FFF3E5] text-[#3B2215] p-[50px] overflow-hidden" data-theme="light" data-bg="#FFF3E5">
       <div className="max-w-[1440px] mx-auto relative flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col relative w-full mb-[50px]">
-          <h2 className="text-[36px] md:text-[60px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase whitespace-normal md:whitespace-nowrap break-words">
+          <h2 className="text-[36px] md:text-[60px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase whitespace-normal xl:whitespace-nowrap break-words">
             GALERI FOTO
           </h2>
-          <h2 className="text-[36px] md:text-[60px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase w-full text-left md:text-right mt-2 md:mt-0 whitespace-normal md:whitespace-nowrap break-words">
+          <h2 className="text-[36px] md:text-[60px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase w-full text-left md:text-right mt-2 md:mt-0 whitespace-normal xl:whitespace-nowrap break-words">
             DOKUM KEGIATAN
           </h2>
         </div>
@@ -46,7 +46,7 @@ export function GallerySection() {
           {/* Row 1 */}
           <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-[50px]">
             {/* Item 01 (Short) */}
-            <div className="flex flex-col w-full lg:w-[628px] shrink-0">
+            <div className="flex flex-col w-full lg:w-[48%] shrink-0">
               <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/2] lg:aspect-[628/415]">
                 <Image src={galleryItems[0].image} alt={galleryItems[0].title} fill className="object-cover object-center" />
               </div>
@@ -57,7 +57,7 @@ export function GallerySection() {
             </div>
 
             {/* Item 02 (Tall) */}
-            <div className="flex flex-col w-full lg:w-[662px] shrink-0">
+            <div className="flex flex-col w-full lg:w-[48%] shrink-0">
               <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/4] lg:aspect-[662/883]">
                 <Image src={galleryItems[1].image} alt={galleryItems[1].title} fill className="object-cover object-center" />
               </div>
@@ -71,7 +71,7 @@ export function GallerySection() {
           {/* Row 2 */}
           <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-[50px]">
             {/* Item 03 (Tall) */}
-            <div className="flex flex-col w-full lg:w-[662px] shrink-0">
+            <div className="flex flex-col w-full lg:w-[48%] shrink-0">
               <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/4] lg:aspect-[662/883]">
                 <Image src={galleryItems[2].image} alt={galleryItems[2].title} fill className="object-cover object-center" />
               </div>
@@ -82,7 +82,7 @@ export function GallerySection() {
             </div>
 
             {/* Item 04 (Short) */}
-            <div className="flex flex-col w-full lg:w-[628px] shrink-0">
+            <div className="flex flex-col w-full lg:w-[48%] shrink-0">
               <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/2] lg:aspect-[628/415]">
                 <Image src={galleryItems[3].image} alt={galleryItems[3].title} fill className="object-cover object-center" />
               </div>
