@@ -17,17 +17,6 @@ const BandunganMapComponent = dynamic(
 );
 
 export function BandunganMapSection() {
-  const [activeLayers, setActiveLayers] = useState<string[]>(["kavling", "risiko"]);
-  const [isFilterOpen, setIsFilterOpen] = useState(false);
-
-  const toggleLayer = (layer: string) => {
-    setActiveLayers((prev) => 
-      prev.includes(layer) 
-        ? prev.filter((l) => l !== layer) 
-        : [...prev, layer]
-    );
-  };
-
   return (
     <section className="w-full flex flex-col bg-white text-black p-[50px]">
       {/* Header Map Section */}
@@ -36,50 +25,6 @@ export function BandunganMapSection() {
           Peta Dusun<br />Bandungan
         </h2>
         <div className="mt-8 md:mt-0 flex flex-col items-end gap-4 shrink-0 relative">
-          
-          {/* Dropdown Filter */}
-          <div className="relative">
-            <button 
-              onClick={() => setIsFilterOpen(!isFilterOpen)}
-              className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-md font-semibold text-sm hover:bg-gray-800 transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
-              Filter Layer
-            </button>
-
-            {isFilterOpen && (
-              <div className="absolute right-0 top-full mt-2 w-64 bg-white border border-gray-200 shadow-xl rounded-md p-4 z-[9999] text-sm">
-                <h4 className="font-bold mb-3 border-b pb-2">Pilih Layer:</h4>
-                <div className="flex flex-col gap-2">
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" checked={activeLayers.includes("kavling")} onChange={() => toggleLayer("kavling")} className="w-4 h-4" />
-                    Batas Administrasi Dusun
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" checked={activeLayers.includes("risiko")} onChange={() => toggleLayer("risiko")} className="w-4 h-4" />
-                    Risiko Longsor
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" checked={activeLayers.includes("jalan")} onChange={() => toggleLayer("jalan")} className="w-4 h-4" />
-                    Jalan
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" checked={activeLayers.includes("evakuasi")} onChange={() => toggleLayer("evakuasi")} className="w-4 h-4" />
-                    Jalur Evakuasi
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" checked={activeLayers.includes("fasilitas")} onChange={() => toggleLayer("fasilitas")} className="w-4 h-4" />
-                    Fasilitas & Titik Kumpul
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" checked={activeLayers.includes("kerentanan")} onChange={() => toggleLayer("kerentanan")} className="w-4 h-4" />
-                    Kerentanan (Balita, Lansia)
-                  </label>
-                </div>
-              </div>
-            )}
-          </div>
-
           <div className="text-xs md:text-sm font-semibold tracking-widest uppercase animate-bounce-slow">
             (INTERAKTIF)
           </div>
@@ -88,7 +33,7 @@ export function BandunganMapSection() {
 
       {/* Map Container */}
       <div className="w-full h-[65vh] md:h-[80vh] overflow-hidden relative z-10 border border-gray-200 rounded-md shadow-sm">
-        <BandunganMapComponent activeLayers={activeLayers} />
+        <BandunganMapComponent />
       </div>
       
       {/* Legenda Lengkap (Sesuai PDF) */}

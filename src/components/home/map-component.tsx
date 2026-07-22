@@ -110,30 +110,37 @@ export default function MapComponent() {
   }
 
   return (
-    <MapContainer
-      center={center}
-      zoom={14}
-      zoomSnap={0.1}
-      scrollWheelZoom={false}
-      style={{ width: "100%", height: "100%" }}
-    >
-      {/* Esri World Imagery (Satellite) */}
-      <TileLayer
-        attribution='&copy; <a href="https://www.esri.com/">Esri</a>'
-        url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-      />
-      <FitBounds coords={polygonCoords} />
-      <RecenterButton coords={polygonCoords} />
-      
-      <Polygon 
-        positions={polygonCoords} 
-        pathOptions={{ 
-          color: "#ffffff", 
-          fillColor: "transparent", 
-          weight: 2,
-          dashArray: "5, 5" // Dashed line for boundary
-        }} 
-      />
-    </MapContainer>
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        .leaflet-container, .leaflet-grab, .leaflet-interactive {
+          cursor: pointer !important;
+        }
+      `}} />
+      <MapContainer
+        center={center}
+        zoom={14}
+        zoomSnap={0.1}
+        scrollWheelZoom={true}
+        style={{ width: "100%", height: "100%" }}
+      >
+        {/* Esri World Imagery (Satellite) */}
+        <TileLayer
+          attribution='&copy; <a href="https://www.esri.com/">Esri</a>'
+          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+        />
+        <FitBounds coords={polygonCoords} />
+        <RecenterButton coords={polygonCoords} />
+        
+        <Polygon 
+          positions={polygonCoords} 
+          pathOptions={{ 
+            color: "#ffffff", 
+            fillColor: "transparent", 
+            weight: 2,
+            dashArray: "5, 5" // Dashed line for boundary
+          }} 
+        />
+      </MapContainer>
+    </>
   );
 }

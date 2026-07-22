@@ -98,11 +98,10 @@ type FeaturePolygon = { attributes: any; geometry: { rings: number[][][] } };
 type FeaturePolyline = { attributes: any; geometry: { paths: number[][][] } };
 type FeaturePoint = { attributes: any; geometry: { x: number; y: number } };
 
-interface BandunganMapProps {
-  activeLayers: string[];
-}
-
-export default function BandunganMapComponent({ activeLayers }: BandunganMapProps) {
+export default function BandunganMapComponent() {
+  const [activeLayers, setActiveLayers] = useState<string[]>(["kavling", "risiko"]);
+  const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
+  
   const [kavling, setKavling] = useState<[number, number][][]>([]);
   const [risiko, setRisiko] = useState<{ coords: [number, number][][], tingkat: string }[]>([]);
   const [jalan, setJalan] = useState<[number, number][][]>([]);
@@ -113,6 +112,11 @@ export default function BandunganMapComponent({ activeLayers }: BandunganMapProp
   const [center, setCenter] = useState<[number, number] | null>(null);
 
   useEffect(() => {
+    // Pada mobile, tutup filter secara otomatis, pada desktop bisa dibuka
+    if (typeof window !== "undefined" && window.innerWidth >= 768) {
+      setIsFilterExpanded(true);
+    }
+
     fetch("/maps/Bandungan/kavling bandungan.json").then(r => r.json()).then(data => {
       if (data?.features?.length > 0) {
         const converted = convertRings(data.features[0].geometry.rings);
@@ -246,12 +250,95 @@ export default function BandunganMapComponent({ activeLayers }: BandunganMapProp
     return svgIcons.default;
   };
 
+  const toggleLayer = (layer: string) => {
+    setActiveLayers((prev) => 
+      prev.includes(layer) 
+        ? prev.filter((l) => l !== layer) 
+        : [...prev, layer]
+    );
+  };
+
   return (
-    <MapContainer
+    <div className="w-full h-full relative overflow-hidden">
+      {/* Panel Filter Layer (Melayang di dalam Map) */}
+      <div className={`absolute top-[10px] right-[10px] z-[1000] bg-white rounded-md shadow-md transition-all duration-300 ${isFilterExpanded ? 'w-[280px] p-4' : 'w-auto p-2'}`} style={{ boxShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
+        
+        {/* Header/Toggle Button */}
+        <div 
+          className={`flex items-center justify-between cursor-pointer ${isFilterExpanded ? 'mb-4 border-b pb-2' : ''}`}
+          onClick={() => setIsFilterExpanded(!isFilterExpanded)}
+        >
+          <div className="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-700"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            {isFilterExpanded && <h3 className="font-bold text-gray-700 tracking-wide text-sm uppercase">Legenda & Filter</h3>}
+          </div>
+          {isFilterExpanded && (
+            <button className="text-gray-400 hover:text-gray-700 p-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          )}
+        </div>
+        
+        {/* Content (Hanya Tampil Jika Expanded) */}
+        {isFilterExpanded && (
+          <div className="max-h-[60vh] md:max-h-[70vh] overflow-y-auto pr-1 custom-scrollbar">
+            {/* Section Administratif */}
+            <div className="mb-4">
+              <h4 className="font-bold text-xs text-gray-500 tracking-wider mb-2 uppercase">Administratif</h4>
+              <div className="flex flex-col gap-2 text-sm">
+                <label className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded transition-colors">
+                  <input type="checkbox" checked={activeLayers.includes("kavling")} onChange={() => toggleLayer("kavling")} className="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
+                  <div className="w-5 h-3 border-2 border-dashed border-gray-400"></div>
+                  <span className="select-none">Batas Administrasi</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded transition-colors">
+                  <input type="checkbox" checked={activeLayers.includes("risiko")} onChange={() => toggleLayer("risiko")} className="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
+                  <div className="w-5 h-3 bg-red-400 border border-red-600 opacity-80"></div>
+                  <span className="select-none">Risiko Longsor</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Section Lokasi / Jaringan */}
+            <div>
+              <h4 className="font-bold text-xs text-gray-500 tracking-wider mb-2 uppercase">Lokasi & Infrastruktur</h4>
+              <div className="flex flex-col gap-2 text-sm">
+                <label className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded transition-colors">
+                  <input type="checkbox" checked={activeLayers.includes("jalan")} onChange={() => toggleLayer("jalan")} className="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
+                  <div className="w-5 h-1 bg-red-500"></div>
+                  <span className="select-none">Jalan Utama</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded transition-colors">
+                  <input type="checkbox" checked={activeLayers.includes("evakuasi")} onChange={() => toggleLayer("evakuasi")} className="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
+                  <div className="w-5 h-0.5 bg-black relative"><div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t border-r border-black rotate-45"></div></div>
+                  <span className="select-none">Jalur Evakuasi</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded transition-colors">
+                  <input type="checkbox" checked={activeLayers.includes("fasilitas")} onChange={() => toggleLayer("fasilitas")} className="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
+                  <svg width="16" height="16" viewBox="0 0 24 24" className="shrink-0"><polygon points="12,2 22,22 2,22" fill="#ef4444" stroke="black" strokeWidth="1"/></svg>
+                  <span className="select-none leading-tight">Fasilitas & Posko</span>
+                </label>
+                <label className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded transition-colors">
+                  <input type="checkbox" checked={activeLayers.includes("kerentanan")} onChange={() => toggleLayer("kerentanan")} className="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
+                  <svg width="16" height="16" viewBox="0 0 24 24" className="shrink-0"><circle cx="12" cy="12" r="10" fill="#3b82f6" stroke="black" strokeWidth="1"/></svg>
+                  <span className="select-none leading-tight">Kelompok Rentan</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <style dangerouslySetInnerHTML={{__html: `
+        .leaflet-container, .leaflet-grab, .leaflet-interactive {
+          cursor: pointer !important;
+        }
+      `}} />
+      <MapContainer
       center={center}
       zoom={16}
       zoomSnap={0.1}
-      scrollWheelZoom={false}
+      scrollWheelZoom={true}
       style={{ width: "100%", height: "100%" }}
     >
       <TileLayer
@@ -338,5 +425,6 @@ export default function BandunganMapComponent({ activeLayers }: BandunganMapProp
       ))}
       
     </MapContainer>
+    </div>
   );
 }
