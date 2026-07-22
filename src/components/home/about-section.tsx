@@ -39,18 +39,18 @@ export function AboutSection() {
   const activeContent = aboutData.find((data) => data.id === activeTab);
 
   return (
-    <section className="w-full bg-[#3B2215] text-white p-[50px]">
+    <section className="w-full bg-[#3B2215] text-white px-[50px] py-[30px]">
       <div className="max-w-[1440px] mx-auto">
         {/* Top Section */}
-        <div className="flex flex-col mb-16 md:mb-[116px] w-full">
-          <div className="text-[40px] md:text-[80px] lg:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] break-words">
+        <div className="flex flex-col mb-10 md:mb-[50px] w-full">
+          <div className="text-[40px] md:text-[80px] lg:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] break-words">
             <h2>APA ITU</h2>
           </div>
           <div className="flex flex-row justify-between items-end w-full mt-2 md:mt-0">
-            <h2 className="text-[40px] md:text-[80px] lg:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] ml-12 md:ml-[100px] lg:ml-[210px] break-words">
+            <h2 className="text-[40px] md:text-[80px] lg:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] ml-12 md:ml-[100px] lg:ml-[210px] break-words">
               SAKA?
             </h2>
-            <div className="text-[32px] md:text-[60px] lg:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] text-white shrink-0 ml-4">
+            <div className="text-[32px] md:text-[60px] lg:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] text-white shrink-0 ml-4">
               (04)
             </div>
           </div>
@@ -70,7 +70,7 @@ export function AboutSection() {
                   {tab.number}
                 </span>
                 <span
-                  className={`text-[28px] md:text-[36px] font-medium leading-[1.1] tracking-tight transition-colors duration-300 ${
+                  className={`text-[20px] md:text-[28px] font-medium leading-[1.1] tracking-tight transition-colors duration-300 ${
                     activeTab === tab.id
                       ? "text-white"
                       : "text-[#B3B3B3] group-hover:text-white"
@@ -85,7 +85,7 @@ export function AboutSection() {
           {/* Tab Content */}
           <div key={activeTab} className="flex flex-col items-start flex-1 min-h-[300px] animate-fade-in-up">
             {activeContent?.image && (
-              <div className="w-full relative h-[250px] md:h-[357px] mb-8 overflow-hidden">
+              <div className="w-full relative h-[200px] md:h-[300px] mb-8 overflow-hidden">
                 <Image
                   src={activeContent.image}
                   alt={activeContent.title}
@@ -94,7 +94,7 @@ export function AboutSection() {
                 />
               </div>
             )}
-            <p className="text-[20px] md:text-[32px] lg:text-[45.71px] font-[Inter] font-medium leading-[1.3] lg:leading-[1.14] tracking-[-0.045em] text-[#FCFCFC] mb-[50px] whitespace-pre-wrap">
+            <p className="text-[16px] md:text-[20px] lg:text-[32px] font-[Inter] font-medium leading-[1.3] lg:leading-[1.14] tracking-[-0.045em] text-[#FCFCFC] mb-[30px] whitespace-pre-wrap">
               {activeContent?.content}
             </p>
 

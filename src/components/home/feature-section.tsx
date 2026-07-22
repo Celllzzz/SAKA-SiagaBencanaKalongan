@@ -31,10 +31,10 @@ export function FeatureSection() {
       <div className="max-w-[1440px] mx-auto relative flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col relative w-full mb-[50px]">
-          <h2 className="text-[36px] md:text-[60px] xl:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase whitespace-normal md:whitespace-nowrap break-words">
+          <h2 className="text-[36px] md:text-[60px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase whitespace-normal md:whitespace-nowrap break-words">
             Cegah resiko
           </h2>
-          <h2 className="text-[36px] md:text-[60px] xl:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase w-full text-left md:text-right mt-2 md:mt-0 whitespace-normal md:whitespace-nowrap break-words">
+          <h2 className="text-[36px] md:text-[60px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase w-full text-left md:text-right mt-2 md:mt-0 whitespace-normal md:whitespace-nowrap break-words">
             Saling melindungi
           </h2>
         </div>

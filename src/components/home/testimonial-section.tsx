@@ -59,7 +59,7 @@ function TestimonialCard({
 
   return (
     <div
-      className="relative w-full lg:w-[381px] h-[420px] lg:h-[562px] rounded-none overflow-hidden cursor-pointer group"
+      className="relative w-full lg:w-[381px] h-[420px] lg:h-[480px] rounded-none overflow-hidden cursor-pointer group"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
@@ -189,23 +189,25 @@ export function TestimonialSection() {
     <>
       <section className="w-full bg-[#3B2215] text-white p-[50px] relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto relative">
-          {/* Opening Quote Mark (decorative) */}
-          <div
-            className="absolute top-0 md:top-[70px] left-0 md:left-[70px] text-[120px] md:text-[200px] font-serif leading-none select-none pointer-events-none rotate-180 opacity-40 md:opacity-100 z-0"
-            style={{ color: "#5C4438" }}
-            aria-hidden="true"
-          >
-            &ldquo;
-          </div>
+          {/* Opening Quote is moved inside the title container */}
 
           {/* Section Title: KATA MEREKA */}
-          <div className="relative mb-10 md:mb-16 z-10">
-            <h2 className="text-[40px] md:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase break-words">
+          <div className="relative mb-10 md:mb-16 z-10 flex flex-col items-start">
+            <h2 className="text-[40px] md:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase break-words relative z-10">
               KATA
             </h2>
-            <h2 className="text-[40px] md:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase ml-[20%] md:ml-[211px] break-words">
-              MEREKA
-            </h2>
+            <div className="flex flex-row items-start relative ml-[20%] md:ml-[211px]">
+              <div
+                className="absolute -left-[50px] md:-left-[110px] -top-[10px] md:-top-[30px] text-[100px] md:text-[180px] font-serif leading-none select-none pointer-events-none z-0"
+                style={{ color: "#5C4438" }}
+                aria-hidden="true"
+              >
+                &rdquo;
+              </div>
+              <h2 className="text-[40px] md:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase break-words relative z-10">
+                MEREKA
+              </h2>
+            </div>
           </div>
 
           {/* Testimonial Cards */}
@@ -221,11 +223,11 @@ export function TestimonialSection() {
 
           {/* Closing Quote Mark (decorative) */}
           <div
-            className="absolute bottom-0 right-0 md:bottom-[-20px] md:right-[20px] text-[120px] md:text-[200px] font-serif leading-none select-none pointer-events-none"
+            className="absolute -bottom-[20px] right-0 md:-bottom-[40px] md:right-[20px] text-[160px] md:text-[300px] font-serif leading-none select-none pointer-events-none z-20"
             style={{ color: "#5C4438" }}
             aria-hidden="true"
           >
-            &ldquo;
+            &rdquo;
           </div>
         </div>
       </section>

@@ -22,7 +22,7 @@ export function MapSection() {
       <div className="w-full max-w-[1440px] flex flex-col p-[50px] overflow-hidden">
         {/* Header Map Section */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end mb-[46px] shrink-0">
-          <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[106px] leading-none tracking-[-0.045em] text-black uppercase break-words">
+          <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[86px] leading-none tracking-[-0.045em] text-black uppercase break-words">
             PETA DESA<br />KALONGAN
           </h2>
           <div className="mt-4 xl:mt-0 text-[16px] font-semibold tracking-[-0.09em] uppercase text-[#3B2215] shrink-0 animate-bounce-slow">
@@ -31,7 +31,7 @@ export function MapSection() {
         </div>
 
         {/* Map Container */}
-        <div className="w-full h-[668px] bg-[#3B2215] overflow-hidden relative">
+        <div className="w-full h-[500px] xl:h-[568px] bg-[#3B2215] overflow-hidden relative">
           <MapComponent />
         </div>
       </div>

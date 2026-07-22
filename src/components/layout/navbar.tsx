@@ -8,11 +8,12 @@ import { Menu } from "lucide-react";
 
 export function Navbar() {
   const navLinks = [
-    { label: "PETA", href: "#" },
-    { label: "FITUR", href: "#" },
-    { label: "MITIGASI", href: "#" },
-    { label: "PANDUAN TAS", href: "#" },
-    { label: "TIM", href: "#" },
+    { label: "Beranda", href: "/" },
+    { label: "Tentang", href: "/tentang" },
+    { label: "Peta", href: "/#peta" },
+    { label: "Mitigasi", href: "/#mitigasi" },
+    { label: "Pra & Pasca", href: "/#pra-pasca" },
+    { label: "Galeri", href: "/galeri" },
   ];
 
   return (
