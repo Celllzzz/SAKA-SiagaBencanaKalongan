@@ -8,31 +8,24 @@ import { Menu } from "lucide-react";
 
 export function Navbar() {
   const navLinks = [
-    { label: "BERANDA", href: "#" },
-    { label: "TENTANG", href: "#" },
-    { label: "DAMPU", href: "#" },
-    { label: "BANDUNGAN", href: "#" },
-    { label: "GLEPUNG", href: "#" },
-    { label: "TOMPO GUNUNG", href: "#" },
+    { label: "PETA", href: "#" },
+    { label: "FITUR", href: "#" },
+    { label: "MITIGASI", href: "#" },
+    { label: "PANDUAN TAS", href: "#" },
+    { label: "TIM", href: "#" },
   ];
 
   return (
-    <nav className="absolute top-0 left-1/2 transform -translate-x-1/2 z-50 pt-[50px] pb-6 text-white pointer-events-auto w-full max-w-[1440px] px-[50px] flex items-center justify-between">
+    <nav className="absolute top-0 left-1/2 transform -translate-x-1/2 z-50 h-[130px] px-[50px] text-white pointer-events-auto w-full max-w-[1440px] flex items-center justify-between">
       {/* Logo */}
       <div className="flex-shrink-0">
-        <Link href="/">
-          <Image
-            src="/logo/white saka.png"
-            alt="SAKA Logo"
-            width={120}
-            height={40}
-            className="object-contain"
-          />
+        <Link href="/" className="font-[Inter] font-extrabold text-[58px] leading-none tracking-[-0.09em]">
+          SAKA
         </Link>
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden lg:flex items-center space-x-6 text-sm font-medium tracking-wide">
+      <div className="hidden lg:flex items-center space-x-10 text-[16px] font-semibold tracking-[-0.09em] uppercase">
         {navLinks.map((link) => (
           <Link
             key={link.label}
@@ -48,7 +41,7 @@ export function Navbar() {
       <div className="flex items-center">
         <Button
           variant="secondary"
-          className="hidden lg:inline-flex rounded-full px-8 py-6 text-sm font-semibold bg-white text-black hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer"
+          className="hidden lg:inline-flex rounded-[20px] px-6 py-5 text-[14px] tracking-[0.01em] font-semibold bg-white text-black hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer uppercase"
         >
           HUBUNGI KAMI
         </Button>

@@ -14,20 +14,24 @@ Dokumen ini adalah acuan utama (Product Requirements Document & Arsitektur) untu
 - **UI & Komponen:** Berbasis komponen yang *reusable*. Menggunakan library **Shadcn UI & Blocks**.
 - **Theming & Styling:** 
   - Wajib menggunakan CSS Variables global (di `globals.css` dan tailwind config) untuk seluruh warna dan tipografi. 
-  - **Dilarang keras** menggunakan tema monokrom bawaan Shadcn tanpa disesuaikan. Palet harus fleksibel agar mudah diubah dari satu titik (terutama karena akan ada penyesuaian UI/UX).
+  - **Warna Utama (Primary):** Cokelat tua (Dark Brown).
+  - **Warna Pendukung (Secondary):** Cokelat muda / Krem (Light Brown / Beige).
+  - **Dilarang keras** menggunakan tema monokrom bawaan Shadcn tanpa disesuaikan. Palet harus menggunakan kombinasi cokelat di atas agar mempresentasikan unsur alam dan tanah.
 - **Form Pengaduan:** Menggunakan Headless Form Service (Formspree, Web3Forms, atau Google Apps Script) untuk *request* POST statis (client-side).
 
 ## 3. Struktur Halaman & Sitemap
 Sistem terdiri dari 4 modul utama sesuai sitemap:
 
 ### 3.1. Modul Beranda (Halaman Utama)
-- **Hero & Basemap:** Peta dasar Desa Kalongan dengan highlight 4 dusun terdampak.
-- **Overview SAKA:** Logo, nama sistem, tagline.
-- **Get to Know (Kilas Info):** Badge/link ke Tujuan, Latar Belakang, Visi Misi, Tim Kami.
-- **Highlight Fitur Utama (Cards):** Mengarahkan ke Pemetaan 4 Dusun, Manual Prosedur, Panduan Tas Siaga, Dokumentasi Sosialisasi.
-- **Testimonial:** Pratinjau video tanggapan Kadus, RT/RW, warga.
-- **FAQ:** Pertanyaan seputar mitigasi longsor & penggunaan web.
-- **Galeri Foto:** Dokumentasi kondisi desa/kegiatan warga.
+Berdasarkan referensi desain terbaru, urutan seksi (section) pada halaman utama adalah:
+1. **Hero Section:** Latar belakang gambar/video bernuansa gelap dengan navigasi dan judul utama.
+2. **Peta Desa Kalongan:** Menampilkan visualisasi peta (background krem).
+3. **Apa Itu SAKA?:** Overview dan penjelasan sistem SAKA (background cokelat tua).
+4. **Cegah Resiko Saling Melindungi:** Menampilkan grid foto dokumentasi mitigasi (background krem).
+5. **Kata Mereka (Testimonial):** Pratinjau video tanggapan warga dan perangkat desa (background cokelat tua).
+6. **Frequently Asked Questions (FAQ):** Akordeon pertanyaan seputar mitigasi longsor (background krem).
+7. **Galeri Foto Dokum Kegiatan:** Grid dokumentasi kegiatan (background krem).
+8. **Footer:** Navigasi bawah, logo pendukung, dan kontak (background krem).
 
 ### 3.2. Modul Tentang Kami
 - **Profil SAKA:** Tujuan, Latar Belakang, Visi, dan Misi.

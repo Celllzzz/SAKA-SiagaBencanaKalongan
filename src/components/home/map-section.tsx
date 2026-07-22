@@ -18,20 +18,22 @@ const MapComponent = dynamic(
 
 export function MapSection() {
   return (
-    <section className="w-full flex flex-col bg-white text-black p-[50px]">
-      {/* Header Map Section */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-10 shrink-0">
-        <h2 className="text-5xl md:text-6xl lg:text-[80px] font-bold max-w-3xl leading-[0.9] tracking-tighter">
-          PETA DESA<br />KALONGAN
-        </h2>
-        <div className="mt-8 md:mt-0 text-xs md:text-sm font-semibold tracking-widest uppercase shrink-0 animate-bounce-slow">
-          (SCROLL DOWN)
+    <section className="w-full bg-[#FAE3C7] flex justify-center">
+      <div className="w-full max-w-[1440px] flex flex-col p-[50px] overflow-hidden">
+        {/* Header Map Section */}
+        <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end mb-[46px] shrink-0">
+          <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[106px] leading-none tracking-[-0.045em] text-black uppercase break-words">
+            PETA DESA<br />KALONGAN
+          </h2>
+          <div className="mt-4 xl:mt-0 text-[16px] font-semibold tracking-[-0.09em] uppercase text-[#3B2215] shrink-0 animate-bounce-slow">
+            (SCROLL DOWN)
+          </div>
         </div>
-      </div>
 
-      {/* Map Container */}
-      <div className="w-full h-[65vh] md:h-[80vh] overflow-hidden relative">
-        <MapComponent />
+        {/* Map Container */}
+        <div className="w-full h-[668px] bg-[#3B2215] overflow-hidden relative">
+          <MapComponent />
+        </div>
       </div>
     </section>
   );

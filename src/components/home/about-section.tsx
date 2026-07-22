@@ -39,18 +39,18 @@ export function AboutSection() {
   const activeContent = aboutData.find((data) => data.id === activeTab);
 
   return (
-    <section className="w-full bg-[#0E0E0D] text-white p-[50px]">
+    <section className="w-full bg-[#3B2215] text-white p-[50px]">
       <div className="max-w-[1440px] mx-auto">
         {/* Top Section */}
-        <div className="flex flex-col mb-16 md:mb-24 w-full">
-          <div className="text-[50px] md:text-[80px] lg:text-[106px] font-medium leading-[0.9] tracking-tighter">
+        <div className="flex flex-col mb-16 md:mb-[116px] w-full">
+          <div className="text-[40px] md:text-[80px] lg:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] break-words">
             <h2>APA ITU</h2>
           </div>
           <div className="flex flex-row justify-between items-end w-full mt-2 md:mt-0">
-            <h2 className="text-[50px] md:text-[80px] lg:text-[106px] font-medium leading-[0.9] tracking-tighter ml-12 md:ml-[100px] lg:ml-[210px]">
+            <h2 className="text-[40px] md:text-[80px] lg:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] ml-12 md:ml-[100px] lg:ml-[210px] break-words">
               SAKA?
             </h2>
-            <div className="text-[40px] md:text-[60px] lg:text-[106px] font-medium leading-[0.9] tracking-tighter text-white">
+            <div className="text-[32px] md:text-[60px] lg:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] text-white shrink-0 ml-4">
               (04)
             </div>
           </div>
@@ -94,14 +94,14 @@ export function AboutSection() {
                 />
               </div>
             )}
-            <p className="text-[20px] md:text-[32px] lg:text-[45px] font-medium leading-[1.3] lg:leading-[1.14] tracking-tight text-[#FCFCFC] mb-10 whitespace-pre-wrap">
+            <p className="text-[20px] md:text-[32px] lg:text-[45.71px] font-[Inter] font-medium leading-[1.3] lg:leading-[1.14] tracking-[-0.045em] text-[#FCFCFC] mb-[50px] whitespace-pre-wrap">
               {activeContent?.content}
             </p>
 
             <Link href="/tentang" passHref>
               <Button
                 variant="secondary"
-                className="rounded-full px-8 py-6 text-sm font-semibold bg-white text-black hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer"
+                className="rounded-[20px] border-[0.8px] border-white/20 bg-white px-6 py-5 text-[14px] font-semibold text-black tracking-[0.01em] hover:bg-gray-200 hover:scale-105 transition-all cursor-pointer uppercase"
               >
                 SELENGKAPNYA
               </Button>
