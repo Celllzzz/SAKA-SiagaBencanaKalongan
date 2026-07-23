@@ -54,7 +54,7 @@ const TEAM_MEMBERS = [
 
 export function TeamSection() {
   return (
-    <section className="w-full bg-[#FAE3C7] text-[#3B2215] px-[20px] md:px-[50px] py-[50px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
+    <section className="w-full bg-[#FAE3C7] text-[#3B2215] px-[50px] py-[50px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
       <div className="w-full flex flex-col gap-[50px] xl:gap-[100px]">
         
         {/* Header Section */}
