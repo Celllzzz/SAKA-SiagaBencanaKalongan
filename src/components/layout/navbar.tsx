@@ -28,7 +28,7 @@ export function Navbar() {
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        
+
         // Cek jika bagian atas footer sudah masuk layar
         if (section.tagName.toLowerCase() === 'footer' && rect.top < window.innerHeight) {
           isFooterInView = true;
@@ -73,7 +73,7 @@ export function Navbar() {
   };
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 z-[9999] w-full transition-all duration-200 pointer-events-auto ${navStyle.isHidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}
       style={{ backgroundColor: navStyle.bg, color: navStyle.textColor }}
     >
@@ -92,9 +92,8 @@ export function Navbar() {
               key={link.label}
               href={link.href}
               onClick={(e) => handleScrollToTop(e, link.href)}
-              className={`cursor-pointer relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 transition-colors ${
-                isLight ? "after:bg-[#3B2215] hover:text-[#3B2215]/70" : "after:bg-white hover:text-white"
-              }`}
+              className={`cursor-pointer relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100 transition-colors ${isLight ? "after:bg-[#3B2215] hover:text-[#3B2215]/70" : "after:bg-white hover:text-white"
+                }`}
             >
               {link.label}
             </Link>
@@ -105,9 +104,8 @@ export function Navbar() {
         <div className="flex items-center">
           <Button
             variant="secondary"
-            className={`hidden xl:inline-flex rounded-[20px] px-6 py-5 text-[14px] tracking-[0.01em] font-semibold transition-all cursor-pointer uppercase ${
-              isLight ? "bg-[#3B2215] text-white hover:bg-black" : "bg-white text-black hover:bg-gray-200"
-            } hover:scale-105`}
+            className={`hidden xl:inline-flex rounded-[20px] px-6 py-5 text-[14px] tracking-[0.01em] font-semibold transition-all cursor-pointer uppercase ${isLight ? "bg-[#3B2215] text-white hover:bg-black" : "bg-white text-black hover:bg-gray-200"
+              } hover:scale-105`}
           >
             HUBUNGI KAMI
           </Button>
@@ -115,9 +113,8 @@ export function Navbar() {
           {/* Mobile Hamburger Menu */}
           <div className="xl:hidden ml-4">
             <Sheet>
-              <SheetTrigger className={`inline-flex items-center justify-center rounded-md p-2 transition-colors ${
-                isLight ? "text-[#3B2215] hover:bg-[#3B2215]/10" : "text-white hover:bg-white/20"
-              }`}>
+              <SheetTrigger className={`inline-flex items-center justify-center rounded-md p-2 transition-colors ${isLight ? "text-[#3B2215] hover:bg-[#3B2215]/10" : "text-white hover:bg-white/20"
+                }`}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle Menu</span>
               </SheetTrigger>
