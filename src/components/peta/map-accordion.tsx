@@ -36,14 +36,14 @@ export function MapAccordion({ mapItems }: { mapItems: MapDetail[] }) {
           <div key={mapItem.id} className="flex flex-col">
             {/* Header Peta (Judul & Tombol) */}
             <div
-              className="flex flex-col md:flex-row justify-between items-start md:items-center gap-[20px] md:gap-[50px] cursor-pointer group"
+              className="flex flex-col md:flex-row justify-between items-start md:items-center gap-[20px] md:gap-[50px] cursor-pointer group py-[10px]"
               onClick={() => toggleOpen(mapItem.id)}
             >
-              <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] lg:text-[90px] leading-none tracking-[-0.045em] capitalize text-[#3B2215] group-hover:opacity-80 transition-opacity flex items-center gap-4">
+              <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] lg:text-[90px] leading-none tracking-[-0.045em] capitalize text-[#3B2215] group-hover:text-[#8b7355] transition-colors duration-300 flex items-center gap-4">
                 {mapItem.title}{" "}
                 <span
-                  className={`transition-transform duration-300 ${
-                    isOpen ? "rotate-90" : "rotate-0"
+                  className={`transition-all duration-300 ${
+                    isOpen ? "rotate-90" : "group-hover:translate-x-4"
                   }`}
                 >
                   &rarr;
