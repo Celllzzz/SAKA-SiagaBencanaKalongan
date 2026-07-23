@@ -90,7 +90,7 @@ export function AboutContentSection() {
             </div>
 
             {/* KKN Logo */}
-            <div className="relative w-[200px] xl:w-[294px] h-[85px] xl:h-[125px] mt-[40px] xl:mt-[50px] self-center">
+            <div className="relative w-[200px] xl:w-[294px] h-[85px] xl:h-[125px] mt-[40px] xl:mt-auto self-center">
               <Image
                 src="/logo/logo_kkn.png"
                 alt="Logo KKN Desa Kalongan"
