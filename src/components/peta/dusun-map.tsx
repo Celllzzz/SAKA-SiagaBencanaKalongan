@@ -122,7 +122,7 @@ type FeaturePolyline = { attributes: any; geometry: { paths: number[][][] } };
 type FeaturePoint = { attributes: any; geometry: { x: number; y: number } };
 
 export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
-  const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(true);
+  const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
   const [layers, setLayers] = useState({
     batas: true,
     risiko: true,
@@ -310,10 +310,128 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
     }
   });
 
+  const legendContent = (
+    <div className="flex flex-col gap-5 overflow-y-auto pr-2 pb-2 custom-scrollbar" style={{ flex: 1 }}>
+      <div className="mb-5">
+        <h4 className="font-bold text-[11px] text-gray-500 tracking-wider mb-3 uppercase">Administratif</h4>
+        <div className="flex flex-col gap-3 text-sm">
+          {kavling.length > 0 && (
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" checked={layers.batas} onChange={() => toggleLayer('batas')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
+              <div className="w-5 h-3 border-2 border-dashed border-gray-400"></div>
+              <span className="select-none text-gray-700">Batas Administrasi</span>
+            </label>
+          )}
+
+          {risiko.length > 0 && (
+            <div className="flex flex-col gap-2">
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" checked={layers.risiko} onChange={() => toggleLayer('risiko')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
+                <div className="w-4 h-3 bg-red-400 border border-red-600"></div>
+                <span className="select-none text-gray-700">Risiko Longsor</span>
+              </label>
+              {layers.risiko && (
+                <div className="flex flex-col gap-1.5 ml-8 mt-1">
+                  {risiko.some(r => r.tingkat.toLowerCase() === "tinggi") && (
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-2 bg-red-400 border border-red-600 opacity-80"></div>
+                      <span className="select-none text-xs text-gray-500">Tinggi</span>
+                    </div>
+                  )}
+                  {risiko.some(r => r.tingkat.toLowerCase() === "sedang" || r.tingkat.toLowerCase() === "menengah") && (
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-2 bg-yellow-400 border border-yellow-600 opacity-80"></div>
+                      <span className="select-none text-xs text-gray-500">Sedang</span>
+                    </div>
+                  )}
+                  {risiko.some(r => r.tingkat.toLowerCase() === "rendah") && (
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-2 bg-green-300 border border-green-500 opacity-80"></div>
+                      <span className="select-none text-xs text-gray-500">Rendah</span>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div>
+        <h4 className="font-bold text-[11px] text-gray-500 tracking-wider mb-3 uppercase">Lokasi & Infrastruktur</h4>
+        <div className="flex flex-col gap-3 text-sm">
+          {jalan.length > 0 && (
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" checked={layers.jalan} onChange={() => toggleLayer('jalan')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
+              <div className="w-5 h-1 bg-red-500"></div>
+              <span className="select-none text-gray-700">Jalan Utama</span>
+            </label>
+          )}
+          {evakuasi.length > 0 && (
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" checked={layers.evakuasi} onChange={() => toggleLayer('evakuasi')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
+              <div className="w-5 h-0.5 bg-black relative"><div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t border-r border-black rotate-45"></div></div>
+              <span className="select-none text-gray-700">Jalur Evakuasi</span>
+            </label>
+          )}
+
+          {activeFasilitas.size > 0 && (
+            <div className="flex flex-col gap-2">
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" checked={layers.fasilitas} onChange={() => toggleLayer('fasilitas')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
+                <svg width="16" height="16" viewBox="0 0 24 24" className="shrink-0"><polygon points="12,2 22,22 2,22" fill="#ef4444" stroke="black" strokeWidth="1" /></svg>
+                <span className="select-none text-gray-700">Fasilitas & Posko</span>
+              </label>
+              {layers.fasilitas && (
+                <div className="flex flex-col gap-1.5 ml-8 mt-1">
+                  {Array.from(activeFasilitas.values()).map((icon, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <div dangerouslySetInnerHTML={{ __html: icon.svg }} className="shrink-0 flex items-center justify-center w-[14px] h-[14px]" />
+                      <span className="select-none text-xs text-gray-500">{icon.label}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
+          {hasTitikKumpul && (
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" checked={layers.titikKumpul} onChange={() => toggleLayer('titikKumpul')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
+              <div dangerouslySetInnerHTML={{ __html: svgStrings.titikKumpul }} className="shrink-0 flex items-center justify-center w-[16px] h-[16px]" />
+              <span className="select-none text-gray-700">Titik Kumpul</span>
+            </label>
+          )}
+
+          {activeKerentanan.size > 0 && (
+            <div className="flex flex-col gap-2">
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" checked={layers.rentan} onChange={() => toggleLayer('rentan')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
+                <svg width="16" height="16" viewBox="0 0 24 24" className="shrink-0"><circle cx="12" cy="12" r="10" fill="#3b82f6" stroke="black" strokeWidth="1" /></svg>
+                <span className="select-none text-gray-700">Kelompok Rentan</span>
+              </label>
+              {layers.rentan && (
+                <div className="flex flex-col gap-1.5 ml-8 mt-1">
+                  {Array.from(activeKerentanan.values()).map((icon, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <div dangerouslySetInnerHTML={{ __html: icon.svg }} className="shrink-0 flex items-center justify-center w-[14px] h-[14px]" />
+                      <span className="select-none text-xs text-gray-500">{icon.label}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="w-full h-[300px] md:h-[668px] relative overflow-hidden">
+      {/* DESKTOP LEGENDA */}
       <div
-        className={`absolute top-[10px] right-[10px] z-[1000] bg-white rounded-md shadow-md transition-all duration-300 ${isFilterExpanded ? 'w-[280px] p-4 cursor-default' : 'w-auto p-2 cursor-pointer hover:bg-gray-50'}`}
+        className={`hidden md:flex absolute top-[10px] right-[10px] z-[1000] bg-white rounded-md shadow-md transition-all duration-300 flex-col ${isFilterExpanded ? 'w-[280px] p-4 cursor-default' : 'w-auto p-2 cursor-pointer hover:bg-gray-50'}`}
         style={{ boxShadow: '0 2px 10px rgba(0,0,0,0.2)' }}
         onClick={() => !isFilterExpanded && setIsFilterExpanded(true)}
       >
@@ -328,123 +446,50 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
             </button>
           )}
         </div>
-
         {isFilterExpanded && (
-          <div className="max-h-[60vh] md:max-h-[70vh] overflow-y-auto pr-1 custom-scrollbar">
-            <div className="mb-5">
-              <h4 className="font-bold text-[11px] text-gray-500 tracking-wider mb-3 uppercase">Administratif</h4>
-              <div className="flex flex-col gap-3 text-sm">
-                {kavling.length > 0 && (
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" checked={layers.batas} onChange={() => toggleLayer('batas')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
-                    <div className="w-5 h-3 border-2 border-dashed border-gray-400"></div>
-                    <span className="select-none text-gray-700">Batas Administrasi</span>
-                  </label>
-                )}
-
-                {risiko.length > 0 && (
-                  <div className="flex flex-col gap-2">
-                    <label className="flex items-center gap-3 cursor-pointer">
-                      <input type="checkbox" checked={layers.risiko} onChange={() => toggleLayer('risiko')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
-                      <div className="w-4 h-3 bg-red-400 border border-red-600"></div>
-                      <span className="select-none text-gray-700">Risiko Longsor</span>
-                    </label>
-                    {layers.risiko && (
-                      <div className="flex flex-col gap-1.5 ml-8 mt-1">
-                        {risiko.some(r => r.tingkat.toLowerCase() === "tinggi") && (
-                          <div className="flex items-center gap-2">
-                            <div className="w-3 h-2 bg-red-400 border border-red-600 opacity-80"></div>
-                            <span className="select-none text-xs text-gray-500">Tinggi</span>
-                          </div>
-                        )}
-                        {risiko.some(r => r.tingkat.toLowerCase() === "sedang" || r.tingkat.toLowerCase() === "menengah") && (
-                          <div className="flex items-center gap-2">
-                            <div className="w-3 h-2 bg-yellow-400 border border-yellow-600 opacity-80"></div>
-                            <span className="select-none text-xs text-gray-500">Sedang</span>
-                          </div>
-                        )}
-                        {risiko.some(r => r.tingkat.toLowerCase() === "rendah") && (
-                          <div className="flex items-center gap-2">
-                            <div className="w-3 h-2 bg-green-300 border border-green-500 opacity-80"></div>
-                            <span className="select-none text-xs text-gray-500">Rendah</span>
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-[11px] text-gray-500 tracking-wider mb-3 uppercase">Lokasi & Infrastruktur</h4>
-              <div className="flex flex-col gap-3 text-sm">
-                {jalan.length > 0 && (
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" checked={layers.jalan} onChange={() => toggleLayer('jalan')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
-                    <div className="w-5 h-1 bg-red-500"></div>
-                    <span className="select-none text-gray-700">Jalan Utama</span>
-                  </label>
-                )}
-                {evakuasi.length > 0 && (
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" checked={layers.evakuasi} onChange={() => toggleLayer('evakuasi')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
-                    <div className="w-5 h-0.5 bg-black relative"><div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t border-r border-black rotate-45"></div></div>
-                    <span className="select-none text-gray-700">Jalur Evakuasi</span>
-                  </label>
-                )}
-
-                {activeFasilitas.size > 0 && (
-                  <div className="flex flex-col gap-2">
-                    <label className="flex items-center gap-3 cursor-pointer">
-                      <input type="checkbox" checked={layers.fasilitas} onChange={() => toggleLayer('fasilitas')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
-                      <svg width="16" height="16" viewBox="0 0 24 24" className="shrink-0"><polygon points="12,2 22,22 2,22" fill="#ef4444" stroke="black" strokeWidth="1" /></svg>
-                      <span className="select-none text-gray-700">Fasilitas & Posko</span>
-                    </label>
-                    {layers.fasilitas && (
-                      <div className="flex flex-col gap-1.5 ml-8 mt-1">
-                        {Array.from(activeFasilitas.values()).map((icon, idx) => (
-                          <div key={idx} className="flex items-center gap-2">
-                            <div dangerouslySetInnerHTML={{ __html: icon.svg }} className="shrink-0 flex items-center justify-center w-[14px] h-[14px]" />
-                            <span className="select-none text-xs text-gray-500">{icon.label}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {hasTitikKumpul && (
-                  <label className="flex items-center gap-3 cursor-pointer">
-                    <input type="checkbox" checked={layers.titikKumpul} onChange={() => toggleLayer('titikKumpul')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
-                    <div dangerouslySetInnerHTML={{ __html: svgStrings.titikKumpul }} className="shrink-0 flex items-center justify-center w-[16px] h-[16px]" />
-                    <span className="select-none text-gray-700">Titik Kumpul</span>
-                  </label>
-                )}
-
-                {activeKerentanan.size > 0 && (
-                  <div className="flex flex-col gap-2">
-                    <label className="flex items-center gap-3 cursor-pointer">
-                      <input type="checkbox" checked={layers.rentan} onChange={() => toggleLayer('rentan')} className="w-4 h-4 cursor-pointer accent-blue-600 rounded" />
-                      <svg width="16" height="16" viewBox="0 0 24 24" className="shrink-0"><circle cx="12" cy="12" r="10" fill="#3b82f6" stroke="black" strokeWidth="1" /></svg>
-                      <span className="select-none text-gray-700">Kelompok Rentan</span>
-                    </label>
-                    {layers.rentan && (
-                      <div className="flex flex-col gap-1.5 ml-8 mt-1">
-                        {Array.from(activeKerentanan.values()).map((icon, idx) => (
-                          <div key={idx} className="flex items-center gap-2">
-                            <div dangerouslySetInnerHTML={{ __html: icon.svg }} className="shrink-0 flex items-center justify-center w-[14px] h-[14px]" />
-                            <span className="select-none text-xs text-gray-500">{icon.label}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            </div>
+          <div className="max-h-[70vh] overflow-hidden flex flex-col">
+            {legendContent}
           </div>
         )}
+      </div>
+
+      {/* MOBILE LEGENDA */}
+      {/* FAB Button */}
+      <button
+        onClick={(e) => { e.stopPropagation(); setIsFilterExpanded(true); }}
+        className={`md:hidden absolute bottom-[30px] left-1/2 -translate-x-1/2 z-[999] bg-white text-black border-2 border-[rgba(0,0,0,0.2)] bg-clip-padding flex items-center gap-2 px-6 py-3 rounded-full hover:bg-[#f4f4f4] transition-all duration-300 ${isFilterExpanded ? 'opacity-0 pointer-events-none translate-y-10' : 'opacity-100 translate-y-0'}`}
+        style={{ boxShadow: '0 1px 5px rgba(0,0,0,0.65)' }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /></svg>
+        <span className="font-semibold text-sm tracking-wide">LEGENDA</span>
+      </button>
+
+      {/* Bottom Sheet Overlay */}
+      <div
+        className={`md:hidden fixed inset-0 z-[9999] bg-black/40 transition-opacity duration-300 ${isFilterExpanded ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        onClick={(e) => { e.stopPropagation(); setIsFilterExpanded(false); }}
+      />
+      {/* Bottom Sheet Panel */}
+      <div
+        className={`md:hidden fixed bottom-0 left-0 right-0 z-[10000] bg-white rounded-t-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.15)] flex flex-col transition-transform duration-300 ease-in-out ${isFilterExpanded ? 'translate-y-0' : 'translate-y-full'}`}
+        style={{ height: '70vh', maxHeight: '70vh' }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="w-full flex justify-center py-3 cursor-pointer" onClick={(e) => { e.stopPropagation(); setIsFilterExpanded(false); }}>
+          <div className="w-12 h-1.5 bg-gray-300 rounded-full"></div>
+        </div>
+        <div className="flex flex-row justify-between items-center px-6 pb-4 border-b border-gray-100">
+          <div className="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#3B2215]"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /></svg>
+            <span className="font-bold text-[15px] tracking-wide text-[#3B2215]">LEGENDA</span>
+          </div>
+          <button onClick={(e) => { e.stopPropagation(); setIsFilterExpanded(false); }} className="text-gray-400 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div className="flex-1 overflow-y-auto px-6 pt-4 pb-8 flex flex-col" style={{ WebkitOverflowScrolling: 'touch' }}>
+          {legendContent}
+        </div>
       </div>
 
       <style dangerouslySetInnerHTML={{
