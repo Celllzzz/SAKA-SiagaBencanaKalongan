@@ -55,21 +55,21 @@ const TEAM_MEMBERS = [
 export function TeamSection() {
   return (
     <section className="w-full bg-[#FAE3C7] text-[#3B2215] px-[20px] md:px-[50px] py-[50px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
-      <div className="w-full flex flex-col gap-[50px] lg:gap-[100px]">
+      <div className="w-full flex flex-col gap-[50px] xl:gap-[100px]">
         
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-[30px] lg:gap-0">
-          <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] lg:text-[90px] leading-[1] tracking-[-0.045em] capitalize lg:w-1/2">
+        <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between w-full gap-[30px] xl:gap-0">
+          <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[90px] leading-[1] tracking-[-0.045em] capitalize xl:w-1/2">
             Orang Orang <br />
             Di Balik SAKA
           </h2>
-          <p className="font-[Inter] font-medium text-[16px] md:text-[20px] lg:text-[24px] leading-[1.35] tracking-[-0.045em] text-justify lg:w-1/2">
+          <p className="font-[Inter] font-medium text-[16px] md:text-[20px] xl:text-[24px] leading-[1.35] tracking-[-0.045em] text-justify xl:w-1/2">
             Dari survei lapangan, pemetaan, penyusunan prosedur, hingga membangun website ini — semua dikerjakan bersama oleh tim KKN-T 119 Universitas Diponegoro. membantu Desa Kalongan lebih siap menghadapi bencana.
           </p>
         </div>
 
         {/* Grid Anggota Tim */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[50px] gap-x-[20px] lg:gap-x-[50px] w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-[50px] gap-x-[20px] xl:gap-x-[50px] w-full">
           {TEAM_MEMBERS.map((member, index) => (
             <div key={index} className="flex flex-col w-full gap-[10px] items-start">
               <div className="relative w-full aspect-[416/520] overflow-hidden bg-[#8b7355]">
@@ -81,10 +81,10 @@ export function TeamSection() {
                 />
               </div>
               <div className="flex flex-row justify-between items-center w-full mt-2">
-                <span className="font-[Inter] font-semibold text-[14px] lg:text-[16px] leading-[1] tracking-[-0.05em] uppercase truncate pr-4">
+                <span className="font-[Inter] font-semibold text-[14px] xl:text-[16px] leading-[1] tracking-[-0.05em] uppercase truncate pr-4">
                   {member.name}
                 </span>
-                <span className="font-[Inter] font-semibold text-[12px] lg:text-[16px] leading-[1] tracking-[-0.09em] uppercase shrink-0">
+                <span className="font-[Inter] font-semibold text-[12px] xl:text-[16px] leading-[1] tracking-[-0.09em] uppercase shrink-0">
                   {member.role}
                 </span>
               </div>
