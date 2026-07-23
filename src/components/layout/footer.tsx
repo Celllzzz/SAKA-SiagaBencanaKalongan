@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Footer() {
+  const pathname = usePathname();
+
   return (
     <footer className="w-full bg-[#FAE3C7] text-[#3B2215] flex flex-col pt-[30px] lg:pt-[50px] pb-[30px] lg:pb-[50px] px-[30px] lg:px-[50px]" data-theme="light" data-bg="#FAE3C7">
       
@@ -37,7 +42,7 @@ export function Footer() {
               let href = "/";
               if (item.toLowerCase() === "beranda") href = "/";
               else if (item.toLowerCase() === "tentang kami") href = "/tentang";
-              else if (item.toLowerCase() === "peta") href = "/#peta";
+              else if (item.toLowerCase() === "peta") href = "/peta";
               else if (item.toLowerCase() === "mitigasi") href = "/#mitigasi";
               else if (item.toLowerCase() === "pra & pasca") href = "/#pra-pasca";
               else if (item.toLowerCase() === "galeri") href = "/galeri";
@@ -47,6 +52,12 @@ export function Footer() {
                 <Link
                   key={idx}
                   href={href}
+                  onClick={(e) => {
+                    if (pathname === href || (pathname.startsWith('/peta') && href === '/peta')) {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
                   className="font-[Inter] font-semibold text-[24px] xl:text-[46px] leading-none tracking-[-0.09em] capitalize hover:opacity-70 transition-opacity"
                 >
                   {item}

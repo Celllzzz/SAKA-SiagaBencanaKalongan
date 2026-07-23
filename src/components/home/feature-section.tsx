@@ -1,27 +1,32 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const features = [
   {
     num: "(01)",
     title: "PEMETAAN DUSUN RAWAN BENCANA",
     image: "/assets/home/pemetaan_home.webp",
+    href: "/peta"
   },
   {
     num: "(02)",
     title: "MITIGASI PANDUAN KEBENCANAAN",
     image: "/assets/home/bukusaku_home.webp",
+    href: "#"
   },
   {
     num: "(03)",
     title: "PENCEGAHAN PRA & PASCA BENCANA",
     image: "/assets/home/tassiagabencana_home.webp",
+    href: "#"
   },
   {
     num: "(04)",
     title: "GALERI KEGIATAN & SOSIALISASI",
     image: "/assets/home/dokumentasikegiatan_home.webp",
+    href: "#"
   },
 ];
 
@@ -44,51 +49,51 @@ export function FeatureSection() {
           {/* Row 1 */}
           <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-[50px]">
             {/* Item 01 (Short) */}
-            <div className="flex flex-col w-full lg:w-[48%] shrink-0">
+            <Link href={features[0].href} className="flex flex-col w-full lg:w-[48%] shrink-0 group">
               <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/2] lg:aspect-[628/415]">
-                <Image src={features[0].image} alt={features[0].title} fill className="object-cover object-center" />
+                <Image src={features[0].image} alt={features[0].title} fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
-              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4">
+              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4 group-hover:opacity-70 transition-opacity duration-300">
                 <span className="text-[16px] font-[Inter] font-semibold tracking-[-0.09em] shrink-0">{features[0].num}</span>
                 <h3 className="text-[16px] font-[Inter] font-semibold tracking-[-0.05em] uppercase text-right leading-tight">{features[0].title}</h3>
               </div>
-            </div>
+            </Link>
 
             {/* Item 02 (Tall) */}
-            <div className="flex flex-col w-full lg:w-[48%] shrink-0">
+            <Link href={features[1].href} className="flex flex-col w-full lg:w-[48%] shrink-0 group">
               <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/4] lg:aspect-[662/883]">
-                <Image src={features[1].image} alt={features[1].title} fill className="object-cover object-center" />
+                <Image src={features[1].image} alt={features[1].title} fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
-              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4">
+              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4 group-hover:opacity-70 transition-opacity duration-300">
                 <span className="text-[16px] font-[Inter] font-semibold tracking-[-0.09em] shrink-0">{features[1].num}</span>
                 <h3 className="text-[16px] font-[Inter] font-semibold tracking-[-0.05em] uppercase text-right leading-tight">{features[1].title}</h3>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* Row 2 */}
           <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-[50px]">
             {/* Item 03 (Tall) */}
-            <div className="flex flex-col w-full lg:w-[48%] shrink-0">
+            <Link href={features[2].href} className="flex flex-col w-full lg:w-[48%] shrink-0 group">
               <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/4] lg:aspect-[662/883]">
-                <Image src={features[2].image} alt={features[2].title} fill className="object-cover object-center" />
+                <Image src={features[2].image} alt={features[2].title} fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
-              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4">
+              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4 group-hover:opacity-70 transition-opacity duration-300">
                 <span className="text-[16px] font-[Inter] font-semibold tracking-[-0.09em] shrink-0">{features[2].num}</span>
                 <h3 className="text-[16px] font-[Inter] font-semibold tracking-[-0.05em] uppercase text-right leading-tight">{features[2].title}</h3>
               </div>
-            </div>
+            </Link>
 
             {/* Item 04 (Short) */}
-            <div className="flex flex-col w-full lg:w-[48%] shrink-0">
+            <Link href={features[3].href} className="flex flex-col w-full lg:w-[48%] shrink-0 group">
               <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/2] lg:aspect-[628/415]">
-                <Image src={features[3].image} alt={features[3].title} fill className="object-cover object-center" />
+                <Image src={features[3].image} alt={features[3].title} fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
-              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4">
+              <div className="flex flex-row justify-between items-start w-full mt-4 gap-4 group-hover:opacity-70 transition-opacity duration-300">
                 <span className="text-[16px] font-[Inter] font-semibold tracking-[-0.09em] shrink-0">{features[3].num}</span>
                 <h3 className="text-[16px] font-[Inter] font-semibold tracking-[-0.05em] uppercase text-right leading-tight">{features[3].title}</h3>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
