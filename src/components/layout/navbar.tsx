@@ -17,11 +17,6 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < 50) {
-        setNavStyle({ bg: 'transparent', textColor: '#FFFFFF', theme: 'dark', isHidden: false });
-        return;
-      }
-
       const sections = document.querySelectorAll('[data-theme]');
       let currentSection: Element | null = null;
       let isFooterInView = false;
@@ -34,13 +29,17 @@ export function Navbar() {
           isFooterInView = true;
         }
 
-        if (rect.top <= 45 && rect.bottom >= 45) {
+        if (rect.top <= 90 && rect.bottom >= 90) {
           currentSection = section;
         }
       });
 
+      if (window.scrollY < 50 && !currentSection && sections.length > 0) {
+        currentSection = sections[0];
+      }
+
       if (currentSection) {
-        const bg = (currentSection as HTMLElement).dataset.bg || 'transparent';
+        const bg = window.scrollY < 50 ? 'transparent' : ((currentSection as HTMLElement).dataset.bg || 'transparent');
         const theme = (currentSection as HTMLElement).dataset.theme || 'dark';
         const textColor = theme === 'light' ? '#3B2215' : '#FFFFFF';
         setNavStyle({ bg, textColor, theme, isHidden: isFooterInView });
@@ -59,7 +58,7 @@ export function Navbar() {
   const navLinks = [
     { label: "Beranda", href: "/" },
     { label: "Tentang", href: "/tentang" },
-    { label: "Peta", href: "/#peta" },
+    { label: "Peta", href: "/peta" },
     { label: "Mitigasi", href: "/#mitigasi" },
     { label: "Pra & Pasca", href: "/#pra-pasca" },
     { label: "Galeri", href: "/galeri" },

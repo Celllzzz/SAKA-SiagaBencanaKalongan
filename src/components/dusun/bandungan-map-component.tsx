@@ -104,7 +104,6 @@ export default function BandunganMapComponent() {
   
   const [kavling, setKavling] = useState<[number, number][][]>([]);
   const [risiko, setRisiko] = useState<{ coords: [number, number][][], tingkat: string }[]>([]);
-  const [jalan, setJalan] = useState<[number, number][][]>([]);
   const [evakuasi, setEvakuasi] = useState<[number, number][][]>([]);
   const [kerentanan, setKerentanan] = useState<{ coord: [number, number], jenis: string }[]>([]);
   const [titikKumpul, setTitikKumpul] = useState<{ coord: [number, number], nama: string, kategori: string }[]>([]);
@@ -117,7 +116,19 @@ export default function BandunganMapComponent() {
       setIsFilterExpanded(true);
     }
 
-    fetch("/maps/Bandungan/kavling bandungan.json").then(r => r.json()).then(data => {
+    const safeFetchJson = async (url: string) => {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) return null;
+        const text = await res.text();
+        if (!text || text.trim().startsWith('<')) return null;
+        return JSON.parse(text);
+      } catch (e) {
+        return null;
+      }
+    };
+
+    safeFetchJson("/maps/Bandungan/kavling bandungan.json").then(data => {
       if (data?.features?.length > 0) {
         const converted = convertRings(data.features[0].geometry.rings);
         setKavling(converted);
@@ -132,7 +143,7 @@ export default function BandunganMapComponent() {
       }
     });
 
-    fetch("/maps/Bandungan/tingkat risiko longsor bandungan.json").then(r => r.json()).then(data => {
+    safeFetchJson("/maps/Bandungan/tingkat risiko longsor bandungan.json").then(data => {
       if (data?.features) {
         setRisiko(data.features.map((f: FeaturePolygon) => ({
           coords: convertRings(f.geometry.rings),
@@ -141,19 +152,13 @@ export default function BandunganMapComponent() {
       }
     });
 
-    fetch("/maps/Bandungan/jalan bandungan.json").then(r => r.json()).then(data => {
-      if (data?.features) {
-        setJalan(data.features.map((f: FeaturePolyline) => convertPaths(f.geometry.paths)[0]));
-      }
-    });
-
-    fetch("/maps/Bandungan/jalur evakuasi bandungan.json").then(r => r.json()).then(data => {
+    safeFetchJson("/maps/Bandungan/jalur evakuasi bandungan.json").then(data => {
       if (data?.features) {
         setEvakuasi(data.features.map((f: FeaturePolyline) => convertPaths(f.geometry.paths)[0]));
       }
     });
 
-    fetch("/maps/Bandungan/kerentanan bandungan.json").then(r => r.json()).then(data => {
+    safeFetchJson("/maps/Bandungan/kerentanan bandungan.json").then(data => {
       if (data?.features) {
         setKerentanan(data.features.map((f: FeaturePoint) => ({
           coord: convertCoord([f.geometry.x, f.geometry.y]),
@@ -164,8 +169,8 @@ export default function BandunganMapComponent() {
 
     // We fetch both titik kumpul and kapasitas, and combine them. 
     Promise.all([
-      fetch("/maps/Bandungan/titik kumpul bandungan.json").then(r => r.json()),
-      fetch("/maps/Bandungan/kapasitas bandungan.json").then(r => r.json())
+      safeFetchJson("/maps/Bandungan/titik kumpul bandungan.json"),
+      safeFetchJson("/maps/Bandungan/kapasitas bandungan.json")
     ]).then(([titikData, kapasitasData]) => {
       const combined: any[] = [];
       const seen: Record<string, boolean> = {};
@@ -261,19 +266,20 @@ export default function BandunganMapComponent() {
   return (
     <div className="w-full h-full relative overflow-hidden">
       {/* Panel Filter Layer (Melayang di dalam Map) */}
-      <div className={`absolute top-[10px] right-[10px] z-[1000] bg-white rounded-md shadow-md transition-all duration-300 ${isFilterExpanded ? 'w-[280px] p-4' : 'w-auto p-2'}`} style={{ boxShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
+      <div 
+        className={`absolute top-[10px] right-[10px] z-[1000] bg-white rounded-md shadow-md transition-all duration-300 ${isFilterExpanded ? 'w-[280px] p-4 cursor-default' : 'w-auto p-2 cursor-pointer hover:bg-gray-50'}`} 
+        style={{ boxShadow: '0 2px 10px rgba(0,0,0,0.2)' }}
+        onClick={() => !isFilterExpanded && setIsFilterExpanded(true)}
+      >
         
         {/* Header/Toggle Button */}
-        <div 
-          className={`flex items-center justify-between cursor-pointer ${isFilterExpanded ? 'mb-4 border-b pb-2' : ''}`}
-          onClick={() => setIsFilterExpanded(!isFilterExpanded)}
-        >
+        <div className={`flex items-center justify-between ${isFilterExpanded ? 'mb-4 border-b pb-2' : ''}`}>
           <div className="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-700"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
             {isFilterExpanded && <h3 className="font-bold text-gray-700 tracking-wide text-sm uppercase">Legenda & Filter</h3>}
           </div>
           {isFilterExpanded && (
-            <button className="text-gray-400 hover:text-gray-700 p-1">
+            <button className="text-gray-400 hover:text-gray-700 p-1" onClick={(e) => { e.stopPropagation(); setIsFilterExpanded(false); }}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
           )}
@@ -304,11 +310,6 @@ export default function BandunganMapComponent() {
               <h4 className="font-bold text-xs text-gray-500 tracking-wider mb-2 uppercase">Lokasi & Infrastruktur</h4>
               <div className="flex flex-col gap-2 text-sm">
                 <label className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded transition-colors">
-                  <input type="checkbox" checked={activeLayers.includes("jalan")} onChange={() => toggleLayer("jalan")} className="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
-                  <div className="w-5 h-1 bg-red-500"></div>
-                  <span className="select-none">Jalan Utama</span>
-                </label>
-                <label className="flex items-center gap-3 cursor-pointer hover:bg-gray-50 p-1 -ml-1 rounded transition-colors">
                   <input type="checkbox" checked={activeLayers.includes("evakuasi")} onChange={() => toggleLayer("evakuasi")} className="w-4 h-4 accent-blue-600 rounded cursor-pointer" />
                   <div className="w-5 h-0.5 bg-black relative"><div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 border-t border-r border-black rotate-45"></div></div>
                   <span className="select-none">Jalur Evakuasi</span>
@@ -333,6 +334,9 @@ export default function BandunganMapComponent() {
         .leaflet-container, .leaflet-grab, .leaflet-interactive {
           cursor: pointer !important;
         }
+        .leaflet-control-zoom a {
+          cursor: pointer !important;
+        }
       `}} />
       <MapContainer
       center={center}
@@ -342,8 +346,8 @@ export default function BandunganMapComponent() {
       style={{ width: "100%", height: "100%" }}
     >
       <TileLayer
-        attribution='&copy; <a href="https://www.esri.com/">Esri</a>'
-        url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+        attribution='&copy; <a href="https://www.google.com/intl/id_id/help/terms_maps/">Google Maps</a>'
+        url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
       />
       <FitBounds coords={kavling} />
       <RecenterButton coords={kavling} />
@@ -379,15 +383,6 @@ export default function BandunganMapComponent() {
           }} 
         />
       )}
-
-      {/* Layer Jalan (Polyline) */}
-      {activeLayers.includes("jalan") && jalan.map((path, i) => (
-        <Polyline 
-          key={`jalan-${i}`}
-          positions={path}
-          pathOptions={{ color: "#ef4444", weight: 3 }} // merah solid seperti PDF
-        />
-      ))}
 
       {/* Layer Jalur Evakuasi (Polyline) */}
       {activeLayers.includes("evakuasi") && evakuasi.map((path, i) => (

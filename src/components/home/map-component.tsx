@@ -115,6 +115,9 @@ export default function MapComponent() {
         .leaflet-container, .leaflet-grab, .leaflet-interactive {
           cursor: pointer !important;
         }
+        .leaflet-control-zoom a {
+          cursor: pointer !important;
+        }
       `}} />
       <MapContainer
         center={center}
@@ -125,8 +128,8 @@ export default function MapComponent() {
       >
         {/* Esri World Imagery (Satellite) */}
         <TileLayer
-          attribution='&copy; <a href="https://www.esri.com/">Esri</a>'
-          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+          attribution='&copy; <a href="https://www.google.com/intl/id_id/help/terms_maps/">Google Maps</a>'
+          url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
         />
         <FitBounds coords={polygonCoords} />
         <RecenterButton coords={polygonCoords} />
