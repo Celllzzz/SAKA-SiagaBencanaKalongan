@@ -52,19 +52,19 @@ export function AboutContentSection() {
 
           {/* Paragraphs (Staggered diagonally on desktop) */}
           <div className="flex flex-col w-full gap-[30px] xl:gap-[50px]">
-            <p className="font-[Inter] font-medium text-[16px] md:text-[20px] xl:text-[30px] leading-[1.4] xl:leading-[1.35] tracking-[-0.045em] xl:w-[761px]">
+            <p className="font-[Inter] font-medium text-[16px] md:text-[20px] xl:text-[30px] leading-[1.4] xl:leading-[1.35] tracking-[-0.045em] xl:w-[56%]">
               Desa Kalongan memiliki luas sekitar 868,3 hektare dengan ketinggian 339 mdpl. Kondisi wilayahnya yang berbukit dan berlereng membuat desa ini rawan bencana, terutama tanah longsor, banjir, dan cuaca ekstrem.
             </p>
-            <p className="font-[Inter] font-medium text-[16px] md:text-[20px] xl:text-[30px] leading-[1.4] xl:leading-[1.35] tracking-[-0.045em] xl:w-[670px] xl:self-end text-justify">
+            <p className="font-[Inter] font-medium text-[16px] md:text-[20px] xl:text-[30px] leading-[1.4] xl:leading-[1.35] tracking-[-0.045em] xl:w-[50%] xl:self-end">
               Menjawab kondisi tersebut, Tim KKN Tematik Universitas Diponegoro mengembangkan SAKA — media digital untuk edukasi mitigasi dan informasi kebencanaan, guna mewujudkan Desa Kalongan yang lebih tangguh dan siap siaga.
             </p>
           </div>
         </div>
 
         {/* Sub-bagian 3: Visi & Misi */}
-        <div className="flex flex-col xl:flex-row justify-between items-stretch w-full gap-[30px] xl:gap-[50px]">
+        <div className="flex flex-col xl:flex-row justify-between items-stretch w-full gap-[30px] xl:gap-0">
           {/* Left Image */}
-          <div className="relative w-full xl:w-[620px] h-[300px] md:h-[450px] xl:h-[775px] overflow-hidden shrink-0">
+          <div className="relative w-full xl:w-[46%] h-[300px] md:h-[450px] xl:h-[775px] overflow-hidden shrink-0">
             <Image
               src="/assets/home/foto_footer.webp"
               alt="Tebing rawan longsor"
@@ -74,9 +74,9 @@ export function AboutContentSection() {
           </div>
 
           {/* Right Content */}
-          <div className="flex flex-col w-full xl:w-[670px] shrink-0">
+          <div className="flex flex-col w-full xl:w-[50%] shrink-0">
             <div className="flex flex-col gap-[20px] xl:gap-[30px]">
-              <h3 className="font-[Inter] font-medium text-[20px] md:text-[28px] xl:text-[46px] leading-[1.3] xl:leading-[1.14] tracking-[-0.045em] mt-0 text-justify">
+              <h3 className="font-[Inter] font-medium text-[20px] md:text-[28px] xl:text-[46px] leading-[1.3] xl:leading-[1.14] tracking-[-0.045em] mt-0">
                 Mewujudkan Desa Kalongan yang siaga, mandiri, dan tanggap terhadap bencana longsor.
               </h3>
               
