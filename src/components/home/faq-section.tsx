@@ -54,17 +54,17 @@ export function FAQSection() {
     <section className="w-full bg-[#FAE3C7] text-black px-[50px] py-[30px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
       <div className="max-w-[1440px] mx-auto relative flex flex-col items-center">
         {/* Header */}
-        <div className="flex flex-col relative w-full mb-[30px]">
-          <h2 className="text-[clamp(32px,6vw,86px)] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase whitespace-normal lg:whitespace-nowrap text-left">
+        <div className="flex flex-col relative w-full mb-[30px] xl:mb-[50px]">
+          <h2 className="text-[clamp(32px,6vw,106px)] xl:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase whitespace-normal xl:whitespace-nowrap text-left">
             FREQUENTLY
           </h2>
-          <h2 className="text-[clamp(32px,6vw,86px)] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase w-full text-left mt-2 md:mt-0 whitespace-normal lg:whitespace-nowrap">
+          <h2 className="text-[clamp(32px,6vw,106px)] xl:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase w-full text-left mt-2 md:mt-0 whitespace-normal xl:whitespace-nowrap">
             ASKED QUETIONS
           </h2>
         </div>
 
         {/* Accordion Container */}
-        <div className="flex flex-col w-full max-w-[946px] gap-[10px]">
+        <div className="flex flex-col w-full max-w-[1108px] gap-[15px]">
           {faqData.map((item, index) => {
             const isOpen = openIndex === index;
 
@@ -75,9 +75,9 @@ export function FAQSection() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="flex flex-row justify-between items-center w-full px-[20px] md:px-[25px] md:pl-[37px] py-[15px] text-left hover:bg-black/5 transition-colors"
+                  className="flex flex-row justify-between items-center w-full px-[20px] md:px-[25px] md:pl-[37px] py-[15px] md:py-[19px] text-left hover:bg-black/5 transition-colors"
                 >
-                  <span className="font-[Inter] font-medium text-[15px] md:text-[20px] leading-[1.2] tracking-[0.01em] uppercase text-[#343434] pr-4">
+                  <span className="font-[Inter] font-medium text-[15px] md:text-[25px] leading-[1.2] md:leading-[100%] tracking-[0.01em] uppercase text-[#343434] pr-4">
                     {item.question}
                   </span>
                   <ChevronDown

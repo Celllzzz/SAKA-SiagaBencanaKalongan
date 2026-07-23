@@ -86,7 +86,7 @@ export function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center space-x-10 text-[16px] font-semibold tracking-[-0.09em] uppercase">
+        <div className="hidden xl:flex items-center space-x-10 text-[16px] font-semibold tracking-[-0.09em] uppercase">
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -105,7 +105,7 @@ export function Navbar() {
         <div className="flex items-center">
           <Button
             variant="secondary"
-            className={`hidden lg:inline-flex rounded-[20px] px-6 py-5 text-[14px] tracking-[0.01em] font-semibold transition-all cursor-pointer uppercase ${
+            className={`hidden xl:inline-flex rounded-[20px] px-6 py-5 text-[14px] tracking-[0.01em] font-semibold transition-all cursor-pointer uppercase ${
               isLight ? "bg-[#3B2215] text-white hover:bg-black" : "bg-white text-black hover:bg-gray-200"
             } hover:scale-105`}
           >
@@ -113,7 +113,7 @@ export function Navbar() {
           </Button>
 
           {/* Mobile Hamburger Menu */}
-          <div className="lg:hidden ml-4">
+          <div className="xl:hidden ml-4">
             <Sheet>
               <SheetTrigger className={`inline-flex items-center justify-center rounded-md p-2 transition-colors ${
                 isLight ? "text-[#3B2215] hover:bg-[#3B2215]/10" : "text-white hover:bg-white/20"

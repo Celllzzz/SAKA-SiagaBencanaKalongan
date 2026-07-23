@@ -33,8 +33,8 @@ export function HeroSection() {
       {/* Content Container */}
       <div className="absolute inset-0 z-20 flex flex-col justify-end pb-[35px] text-white h-full pointer-events-none">
 
-        {/* Middle Feature Links (Hidden on Mobile) */}
-        <div className="hidden md:flex w-full max-w-[1440px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 px-[50px] justify-between items-center pointer-events-auto animate-fade-in-up delay-300">
+        {/* Middle Feature Links (Hidden on Mobile and Tablet) */}
+        <div className="hidden xl:flex w-full max-w-[1440px] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 px-[50px] justify-between items-center pointer-events-auto animate-fade-in-up delay-300">
           {featureLinks.map((link, index) => (
             <Link
               key={index}

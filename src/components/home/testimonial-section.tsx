@@ -59,7 +59,7 @@ function TestimonialCard({
 
   return (
     <div
-      className="relative w-full lg:w-[381px] h-[420px] lg:h-[480px] rounded-none overflow-hidden cursor-pointer group"
+      className="relative w-full xl:w-[381px] h-[420px] xl:h-[562px] rounded-none overflow-hidden cursor-pointer group"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
@@ -192,11 +192,11 @@ export function TestimonialSection() {
           {/* Opening Quote is moved inside the title container */}
 
           {/* Section Title: KATA MEREKA */}
-          <div className="relative mb-10 md:mb-16 z-10 flex flex-col items-start">
-            <h2 className="text-[40px] md:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase break-words relative z-10">
+          <div className="relative mb-10 xl:mb-[64px] z-10 flex flex-col items-start">
+            <h2 className="text-[40px] md:text-[80px] xl:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase break-words relative z-10">
               KATA
             </h2>
-            <div className="flex flex-row items-start relative ml-[20%] md:ml-[211px]">
+            <div className="flex flex-row items-start relative ml-[20%] xl:ml-[211px]">
               <div
                 className="absolute -left-[50px] md:-left-[110px] -top-[10px] md:-top-[30px] text-[100px] md:text-[180px] font-serif leading-none select-none pointer-events-none z-0"
                 style={{ color: "#5C4438" }}
@@ -204,14 +204,14 @@ export function TestimonialSection() {
               >
                 &rdquo;
               </div>
-              <h2 className="text-[40px] md:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase break-words relative z-10">
+              <h2 className="text-[40px] md:text-[80px] xl:text-[106px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase break-words relative z-10">
                 MEREKA
               </h2>
             </div>
           </div>
 
           {/* Testimonial Cards */}
-          <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-[4px] lg:justify-center z-10 relative items-center">
+          <div className="flex flex-col xl:flex-row gap-[20px] xl:gap-0 xl:justify-center z-10 relative items-center">
             {testimonials.map((item, index) => (
               <TestimonialCard
                 key={index}
