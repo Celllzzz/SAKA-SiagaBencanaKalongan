@@ -14,7 +14,7 @@ export function PetaSection() {
   return (
     <section className="w-full bg-[#FAE3C7] text-[#3B2215] pt-[180px] pb-[50px] px-[20px] md:px-[50px] min-h-screen flex flex-col" data-theme="light" data-bg="#FAE3C7">
       <div className="w-full max-w-[1340px] mx-auto flex flex-col gap-[50px]">
-        
+
         {/* Header */}
         <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-[30px] xl:gap-[50px] animate-fade-in-up">
           <div className="flex flex-col">
@@ -36,11 +36,11 @@ export function PetaSection() {
             <Link href={`/peta/${map.slug}`} key={map.id} className="group flex flex-col gap-[16px] w-full cursor-pointer transition-transform duration-300 hover:-translate-y-2">
               {/* Image Container with 645/415 aspect ratio */}
               <div className="relative w-full aspect-[645/415] overflow-hidden bg-black/10">
-                <Image 
-                  src={`/assets/peta/${map.image}`} 
-                  alt={`Peta ${map.name}`} 
-                  fill 
-                  className="object-cover transition-transform duration-500 group-hover:scale-105" 
+                <Image
+                  src={`/assets/peta/${map.image}`}
+                  alt={`Peta ${map.name}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 1280px) 100vw, 645px"
                   priority
                 />
