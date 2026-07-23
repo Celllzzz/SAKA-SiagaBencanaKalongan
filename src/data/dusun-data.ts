@@ -31,26 +31,20 @@ export const dusunDataList: DusunData[] = [
         description: "Dusun Dampu memiliki kerawanan longsor rendah hingga tinggi. Zona berisiko tinggi berada di bagian utara Dusun Dampu, ditandai dengan tebing curam dan riwayat longsor. Meski sudah terdapat upaya mitigasi seperti pembuatan jenjang tebing, pengaturan jarak permukiman, dan pemasangan Early Warning System (EWS), kewaspadaan di Dusun Dampu tetap harus ditingkatkan.",
         file: "/download/PetaAncaman/PetaAncaman_Dampu.pdf"
       },
-      {
-        id: "03",
-        title: "PETA RISIKO",
-        definition: "Peta yang menunjukkan tingkat risiko bencana dengan menggabungkan faktor ancaman, kerentanan, dan kapasitas.",
-        description: "[Deskripsi analisis risiko Dusun Dampu akan diisi di sini]",
-        file: "#"
-      },
+
       {
         id: "04",
         title: "PETA PELAPUKAN",
         definition: "Peta pelapukan menunjukkan tingkat perubahan batuan akibat faktor lingkungan (air, udara, iklim). Semakin tinggi tingkat pelapukan, kekuatan batuan makin menurun dan rentan longsor, khususnya di lereng curam. Peta yang merujuk pada klasifikasi GSEGWP (1972) ini berfungsi sebagai informasi awal untuk memetakan kawasan rawan gerakan tanah.",
-        description: "Dusun Dampu didominasi oleh tingkat pelapukan Sangat Lapuk (W IV) pada batupasir tufaan dan breksi andesit. Penurunan kekuatan batuan tersebut membuat Dusun Dampu memiliki tingkat kerawanan longsor sedang hingga tinggi, terutama di area lereng curam.",
+        description: "Tingkat pelapukan batuan di Dusun Dampu didominasi oleh kondisi Sangat Lapuk (W IV), terutama pada batupasir tufaan dan breksi andesit. Pada tahap pelapukan tersebut, kekuatan batuan menurun drastis sehingga area lereng curam di Dusun Dampu memiliki tingkat kerawanan longsor sedang hingga tinggi.",
         file: "/download/PetaPelapukan/PetaPelapukan_Dampu.pdf"
       },
       {
         id: "05",
         title: "PETA EVAKUASI",
-        definition: "Peta yang menunjukkan arah atau jalur aman untuk menyelamatkan diri menuju titik kumpul terdekat.",
-        description: "[Deskripsi jalur evakuasi Dusun Dampu akan diisi di sini]",
-        file: "#"
+        definition: "Peta Jalur Evakuasi menyajikan rute rekomendasi bagi masyarakat menuju lokasi aman saat terjadi bencana. Peta evakuasi berfungsi sebagai upaya mitigasi agar warga mengenali rute, titik kumpul, dan fasilitas pendukung. Keberadaan peta jalur evakuasi diharapkan mempercepat proses evakuasi yang terarah dan terkoordinasi untuk meminimalkan risiko akibat bencana longsor.",
+        description: "Peta Jalur Evakuasi Dusun Dampu menjadi panduan bagi warga RW 01 (RT 01–04) saat menghadapi longsor. Rute di Dusun Dampu dirancang mengikuti akses jalan menuju titik kumpul agar proses evakuasi berlangsung cepat dan terarah. Peta Dusun Dampu memuat lokasi titik longsor, titik kumpul, palang evakuasi, Early Warning System (EWS), rumah tokoh masyarakat (RT, RW, Kepala Dusun), serta fasilitas umum seperti masjid, gereja, sanggar budaya, dan makam guna mendukung kelancaran evakuasi.",
+        file: "/download/PetaEvakuasi/PetaEvakuasi_Dampu.pdf"
       },
       {
         id: "06",
@@ -62,16 +56,16 @@ export const dusunDataList: DusunData[] = [
       {
         id: "07",
         title: "PETA CURAH HUJAN",
-        definition: "Peta yang menunjukkan tingkat curah hujan tahunan di area tersebut.",
-        description: "[Deskripsi analisis curah hujan Dusun Dampu akan diisi di sini]",
-        file: "#"
+        definition: "Peta curah hujan memetakan persebaran jumlah hujan di suatu wilayah. Pada kajian ini, peta disusun menggunakan data Pos Hujan Ngobo, Ungaran, dan Banyumeneng (BMKG Jawa Tengah) untuk periode Januari–Juni 2026. Selain untuk pertanian dan pengelolaan air, informasi curah hujan sangat krusial dalam mitigasi bencana. Hujan lebat yang terus-menerus memicu kejenuhan air pada tanah, yang melemahkan kestabilan lereng dan meningkatkan risiko longsor.",
+        description: "Dusun Dampu memiliki curah hujan rata-rata 324–332 mm/bulan (kategori sedang) yang tersebar merata, dengan sedikit peningkatan di bagian selatan. Dibandingkan dusun lain, curah hujan di Dusun Dampu adalah yang paling rendah dengan catatan longsor yang sangat minim. Potensi longsor akibat curah hujan di Dusun Dampu tergolong rendah, meskipun faktor kemiringan lereng dan jenis tanah tetap harus diperhatikan.",
+        file: "/download/PetaCurahHujan/CurahHujan_Dampu.pdf"
       },
       {
         id: "08",
         title: "PETA KAPASITAS",
-        definition: "Peta yang menunjukkan kapasitas daya tampung dan dukungan mitigasi.",
-        description: "[Deskripsi analisis kapasitas Dusun Dampu akan diisi di sini]",
-        file: "#"
+        definition: "Peta Kapasitas memetakan kemampuan sumber daya manusia, infrastruktur, kelembagaan, dan lingkungan dalam mencegah atau menanggulangi ancaman bencana. Secara konsep, semakin besar kapasitas suatu daerah, semakin kecil risiko bencananya. Peta kapasitas bertujuan mendata seluruh potensi yang tersedia, mulai dari tenaga masyarakat, fasilitas umum, hingga vegetasi penahan longsor.",
+        description: "Dusun Dampu memiliki 923 jiwa penduduk yang dipimpin oleh satu Kepala Dusun dan empat Ketua RT. Mayoritas warga Dusun Dampu berprofesi sebagai karyawan swasta, buruh harian, dan petani yang potensial untuk kerja bakti maupun evakuasi mandiri. Kapasitas pendukung di Dusun Dampu mencakup 3 PNS dan 1 TNI untuk koordinasi pemerintahan dan keamanan. Fasilitas umum seperti masjid, musala, dan sekolah di zona longsor rendah siap digunakan sebagai titik evakuasi bagi warga Dusun Dampu.",
+        file: "/download/PetaKapasitas/PetaKapasitas_Dampu_compressed.pdf"
       },
       {
         id: "09",
@@ -79,6 +73,13 @@ export const dusunDataList: DusunData[] = [
         definition: "Peta Kerentanan memetakan persebaran kelompok rentan (balita, ibu hamil, lansia) yang diintegrasikan dengan tingkat ancaman longsor di Desa Kalongan. Peta kerentanan berfungsi untuk mengidentifikasi lokasi prioritas mitigasi, dasar penyusunan jalur evakuasi, dan perencanaan kesiapsiagaan masyarakat. Titik kelompok rentan pada peta merupakan sampel pendataan lapangan dan data kader sebagai informasi pendukung mitigasi, bukan representasi keseluruhan populasi di Desa Kalongan.",
         description: "Dusun Dampu didominasi zona kerawanan sedang, dengan ancaman tinggi di bagian utara dan timur. Sebaran kelompok rentan di Dusun Dampu terpusat di kawasan permukiman yang sebagian berdekatan dengan area berpotensi longsor. Tata letak tersebut menuntut peningkatan kesiapsiagaan masyarakat dan penentuan prioritas evakuasi kelompok rentan di Dusun Dampu.",
         file: "/download/PetaKerentanan/PetaKerentanan_Dampu.pdf"
+      },
+      {
+        id: "03",
+        title: "PETA RISIKO",
+        definition: "Peta risiko menunjukkan tingkat bahaya longsor di suatu wilayah berdasarkan tiga faktor: potensi ancaman, kerentanan warga, dan kapasitas kesiapsiagaan masyarakat. Peta risiko berfungsi sebagai panduan bagi warga dan pemerintah desa untuk menentukan titik prioritas kewaspadaan, target penyelamatan kelompok rentan, dan arah evakuasi agar masyarakat lebih siap saat menghadapi bencana.",
+        description: "Wilayah utara dan timur laut Dusun Dampu (sekitar RT 3) termasuk zona risiko longsor tinggi. Kawasan RT 3 dan RT 4 di Dusun Dampu membutuhkan kewaspadaan ekstra karena lokasinya berbatasan dengan zona bahaya dan dihuni banyak kelompok rentan. Meskipun alat peringatan dini dan jalur evakuasi sudah terpasang, kesiapsiagaan warga Dusun Dampu perlu terus ditingkatkan.",
+        file: "/download/PetaRisiko/PetaRisiko_Dampu_compressed.pdf"
       }
     ]
   },
@@ -108,6 +109,13 @@ export const dusunDataList: DusunData[] = [
         file: "/download/PetaPelapukan/PetaPelapukan_Bandungan.pdf"
       },
       {
+        id: "05",
+        title: "PETA EVAKUASI",
+        definition: "Peta Jalur Evakuasi menyajikan rute rekomendasi bagi masyarakat menuju lokasi aman saat terjadi bencana. Peta evakuasi berfungsi sebagai upaya mitigasi agar warga mengenali rute, titik kumpul, dan fasilitas pendukung. Keberadaan peta jalur evakuasi diharapkan mempercepat proses evakuasi yang terarah dan terkoordinasi untuk meminimalkan risiko akibat bencana longsor.",
+        description: "Peta Jalur Evakuasi Dusun Bandungan memandu warga RW 03 (RT 02–06) menuju lokasi aman melalui akses jalan yang terstruktur. Penempatan titik kumpul di Dusun Bandungan disesuaikan dengan keterjangkauan dari seluruh area RT demi kelancaran dan ketertiban evakuasi. Peta Dusun Bandungan juga memuat posisi titik longsor, EWS, masjid, serta rumah Ketua RW dan Kepala Dusun yang berfungsi sebagai pusat informasi dan penyebaran instruksi darurat bagi warga Dusun Bandungan.",
+        file: "/download/PetaEvakuasi/PetaEvakuasi_Bandungan.pdf"
+      },
+      {
         id: "06",
         title: "PETA ALIRAN",
         definition: "Peta aliran menyajikan informasi arah, sebaran, dan hubungan antar sungai di suatu wilayah. Peta aliran membantu warga memahami sistem drainase, topografi, dan kaitan sungai dengan kondisi geologi. Terkait kebencanaan, peta aliran sangat berguna untuk mengidentifikasi daerah rawan erosi, genangan, dan longsor dengan melihat pengaruh morfologi terhadap pergerakan air hujan.",
@@ -115,11 +123,32 @@ export const dusunDataList: DusunData[] = [
         file: "#"
       },
       {
+        id: "07",
+        title: "PETA CURAH HUJAN",
+        definition: "Peta curah hujan memetakan persebaran jumlah hujan di suatu wilayah. Pada kajian ini, peta disusun menggunakan data Pos Hujan Ngobo, Ungaran, dan Banyumeneng (BMKG Jawa Tengah) untuk periode Januari–Juni 2026. Selain untuk pertanian dan pengelolaan air, informasi curah hujan sangat krusial dalam mitigasi bencana. Hujan lebat yang terus-menerus memicu kejenuhan air pada tanah, yang melemahkan kestabilan lereng dan meningkatkan risiko longsor.",
+        description: "Dusun Bandungan mencatat curah hujan 324–357 mm/bulan (kategori sedang hingga tinggi), dengan puncaknya berada di bagian tengah hingga selatan Dusun Bandungan. Terdapat titik riwayat longsor di area Dusun Bandungan yang bercurah hujan tinggi dan bertopografi curam, yang membuktikan besarnya pengaruh hujan sebagai pemicu pergerakan tanah. Dusun Bandungan menuntut prioritas pencegahan dan mitigasi longsor ekstra saat musim penghujan.",
+        file: "/download/PetaCurahHujan/CurahHujan_Bandungan.pdf"
+      },
+      {
         id: "09",
         title: "PETA KERENTANAN",
         definition: "Peta Kerentanan memetakan persebaran kelompok rentan (balita, ibu hamil, lansia) yang diintegrasikan dengan tingkat ancaman longsor di Desa Kalongan. Peta kerentanan berfungsi untuk mengidentifikasi lokasi prioritas mitigasi, dasar penyusunan jalur evakuasi, dan perencanaan kesiapsiagaan masyarakat. Titik kelompok rentan pada peta merupakan sampel pendataan lapangan dan data kader sebagai informasi pendukung mitigasi, bukan representasi keseluruhan populasi di Desa Kalongan.",
         description: "Permukiman Dusun Bandungan berada pada zona kerawanan rendah hingga sedang, sementara ancaman tinggi terdapat di area lereng. Kelompok rentan di Dusun Bandungan tersebar mengikuti pola permukiman. Sebaran tersebut mengharuskan penyusunan jalur evakuasi yang efektif untuk melindungi kelompok rentan di Dusun Bandungan saat terjadi longsor.",
         file: "/download/PetaKerentanan/PetaKerentanan_Bandungan.pdf"
+      },
+      {
+        id: "08",
+        title: "PETA KAPASITAS",
+        definition: "Peta Kapasitas memetakan kemampuan sumber daya manusia, infrastruktur, kelembagaan, dan lingkungan dalam mencegah atau menanggulangi ancaman bencana. Secara konsep, semakin besar kapasitas suatu daerah, semakin kecil risiko bencananya. Peta kapasitas bertujuan mendata seluruh potensi yang tersedia, mulai dari tenaga masyarakat, fasilitas umum, hingga vegetasi penahan longsor.",
+        description: "Dusun Bandungan dihuni oleh 1.155 jiwa yang dipimpin satu Kepala Dusun, satu Ketua RW, dan enam Ketua RT. Keberagaman profesi warga Dusun Bandungan menjadi potensi besar untuk gotong royong dan pembangunan sarana mitigasi. Kapasitas sumber daya manusia di Dusun Bandungan sangat memadai dengan dukungan 12 PNS, 3 TNI, 2 Polri, 6 guru, dan 2 bidan. Selain itu, masjid dan musala yang tersebar merata di Dusun Bandungan siap difungsikan sebagai titik kumpul evakuasi.",
+        file: "/download/PetaKapasitas/PetaKapasitas_Bandungan_compressed.pdf"
+      },
+      {
+        id: "03",
+        title: "PETA RISIKO",
+        definition: "Peta risiko menunjukkan tingkat bahaya longsor di suatu wilayah berdasarkan tiga faktor: potensi ancaman, kerentanan warga, dan kapasitas kesiapsiagaan masyarakat. Peta risiko berfungsi sebagai panduan bagi warga dan pemerintah desa untuk menentukan titik prioritas kewaspadaan, target penyelamatan kelompok rentan, dan arah evakuasi agar masyarakat lebih siap saat menghadapi bencana.",
+        description: "Terdapat dua area risiko longsor tinggi di Dusun Bandungan, yakni di bagian utara (sekitar Jl. Arjuna) serta membentang dari tengah hingga selatan Dusun Bandungan. Area RT 4 di Dusun Bandungan menjadi titik paling rawan karena berdekatan dengan zona bahaya dan banyak dihuni kelompok rentan. Walaupun alat peringatan dini dan jalur evakuasi sudah beroperasi di RT 4, kesiapsiagaan warga Dusun Bandungan tidak boleh menurun.",
+        file: "/download/PetaRisiko/PetaRisiko_Bandungan_compressed.pdf"
       }
     ]
   },
@@ -149,6 +178,13 @@ export const dusunDataList: DusunData[] = [
         file: "/download/PetaPelapukan/PetaPelapukan_Glepung.pdf"
       },
       {
+        id: "05",
+        title: "PETA EVAKUASI",
+        definition: "Peta Jalur Evakuasi menyajikan rute rekomendasi bagi masyarakat menuju lokasi aman saat terjadi bencana. Peta evakuasi berfungsi sebagai upaya mitigasi agar warga mengenali rute, titik kumpul, dan fasilitas pendukung. Keberadaan peta jalur evakuasi diharapkan mempercepat proses evakuasi yang terarah dan terkoordinasi untuk meminimalkan risiko akibat bencana longsor.",
+        description: "Peta Jalur Evakuasi Dusun Glepung menjadi panduan mitigasi bagi warga RW 09, 12, 18, dan 20. Rute evakuasi di Dusun Glepung mengikuti jaringan jalan utama yang menghubungkan permukiman dengan titik kumpul yang strategis dan mudah dijangkau dari setiap RW. Peta Dusun Glepung menampilkan titik longsor, titik kumpul, rumah tokoh masyarakat, serta fasilitas penting seperti Puskesmas Kalongan, Balai Desa, Kantor Desa, Alun-Alun, KUA, masjid, musala, dan GKJ Glepung sebagai pusat koordinasi bencana.",
+        file: "/download/PetaEvakuasi/PetaEvakuasi_Glepung.pdf"
+      },
+      {
         id: "06",
         title: "PETA ALIRAN",
         definition: "Peta aliran menyajikan informasi arah, sebaran, dan hubungan antar sungai di suatu wilayah. Peta aliran membantu warga memahami sistem drainase, topografi, dan kaitan sungai dengan kondisi geologi. Terkait kebencanaan, peta aliran sangat berguna untuk mengidentifikasi daerah rawan erosi, genangan, dan longsor dengan melihat pengaruh morfologi terhadap pergerakan air hujan.",
@@ -156,11 +192,32 @@ export const dusunDataList: DusunData[] = [
         file: "#"
       },
       {
+        id: "07",
+        title: "PETA CURAH HUJAN",
+        definition: "Peta curah hujan memetakan persebaran jumlah hujan di suatu wilayah. Pada kajian ini, peta disusun menggunakan data Pos Hujan Ngobo, Ungaran, dan Banyumeneng (BMKG Jawa Tengah) untuk periode Januari–Juni 2026. Selain untuk pertanian dan pengelolaan air, informasi curah hujan sangat krusial dalam mitigasi bencana. Hujan lebat yang terus-menerus memicu kejenuhan air pada tanah, yang melemahkan kestabilan lereng dan meningkatkan risiko longsor.",
+        description: "Curah hujan rata-rata di Dusun Glepung berkisar 324–357 mm/bulan (kategori sedang hingga tinggi). Intensitas hujan tertinggi di Dusun Glepung terkonsentrasi pada bagian timur dan tenggara, sedangkan area barat memiliki curah hujan lebih rendah. Meskipun belum ada riwayat longsor di Dusun Glepung, area lereng curam yang diguyur curah hujan tinggi tetap menuntut kewaspadaan penuh.",
+        file: "/download/PetaCurahHujan/CurahHujan_Glepung.pdf"
+      },
+      {
         id: "09",
         title: "PETA KERENTANAN",
         definition: "Peta Kerentanan memetakan persebaran kelompok rentan (balita, ibu hamil, lansia) yang diintegrasikan dengan tingkat ancaman longsor di Desa Kalongan. Peta kerentanan berfungsi untuk mengidentifikasi lokasi prioritas mitigasi, dasar penyusunan jalur evakuasi, dan perencanaan kesiapsiagaan masyarakat. Titik kelompok rentan pada peta merupakan sampel pendataan lapangan dan data kader sebagai informasi pendukung mitigasi, bukan representasi keseluruhan populasi di Desa Kalongan.",
         description: "Persebaran kelompok rentan di Dusun Glepung cukup luas, dengan beberapa titik berlokasi di sekitar zona kerawanan sedang hingga tinggi. Posisi kelompok rentan di Dusun Glepung menuntut koordinasi evakuasi yang sangat baik agar bantuan dan penyelamatan saat bencana dapat dilakukan dengan cepat.",
         file: "/download/PetaKerentanan/PetaKerentanan_Glepung.pdf"
+      },
+      {
+        id: "08",
+        title: "PETA KAPASITAS",
+        definition: "Peta Kapasitas memetakan kemampuan sumber daya manusia, infrastruktur, kelembagaan, dan lingkungan dalam mencegah atau menanggulangi ancaman bencana. Secara konsep, semakin besar kapasitas suatu daerah, semakin kecil risiko bencananya. Peta kapasitas bertujuan mendata seluruh potensi yang tersedia, mulai dari tenaga masyarakat, fasilitas umum, hingga vegetasi penahan longsor.",
+        description: "Dusun Glepung memiliki 1.108 penduduk di bawah pimpinan satu Kepala Dusun dan empat Ketua RW. Tenaga masyarakat Dusun Glepung sangat potensial untuk penanganan awal bencana. Kapasitas keahlian di Dusun Glepung ditopang oleh 2 PNS, 2 TNI, 1 Polri, 1 guru, 1 bidan, dan 2 peneliti untuk pendampingan teknis kebencanaan. Fasilitas seperti masjid, gereja, sekolah, posyandu, dan puskesmas di Dusun Glepung siap dijadikan pusat informasi, evakuasi, dan pelayanan kesehatan darurat.",
+        file: "/download/PetaKapasitas/PetaKapasitas_Glepung_compressed.pdf"
+      },
+      {
+        id: "03",
+        title: "PETA RISIKO",
+        definition: "Peta risiko menunjukkan tingkat bahaya longsor di suatu wilayah berdasarkan tiga faktor: potensi ancaman, kerentanan warga, dan kapasitas kesiapsiagaan masyarakat. Peta risiko berfungsi sebagai panduan bagi warga dan pemerintah desa untuk menentukan titik prioritas kewaspadaan, target penyelamatan kelompok rentan, dan arah evakuasi agar masyarakat lebih siap saat menghadapi bencana.",
+        description: "Mayoritas permukiman di Dusun Glepung (RW 9, RW 12, RW 18) tergolong aman dari risiko longsor. Namun, kawasan RW 20 di barat laut Dusun Glepung berstatus zona risiko tinggi dan banyak dihuni oleh kelompok rentan. Meski fasilitas evakuasi, kesehatan, dan tempat ibadah sudah memadai di RW 20, warga Dusun Glepung di titik tersebut harus terus menjaga kewaspadaan.",
+        file: "/download/PetaRisiko/PetaRisiko_Glepung_compressed.pdf"
       }
     ]
   },
@@ -190,6 +247,13 @@ export const dusunDataList: DusunData[] = [
         file: "/download/PetaPelapukan/PetaPelapukan_TompoGunung.pdf"
       },
       {
+        id: "05",
+        title: "PETA EVAKUASI",
+        definition: "Peta Jalur Evakuasi menyajikan rute rekomendasi bagi masyarakat menuju lokasi aman saat terjadi bencana. Peta evakuasi berfungsi sebagai upaya mitigasi agar warga mengenali rute, titik kumpul, dan fasilitas pendukung. Keberadaan peta jalur evakuasi diharapkan mempercepat proses evakuasi yang terarah dan terkoordinasi untuk meminimalkan risiko akibat bencana longsor.",
+        description: "Peta Jalur Evakuasi Dusun Tompogunung dirancang untuk warga RW 10 (RT 01–06) dengan memanfaatkan akses jalan terdekat menuju lokasi aman. Rute evakuasi di Dusun Tompogunung dipastikan mudah dikenali dan dijangkau oleh seluruh warga. Peta Dusun Tompogunung turut menampilkan titik longsor, titik kumpul, rumah tokoh masyarakat, serta fasilitas seperti masjid, musala, pondok pesantren, posyandu, dan Kayangan Tebing Al Fatah yang dapat dimanfaatkan warga Dusun Tompogunung sebagai posko orientasi darurat.",
+        file: "/download/PetaEvakuasi/PetaEvakuasi_TompoGunung.pdf"
+      },
+      {
         id: "06",
         title: "PETA ALIRAN",
         definition: "Peta aliran menyajikan informasi arah, sebaran, dan hubungan antar sungai di suatu wilayah. Peta aliran membantu warga memahami sistem drainase, topografi, dan kaitan sungai dengan kondisi geologi. Terkait kebencanaan, peta aliran sangat berguna untuk mengidentifikasi daerah rawan erosi, genangan, dan longsor dengan melihat pengaruh morfologi terhadap pergerakan air hujan.",
@@ -197,16 +261,44 @@ export const dusunDataList: DusunData[] = [
         file: "#"
       },
       {
+        id: "07",
+        title: "PETA CURAH HUJAN",
+        definition: "Peta curah hujan memetakan persebaran jumlah hujan di suatu wilayah. Pada kajian ini, peta disusun menggunakan data Pos Hujan Ngobo, Ungaran, dan Banyumeneng (BMKG Jawa Tengah) untuk periode Januari–Juni 2026. Selain untuk pertanian dan pengelolaan air, informasi curah hujan sangat krusial dalam mitigasi bencana. Hujan lebat yang terus-menerus memicu kejenuhan air pada tanah, yang melemahkan kestabilan lereng dan meningkatkan risiko longsor.",
+        description: "Dusun Tompo Gunung memiliki curah hujan 324–357 mm/bulan (kategori sedang hingga tinggi), dengan intensitas tertinggi di barat laut dan terendah di tenggara. Mengingat Dusun Tompo Gunung didominasi oleh topografi perbukitan berlereng curam, tingginya curah hujan sangat berisiko memicu erosi dan longsor. Hal tersebut mengharuskan Dusun Tompo Gunung mendapat pengawasan khusus dari masyarakat selama musim hujan.",
+        file: "/download/PetaCurahHujan/CurahHujan_TompoGunung.pdf"
+      },
+      {
         id: "09",
         title: "PETA KERENTANAN",
         definition: "Peta Kerentanan memetakan persebaran kelompok rentan (balita, ibu hamil, lansia) yang diintegrasikan dengan tingkat ancaman longsor di Desa Kalongan. Peta kerentanan berfungsi untuk mengidentifikasi lokasi prioritas mitigasi, dasar penyusunan jalur evakuasi, dan perencanaan kesiapsiagaan masyarakat. Titik kelompok rentan pada peta merupakan sampel pendataan lapangan dan data kader sebagai informasi pendukung mitigasi, bukan representasi keseluruhan populasi di Desa Kalongan.",
         description: "Dusun Tompo Gunung didominasi zona kerawanan sedang, dengan area ancaman tinggi terpusat di bagian timur. Sebaran kelompok rentan di Dusun Tompo Gunung mengikuti kawasan permukiman warga. Lokasi permukiman tersebut mengharuskan Dusun Tompo Gunung menyediakan jalur evakuasi yang mudah diakses untuk menjamin keselamatan balita, ibu hamil, dan lansia saat longsor terjadi.",
         file: "/download/PetaKerentanan/PetaKerentanan_TompoGunung.pdf"
+      },
+      {
+        id: "08",
+        title: "PETA KAPASITAS",
+        definition: "Peta Kapasitas memetakan kemampuan sumber daya manusia, infrastruktur, kelembagaan, dan lingkungan dalam mencegah atau menanggulangi ancaman bencana. Secara konsep, semakin besar kapasitas suatu daerah, semakin kecil risiko bencananya. Peta kapasitas bertujuan mendata seluruh potensi yang tersedia, mulai dari tenaga masyarakat, fasilitas umum, hingga vegetasi penahan longsor.",
+        description: "Dusun Tompo Gunung memiliki populasi terbesar, yakni 1.229 jiwa, di bawah koordinasi satu Kepala Dusun, satu Ketua RW, dan enam Ketua RT. Besarnya jumlah penduduk Dusun Tompo Gunung menjadi modal tenaga kerja utama untuk mitigasi bencana berbasis masyarakat. Kapasitas pendukung di Dusun Tompo Gunung diperkuat oleh 6 PNS, 1 TNI, 2 Polri, 9 guru, 1 pengacara, dan 1 peneliti. Infrastruktur seperti masjid, pondok pesantren, dan posyandu di Dusun Tompo Gunung siap difungsikan untuk evakuasi dan kesehatan darurat.",
+        file: "/download/PetaKapasitas/PetaKapasitas_TompoGunung_compressed.pdf"
+      },
+      {
+        id: "03",
+        title: "PETA RISIKO",
+        definition: "Peta risiko menunjukkan tingkat bahaya longsor di suatu wilayah berdasarkan tiga faktor: potensi ancaman, kerentanan warga, dan kapasitas kesiapsiagaan masyarakat. Peta risiko berfungsi sebagai panduan bagi warga dan pemerintah desa untuk menentukan titik prioritas kewaspadaan, target penyelamatan kelompok rentan, dan arah evakuasi agar masyarakat lebih siap saat menghadapi bencana.",
+        description: "Wilayah timur Dusun Tompo Gunung, termasuk RT 6 dan area sekitar Pondok Pesantren Nurul Azhar, berada di zona risiko longsor tinggi, sementara RT 1 hingga RT 5 tergolong aman. Titik paling rawan di Dusun Tompo Gunung adalah RT 6 karena bersinggungan langsung dengan zona bahaya. Saat ini, jalur evakuasi di Dusun Tompo Gunung baru tersedia di RT 6, sehingga infrastruktur evakuasi dan sosialisasi kebencanaan perlu segera diperluas ke area RT 1 hingga RT 5.",
+        file: "/download/PetaRisiko/PetaRisiko_TompoGunung_compressed.pdf"
       }
     ]
   }
 ];
 
 export function getDusunData(slug: string) {
-  return dusunDataList.find(d => d.slug === slug);
+  const data = dusunDataList.find(d => d.slug === slug);
+  if (data) {
+    return {
+      ...data,
+      maps: [...data.maps].sort((a, b) => a.id.localeCompare(b.id))
+    };
+  }
+  return data;
 }
