@@ -3,7 +3,7 @@ import Image from "next/image";
 export function AboutContentSection() {
   return (
     <section className="w-full bg-[#FAE3C7] text-[#3B2215] px-[50px] py-[50px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
-      <div className="w-full flex flex-col relative">
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col relative">
         
         {/* Sub-bagian 1: Tujuan SAKA */}
         <div className="relative flex flex-col w-full mb-[50px] xl:mb-[80px]">
@@ -55,7 +55,7 @@ export function AboutContentSection() {
             <p className="font-[Inter] font-medium text-[16px] md:text-[20px] xl:text-[30px] leading-[1.4] xl:leading-[1.35] tracking-[-0.045em] xl:w-[761px]">
               Desa Kalongan memiliki luas sekitar 868,3 hektare dengan ketinggian 339 mdpl. Kondisi wilayahnya yang berbukit dan berlereng membuat desa ini rawan bencana, terutama tanah longsor, banjir, dan cuaca ekstrem.
             </p>
-            <p className="font-[Inter] font-medium text-[16px] md:text-[20px] xl:text-[30px] leading-[1.4] xl:leading-[1.35] tracking-[-0.045em] xl:w-[670px] xl:self-end">
+            <p className="font-[Inter] font-medium text-[16px] md:text-[20px] xl:text-[30px] leading-[1.4] xl:leading-[1.35] tracking-[-0.045em] xl:w-[670px] xl:self-end text-justify">
               Menjawab kondisi tersebut, Tim KKN Tematik Universitas Diponegoro mengembangkan SAKA — media digital untuk edukasi mitigasi dan informasi kebencanaan, guna mewujudkan Desa Kalongan yang lebih tangguh dan siap siaga.
             </p>
           </div>
@@ -76,7 +76,7 @@ export function AboutContentSection() {
           {/* Right Content */}
           <div className="flex flex-col w-full xl:w-[670px] shrink-0">
             <div className="flex flex-col gap-[20px] xl:gap-[30px]">
-              <h3 className="font-[Inter] font-medium text-[20px] md:text-[28px] xl:text-[46px] leading-[1.3] xl:leading-[1.14] tracking-[-0.045em] mt-0">
+              <h3 className="font-[Inter] font-medium text-[20px] md:text-[28px] xl:text-[46px] leading-[1.3] xl:leading-[1.14] tracking-[-0.045em] mt-0 text-justify">
                 Mewujudkan Desa Kalongan yang siaga, mandiri, dan tanggap terhadap bencana longsor.
               </h3>
               
