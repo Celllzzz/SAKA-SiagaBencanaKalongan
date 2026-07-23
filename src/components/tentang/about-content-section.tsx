@@ -80,7 +80,7 @@ export function AboutContentSection() {
                 Mewujudkan Desa Kalongan yang siaga, mandiri, dan tanggap terhadap bencana longsor.
               </h3>
               
-              <ul className="flex flex-col gap-2 font-[Inter] font-medium text-[14px] md:text-[18px] xl:text-[29px] leading-[1.4] xl:leading-[1.25] tracking-[-0.045em] list-disc pl-6 marker:text-[#3B2215]">
+              <ul className="font-[Inter] font-medium text-[14px] md:text-[18px] xl:text-[29px] leading-[1.4] xl:leading-[1.25] tracking-[-0.045em] list-disc pl-[1.2em] marker:text-[#3B2215]">
                 <li>Menyediakan pemetaan wilayah rawan bencana yang mudah dipahami</li>
                 <li>Membekali warga dengan prosedur mitigasi yang jelas dan aplikatif</li>
                 <li>Mendorong kesiapsiagaan mandiri lewat panduan tas siaga bencana</li>
@@ -90,7 +90,7 @@ export function AboutContentSection() {
             </div>
 
             {/* KKN Logo */}
-            <div className="relative w-[200px] xl:w-[294px] h-[85px] xl:h-[125px] mt-[40px] xl:mt-auto self-center">
+            <div className="relative w-[200px] xl:w-[294px] h-[85px] xl:h-[125px] mt-[40px] xl:mt-[50px] self-center">
               <Image
                 src="/logo/logo_kkn.png"
                 alt="Logo KKN Desa Kalongan"
