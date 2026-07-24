@@ -8,7 +8,7 @@ export function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer className="w-full bg-[#FAE3C7] text-[#3B2215] flex flex-col pt-[30px] lg:pt-[50px] pb-[30px] lg:pb-[50px] px-[30px] lg:px-[50px]" data-theme="light" data-bg="#FAE3C7">
+    <footer className="w-full bg-[#FAE3C7] text-[#3B2215] flex flex-col pt-[30px] lg:pt-[50px] pb-[30px] lg:pb-[50px] px-[50px]" data-theme="light" data-bg="#FAE3C7">
       
       {/* Top Section */}
       <div className="flex flex-col xl:flex-row justify-between items-start w-full gap-[50px] xl:gap-0 mb-[40px] xl:mb-[60px]">
@@ -110,13 +110,19 @@ export function Footer() {
         <span className="font-[Inter] font-semibold text-[10px] md:text-[14px] xl:text-[32px] leading-none tracking-[-0.09em] uppercase text-center xl:text-left shrink-0">
           © 2026 kkn-t 119 undip
         </span>
-        {["Email", "Instagram", "Tiktok"].map((item, idx) => (
+        {[
+          { label: "Email", href: "#" },
+          { label: "Instagram", href: "https://www.instagram.com/kknt119.desakalongan?igsh=MTViMG9vZ3RrOWFlbQ==" },
+          { label: "Tiktok", href: "https://www.tiktok.com/@kkn.desakalongan?_r=1&_t=ZS-98HviK0bzse" }
+        ].map((item, idx) => (
           <Link
             key={idx}
-            href="#"
+            href={item.href}
+            target={item.href !== "#" ? "_blank" : undefined}
+            rel={item.href !== "#" ? "noopener noreferrer" : undefined}
             className="font-[Inter] font-semibold text-[10px] md:text-[14px] xl:text-[32px] leading-none tracking-[-0.09em] uppercase underline hover:opacity-70 transition-opacity shrink-0"
           >
-            {item}
+            {item.label}
           </Link>
         ))}
       </div>

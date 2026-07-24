@@ -14,9 +14,10 @@ L.Icon.Default.mergeOptions({
   shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
 });
 
-// Define UTM Zone 48S
+// Define UTM Zone 48S and 49S
 // WKID 32748: WGS 84 / UTM zone 48S
 proj4.defs("EPSG:32748", "+proj=utm +zone=48 +south +datum=WGS84 +units=m +no_defs");
+proj4.defs("EPSG:32749", "+proj=utm +zone=49 +south +datum=WGS84 +units=m +no_defs");
 
 function FitBounds({ coords }: { coords: [number, number][][] }) {
   const map = useMap();
@@ -66,6 +67,7 @@ function RecenterButton({ coords }: { coords: [number, number][][] }) {
 
 export default function MapComponent() {
   const [polygonCoords, setPolygonCoords] = useState<[number, number][][]>([]);
+  const [affectedDusuns, setAffectedDusuns] = useState<{name: string, coords: [number, number][][]}[]>([]);
   const [center, setCenter] = useState<[number, number] | null>(null);
 
   useEffect(() => {
@@ -99,6 +101,35 @@ export default function MapComponent() {
         }
       })
       .catch((error) => console.error("Error loading map data:", error));
+
+    const dusuns = [
+      { folder: "Dampu", prefix: "dampu" },
+      { folder: "Bandungan", prefix: "bandungan" },
+      { folder: "Glepung", prefix: "glepung" },
+      { folder: "TompoGunung", prefix: "tompo gunung" },
+    ];
+
+    dusuns.forEach(d => {
+      const fileName = d.folder === "TompoGunung" ? `kavlling ${d.prefix}.json` : `kavling ${d.prefix}.json`;
+      fetch(`/maps/${d.folder}/${fileName}`)
+        .then(res => res.ok ? res.json() : null)
+        .then(async data => {
+          if (data && data.features && data.features.length > 0) {
+            const wkid = data.spatialReference?.wkid || 32749;
+            const projDef = wkid === 32748 ? "EPSG:32748" : "EPSG:32749";
+            
+            const rings = data.features[0].geometry.rings;
+            const convertedRings: [number, number][][] = rings.map((ring: number[][]) => 
+              ring.map((coord: number[]) => {
+                const [lng, lat] = proj4(projDef, "EPSG:4326", [coord[0], coord[1]]);
+                return [lat, lng] as [number, number];
+              })
+            );
+            setAffectedDusuns(prev => [...prev, { name: d.folder, coords: convertedRings }]);
+          }
+        })
+        .catch(() => {});
+    });
   }, []);
 
   if (!center) {
@@ -143,6 +174,19 @@ export default function MapComponent() {
             dashArray: "5, 5" // Dashed line for boundary
           }} 
         />
+        
+        {affectedDusuns.map((dusun, idx) => (
+          <Polygon 
+            key={idx}
+            positions={dusun.coords}
+            pathOptions={{
+              color: "#ef4444", 
+              fillColor: "rgba(239, 68, 68, 0.15)", 
+              weight: 2,
+              dashArray: "4, 4"
+            }}
+          />
+        ))}
       </MapContainer>
     </>
   );

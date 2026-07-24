@@ -65,7 +65,8 @@ export function Navbar() {
   ];
 
   const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href === "/" && window.location.pathname === "/") {
+    // Prevent default navigation and scroll to top if the link points to the current page (without hash)
+    if (!href.includes('#') && href === window.location.pathname) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -140,6 +141,7 @@ export function Navbar() {
                     <Link
                       key={link.label}
                       href={link.href}
+                      onClick={(e) => handleScrollToTop(e, link.href)}
                       className="text-lg font-bold uppercase tracking-wider hover:text-gray-300 transition-colors w-fit text-white"
                     >
                       {link.label}

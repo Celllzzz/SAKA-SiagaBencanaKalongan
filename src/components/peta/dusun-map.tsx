@@ -166,10 +166,8 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
       }
     };
 
-    safeFetchJson(`/maps/${folderName}/kavling ${filePrefix}.json`).then(async data => {
-      if (!data && dusunSlug === "tompo-gunung") {
-        data = await safeFetchJson(`/maps/${folderName}/kavlling ${filePrefix}.json`);
-      }
+    const fileNameKavling = dusunSlug === "tompo-gunung" ? `kavlling ${filePrefix}.json` : `kavling ${filePrefix}.json`;
+    safeFetchJson(`/maps/${folderName}/${fileNameKavling}`).then(async data => {
       if (data?.features?.length > 0) {
         const wkid = data.spatialReference?.wkid || 32749;
         const converted = convertRings(data.features[0].geometry.rings, wkid);

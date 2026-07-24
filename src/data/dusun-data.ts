@@ -51,7 +51,7 @@ export const dusunDataList: DusunData[] = [
         title: "PETA ALIRAN",
         definition: "Peta aliran menyajikan informasi arah, sebaran, dan hubungan antar sungai di suatu wilayah. Peta aliran membantu warga memahami sistem drainase, topografi, dan kaitan sungai dengan kondisi geologi. Terkait kebencanaan, peta aliran sangat berguna untuk mengidentifikasi daerah rawan erosi, genangan, dan longsor dengan melihat pengaruh morfologi terhadap pergerakan air hujan.",
         description: "Dusun Dampu memiliki pola aliran dendritik dengan satu sungai utama dan beberapa anak sungai. Pola tersebut menunjukkan aliran lebih dipengaruhi topografi daripada struktur geologi. Kerapatan aliran di Dusun Dampu tergolong rendah. Sebagian aliran berada di lereng curam, yang berpotensi mempercepat erosi dan mengganggu kestabilan lereng, terutama saat curah hujan tinggi.",
-        file: "#"
+        file: "/download/PetaAliran/PetaAliran_Dampu.pdf"
       },
       {
         id: "07",
@@ -120,7 +120,7 @@ export const dusunDataList: DusunData[] = [
         title: "PETA ALIRAN",
         definition: "Peta aliran menyajikan informasi arah, sebaran, dan hubungan antar sungai di suatu wilayah. Peta aliran membantu warga memahami sistem drainase, topografi, dan kaitan sungai dengan kondisi geologi. Terkait kebencanaan, peta aliran sangat berguna untuk mengidentifikasi daerah rawan erosi, genangan, dan longsor dengan melihat pengaruh morfologi terhadap pergerakan air hujan.",
         description: "Dusun Bandungan memiliki pola aliran dendritik yang berkembang baik dengan sebaran sungai yang merata akibat pengaruh topografi. Pada area Dusun Bandungan dengan kontur rapat, aliran air akan mengalir lebih deras. Kondisi tersebut dapat mengganggu kestabilan lereng dan berpotensi mempercepat terjadinya erosi.",
-        file: "#"
+        file: "/download/PetaAliran/PetaAliran_Bandungan.pdf"
       },
       {
         id: "07",
@@ -189,7 +189,7 @@ export const dusunDataList: DusunData[] = [
         title: "PETA ALIRAN",
         definition: "Peta aliran menyajikan informasi arah, sebaran, dan hubungan antar sungai di suatu wilayah. Peta aliran membantu warga memahami sistem drainase, topografi, dan kaitan sungai dengan kondisi geologi. Terkait kebencanaan, peta aliran sangat berguna untuk mengidentifikasi daerah rawan erosi, genangan, dan longsor dengan melihat pengaruh morfologi terhadap pergerakan air hujan.",
         description: "Dusun Glepung memiliki pola aliran dendritik dengan beberapa anak sungai yang berpusat di bagian timur. Alirannya murni mengikuti kemiringan lereng tanpa pengaruh struktur geologi yang dominan. Kerapatan aliran di bagian timur Dusun Glepung jauh lebih tinggi dibandingkan bagian barat, sehingga aliran permukaan terkonsentrasi di timur dan meningkatkan potensi erosi.",
-        file: "#"
+        file: "/download/PetaAliran/PetaAliran_Glepung.pdf"
       },
       {
         id: "07",
@@ -258,7 +258,7 @@ export const dusunDataList: DusunData[] = [
         title: "PETA ALIRAN",
         definition: "Peta aliran menyajikan informasi arah, sebaran, dan hubungan antar sungai di suatu wilayah. Peta aliran membantu warga memahami sistem drainase, topografi, dan kaitan sungai dengan kondisi geologi. Terkait kebencanaan, peta aliran sangat berguna untuk mengidentifikasi daerah rawan erosi, genangan, dan longsor dengan melihat pengaruh morfologi terhadap pergerakan air hujan.",
         description: "Pola aliran di Dusun Tompogunung juga bersifat dendritik dengan sungai utama di pinggir wilayah. Aliran sungai mengikuti bentuk kontur sehingga sangat dipengaruhi morfologi. Keberadaan lembah di Dusun Tompogunung menjadi jalur konsentrasi air hujan yang dapat memicu erosi di sekitar sungai, khususnya pada lereng terjal.",
-        file: "#"
+        file: "/download/PetaAliran/PetaAliran_TompoGunung.pdf"
       },
       {
         id: "07",

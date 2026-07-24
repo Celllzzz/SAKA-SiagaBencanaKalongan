@@ -29,7 +29,7 @@ const aboutData = [
     number: "04",
     title: "Tim Kami",
     content: "SAKA lahir dari kolaborasi lintas disiplin ilmu — mahasiswa Teknik Geologi, K3, Teknologi Pangan, Teknik Komputer, dan berbagai jurusan lain yang bersatu dalam program KKN-T UNDIP untuk satu misi: membantu Desa Kalongan lebih siap menghadapi bencana longsor.",
-    image: "/assets/home/timkami2.webp",
+    image: "/assets/home/timkami1.webp",
   }
 ];
 
@@ -70,11 +70,10 @@ export function AboutSection() {
                   {tab.number}
                 </span>
                 <span
-                  className={`text-[20px] md:text-[28px] xl:text-[36px] leading-[1.1] xl:leading-[40px] tracking-[-0.0075em] transition-colors duration-300 ${
-                    activeTab === tab.id
+                  className={`text-[20px] md:text-[28px] xl:text-[36px] leading-[1.1] xl:leading-[40px] tracking-[-0.0075em] transition-colors duration-300 ${activeTab === tab.id
                       ? "text-white font-medium"
                       : "text-[#B3B3B3] font-normal group-hover:text-white"
-                  }`}
+                    }`}
                 >
                   {tab.title}
                 </span>
