@@ -10,7 +10,7 @@ export const metadata = {
 export default function PetaPage() {
   return (
     <main className="min-h-screen bg-[#FAE3C7] text-[#3B2215]">
-      <Navbar />
+      <Navbar initialTheme="light" />
       <PetaSection />
       <Footer />
     </main>

@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function HubungiKamiPage() {
   return (
-    <main className="min-h-screen bg-[#FAE3C7] flex flex-col">
-      <Navbar />
+    <main className="min-h-screen bg-[#FAE3C7] flex flex-col" data-theme="light">
+      <Navbar initialTheme="light" />
       <ContactHero />
       <ComplaintForm />
       <Footer />

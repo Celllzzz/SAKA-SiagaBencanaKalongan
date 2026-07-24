@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetClose } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
-export function Navbar() {
+export function Navbar({ initialTheme = 'dark' }: { initialTheme?: 'light' | 'dark' }) {
   const [navStyle, setNavStyle] = useState({
     bg: 'transparent',
-    textColor: '#FFFFFF',
-    theme: 'dark',
+    textColor: initialTheme === 'light' ? '#3B2215' : '#FFFFFF',
+    theme: initialTheme,
     isHidden: false
   });
 
@@ -24,8 +24,8 @@ export function Navbar() {
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
 
-        // Cek jika bagian atas footer sudah masuk layar
-        if (section.tagName.toLowerCase() === 'footer' && rect.top < window.innerHeight) {
+        // Cek jika bagian atas footer sudah masuk layar dan elemennya benar-benar terlihat (tidak display:none)
+        if (section.tagName.toLowerCase() === 'footer' && rect.height > 0 && rect.top < window.innerHeight) {
           isFooterInView = true;
         }
 
@@ -40,7 +40,7 @@ export function Navbar() {
 
       if (currentSection) {
         const bg = window.scrollY < 50 ? 'transparent' : ((currentSection as HTMLElement).dataset.bg || 'transparent');
-        const theme = (currentSection as HTMLElement).dataset.theme || 'dark';
+        const theme = ((currentSection as HTMLElement).dataset.theme as 'light' | 'dark') || 'dark';
         const textColor = theme === 'light' ? '#3B2215' : '#FFFFFF';
         setNavStyle({ bg, textColor, theme, isHidden: isFooterInView });
       } else {
