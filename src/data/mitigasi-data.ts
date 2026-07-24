@@ -5,6 +5,7 @@ export interface MitigasiItem {
   description: string;
   image: string;
   detailSlug: string;
+  pdfUrl?: string;
 }
 
 export const mitigasiDataList: MitigasiItem[] = [
@@ -29,8 +30,9 @@ export const mitigasiDataList: MitigasiItem[] = [
     number: "03",
     title: "Pangan Darurat",
     description: "Wadah penyimpanan pangan darurat berukuran ringkas yang berisi cadangan pangan praktis untuk 1 orang selama ±36 jam pertama dan ditempatkan di dalam Tas Siaga Bencana keluarga.",
-    image: "/assets/mitigasi/PanganDarurat.webp",
-    detailSlug: "/mitigasi/pangan-darurat"
+    image: "/assets/mitigasi/PanganDarurat_Detail.webp",
+    detailSlug: "/mitigasi/pangan-darurat",
+    pdfUrl: "/download/mitigasi/PanganDarurat.pdf"
   },
   {
     id: "air-bersih",
@@ -38,7 +40,8 @@ export const mitigasiDataList: MitigasiItem[] = [
     title: "Panduan Penanganan Air Bersih",
     description: "Pasokan air bersih sering terganggu setelah bencana. Ini cara sederhana memastikan air yang kamu konsumsi tetap aman.",
     image: "/assets/mitigasi/air.webp",
-    detailSlug: "/mitigasi/air-bersih"
+    detailSlug: "/mitigasi/air-bersih",
+    pdfUrl: "/download/mitigasi/Penanganan Air Bersih.pdf"
   },
   {
     id: "pengelolaan-sampah",
@@ -46,7 +49,8 @@ export const mitigasiDataList: MitigasiItem[] = [
     title: "Pengelolaan Sampah",
     description: "Tumpukan sampah dan puing pasca longsor bisa jadi sumber masalah baru. Kenali cara penanganan yang tepat agar lingkungan tetap sehat.",
     image: "/assets/mitigasi/sampah.webp",
-    detailSlug: "/mitigasi/pengelolaan-sampah"
+    detailSlug: "/mitigasi/pengelolaan-sampah",
+    pdfUrl: "/download/mitigasi/DaurUlangSampah.pdf"
   },
   {
     id: "kesiapsiagaan-ekonomi",
@@ -54,6 +58,7 @@ export const mitigasiDataList: MitigasiItem[] = [
     title: "Kesiapsiagaan Ekonomi",
     description: "Bencana gak cuma mengancam keselamatan fisik, tapi juga kestabilan ekonomi rumah tangga. Ini langkah-langkah kesiapsiagaan dari sisi ekonomi yang bisa disiapkan dari sekarang.",
     image: "/assets/mitigasi/ekonomi.webp",
-    detailSlug: "/mitigasi/kesiapsiagaan-ekonomi"
+    detailSlug: "/mitigasi/kesiapsiagaan-ekonomi",
+    pdfUrl: "/download/mitigasi/KesiapsiagaanEkonomi.pdf"
   }
 ];

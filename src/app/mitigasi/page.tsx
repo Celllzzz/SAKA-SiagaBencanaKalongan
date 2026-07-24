@@ -12,7 +12,7 @@ export const metadata = {
 export default function MitigasiPage() {
   return (
     <main className="min-h-screen bg-[#FAE3C7] flex flex-col">
-      <Navbar />
+      <Navbar initialTheme="light" />
       <MitigasiHero />
       
       {/* Cards List Section */}

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Download } from "lucide-react";
@@ -9,6 +11,22 @@ interface MitigasiCardProps {
 }
 
 export function MitigasiCard({ data, isLast }: MitigasiCardProps) {
+  const handleDownload = (e: React.MouseEvent, fileUrl: string, title: string) => {
+    e.stopPropagation();
+    if (!fileUrl || fileUrl === "#") return;
+
+    // 1. Open in new tab
+    window.open(fileUrl, "_blank");
+
+    // 2. Trigger download
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = `${title.replace(/\s+/g, "_")}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="w-full relative flex flex-col items-center">
       
@@ -46,17 +64,29 @@ export function MitigasiCard({ data, isLast }: MitigasiCardProps) {
                 </span>
               </Link>
 
-              {/* Unduh Berkas Button - currently disabled/hidden functionality */}
-              <button 
-                disabled
-                className="flex flex-row justify-center items-center px-[24px] py-[8px] border-[2px] border-[#3B2215] rounded-[20px] opacity-50 cursor-not-allowed"
-                aria-label="Unduh berkas belum tersedia"
-              >
-                <Download className="w-[20px] h-[20px] mr-2 text-[#3B2215]" />
-                <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] text-[#3B2215] uppercase">
-                  Unduh berkas
-                </span>
-              </button>
+              {/* Unduh Berkas Button */}
+              {data.pdfUrl ? (
+                <button 
+                  onClick={(e) => handleDownload(e, data.pdfUrl!, data.title)}
+                  className="flex flex-row justify-center items-center px-[24px] py-[8px] border-[2px] border-[#3B2215] rounded-[20px] hover:bg-[#3B2215] hover:text-[#FAE3C7] transition-colors group"
+                >
+                  <Download className="w-[20px] h-[20px] mr-2 text-[#3B2215] group-hover:text-[#FAE3C7]" />
+                  <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] uppercase group-hover:text-[#FAE3C7] text-[#3B2215]">
+                    Unduh berkas
+                  </span>
+                </button>
+              ) : (
+                <button 
+                  disabled
+                  className="flex flex-row justify-center items-center px-[24px] py-[8px] border-[2px] border-[#3B2215] rounded-[20px] opacity-50 cursor-not-allowed"
+                  aria-label="Unduh berkas belum tersedia"
+                >
+                  <Download className="w-[20px] h-[20px] mr-2 text-[#3B2215]" />
+                  <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] text-[#3B2215] uppercase">
+                    Unduh berkas
+                  </span>
+                </button>
+              )}
             </div>
           </div>
           

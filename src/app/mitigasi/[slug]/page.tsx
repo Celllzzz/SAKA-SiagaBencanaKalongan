@@ -22,28 +22,29 @@ export default async function MitigasiDetailPage({ params }: { params: Promise<{
 
   return (
     <>
-      <Navbar />
+      <Navbar initialTheme="light" />
       <main className="w-full min-h-screen flex flex-col bg-[#FAE3C7]">
-      <MitigasiDetailHeader 
-        titleTop={data.titleTop} 
-        titleBottom={data.titleBottom} 
-        heroImage={data.heroImage} 
-      />
-      
-      {/* Sections Container */}
-      <div className="w-full flex flex-col">
-        {data.sections.map((section, index) => (
-          <MitigasiDetailSection 
-            key={index} 
-            data={section} 
-            isLast={index === data.sections.length - 1} 
-          />
-        ))}
-      </div>
+        <MitigasiDetailHeader
+          titleTop={data.titleTop}
+          titleBottom={data.titleBottom}
+          heroImage={data.heroImage}
+          pdfUrl={data.pdfUrl}
+        />
 
-      <MitigasiPdfSection />
-    </main>
-    <Footer />
-  </>
+        {/* Sections Container */}
+        <div className="w-full flex flex-col">
+          {data.sections.map((section, index) => (
+            <MitigasiDetailSection
+              key={index}
+              data={section}
+              isLast={index === data.sections.length - 1}
+            />
+          ))}
+        </div>
+
+        <MitigasiPdfSection pdfUrl={data.pdfUrl} />
+      </main>
+      <Footer />
+    </>
   );
 }

@@ -197,8 +197,8 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
     slug: "pangan-darurat",
     titleTop: "Pangan",
     titleBottom: "Darurat",
-    heroImage: "/assets/mitigasi/PanganDarurat.webp",
-    pdfUrl: "/assets/pdf/pangan-darurat.pdf",
+    heroImage: "/assets/mitigasi/PanganDarurat_Detail.webp",
+    pdfUrl: "/download/mitigasi/PanganDarurat.pdf",
     sections: [
       {
         number: "01",
@@ -246,7 +246,7 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
     titleTop: "Panduan Penanganan",
     titleBottom: "Air Bersih",
     heroImage: "/assets/mitigasi/air.webp",
-    pdfUrl: "/assets/pdf/air-bersih.pdf",
+    pdfUrl: "/download/mitigasi/Penanganan Air Bersih.pdf",
     sections: [
       {
         number: "01",
@@ -362,7 +362,7 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
     titleTop: "Pengelolaan",
     titleBottom: "Sampah",
     heroImage: "/assets/mitigasi/sampah.webp",
-    pdfUrl: "/assets/pdf/pengelolaan-sampah.pdf",
+    pdfUrl: "/download/mitigasi/DaurUlangSampah.pdf",
     sections: [
       {
         number: "01",
@@ -452,7 +452,7 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
     titleTop: "Kesiapsiagaan Ekonomi",
     titleBottom: "& Penyelamatan Dokumen",
     heroImage: "/assets/mitigasi/ekonomi.webp",
-    pdfUrl: "/assets/pdf/kesiapsiagaan-ekonomi.pdf",
+    pdfUrl: "/download/mitigasi/KesiapsiagaanEkonomi.pdf",
     sections: [
       {
         number: "01",
