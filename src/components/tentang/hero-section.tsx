@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/navbar";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-[100dvh] md:h-[780px] bg-[#3B2215] flex flex-col justify-center items-center overflow-hidden" data-theme="dark" data-bg="#3B2215">
+    <section className="relative w-full h-[100svh] bg-[#3B2215] flex flex-col justify-center items-center overflow-hidden" data-theme="dark" data-bg="#3B2215">
       {/* Navigation Bar */}
       <Navbar />
 

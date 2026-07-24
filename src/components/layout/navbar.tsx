@@ -59,7 +59,7 @@ export function Navbar() {
     { label: "Beranda", href: "/" },
     { label: "Tentang", href: "/tentang" },
     { label: "Peta", href: "/peta" },
-    { label: "Mitigasi", href: "/#mitigasi" },
+    { label: "Mitigasi", href: "/mitigasi" },
     { label: "Galeri", href: "/galeri" },
   ];
 

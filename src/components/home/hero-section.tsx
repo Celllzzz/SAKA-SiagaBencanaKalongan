@@ -11,7 +11,7 @@ export function HeroSection() {
   ];
 
   return (
-    <div className="relative w-full h-[780px] overflow-hidden bg-[#3B2215]" data-theme="dark" data-bg="#3B2215">
+    <div className="relative w-full h-[100svh] overflow-hidden bg-[#3B2215]" data-theme="dark" data-bg="#3B2215">
       {/* Background Image */}
       <Image
         src="/assets/home/foto_hero.webp"
