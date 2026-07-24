@@ -37,16 +37,15 @@ export function Footer() {
             (Navigasi)
           </span>
           <div className="flex flex-col gap-[10px] xl:gap-[15px]">
-            {["Beranda", "Tentang kami", "Peta", "Mitigasi", "Pra & Pasca", "Galeri", "Hubungi kami"].map((item, idx) => {
+            {["Beranda", "Tentang kami", "Peta", "Mitigasi", "Galeri", "Hubungi kami"].map((item, idx) => {
               // Map to hrefs
               let href = "/";
               if (item.toLowerCase() === "beranda") href = "/";
               else if (item.toLowerCase() === "tentang kami") href = "/tentang";
               else if (item.toLowerCase() === "peta") href = "/peta";
               else if (item.toLowerCase() === "mitigasi") href = "/#mitigasi";
-              else if (item.toLowerCase() === "pra & pasca") href = "/#pra-pasca";
               else if (item.toLowerCase() === "galeri") href = "/galeri";
-              else if (item.toLowerCase() === "hubungi kami") href = "/#hubungi";
+              else if (item.toLowerCase() === "hubungi kami") href = "/hubungi-kami";
 
               return (
                 <Link

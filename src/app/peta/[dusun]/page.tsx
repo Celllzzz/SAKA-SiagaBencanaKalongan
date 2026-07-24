@@ -13,6 +13,18 @@ export function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ dusun: string }> }) {
+  const resolvedParams = await params;
+  const dusunData = getDusunData(resolvedParams.dusun);
+  
+  if (!dusunData) return { title: 'Peta | SAKA' };
+  
+  const titleName = dusunData.name.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(" ");
+  return {
+    title: `Peta ${titleName} | SAKA`,
+  };
+}
+
 export default async function PetaDetailPage({ params }: { params: Promise<{ dusun: string }> }) {
   const resolvedParams = await params;
   const dusunData = getDusunData(resolvedParams.dusun);

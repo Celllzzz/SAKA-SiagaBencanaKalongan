@@ -60,7 +60,6 @@ export function Navbar() {
     { label: "Tentang", href: "/tentang" },
     { label: "Peta", href: "/peta" },
     { label: "Mitigasi", href: "/#mitigasi" },
-    { label: "Pra & Pasca", href: "/#pra-pasca" },
     { label: "Galeri", href: "/galeri" },
   ];
 
@@ -102,13 +101,15 @@ export function Navbar() {
 
         {/* Right Side / Mobile Menu */}
         <div className="flex items-center">
-          <Button
-            variant="secondary"
-            className={`hidden xl:inline-flex rounded-[20px] px-6 py-5 text-[14px] tracking-[0.01em] font-semibold transition-all cursor-pointer uppercase ${isLight ? "bg-[#3B2215] text-white hover:bg-black" : "bg-white text-black hover:bg-gray-200"
-              } hover:scale-105`}
-          >
-            HUBUNGI KAMI
-          </Button>
+          <Link href="/hubungi-kami" passHref>
+            <Button
+              variant="secondary"
+              className={`hidden xl:inline-flex rounded-[20px] px-6 py-5 text-[14px] tracking-[0.01em] font-semibold transition-all cursor-pointer uppercase ${isLight ? "bg-[#3B2215] text-white hover:bg-black" : "bg-white text-black hover:bg-gray-200"
+                } hover:scale-105`}
+            >
+              HUBUNGI KAMI
+            </Button>
+          </Link>
 
           {/* Mobile Hamburger Menu */}
           <div className="xl:hidden ml-4">
@@ -152,7 +153,7 @@ export function Navbar() {
                 {/* Bottom Action Button */}
                 <div className="mt-12">
                   <Link
-                    href="#"
+                    href="/hubungi-kami"
                     className="inline-flex items-center justify-center bg-white text-black font-bold uppercase text-sm tracking-wide py-4 px-8 rounded-full hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#111111] focus:ring-white w-auto self-start"
                   >
                     Hubungi Kami
