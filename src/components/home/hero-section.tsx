@@ -5,9 +5,9 @@ import { Navbar } from "@/components/layout/navbar";
 export function HeroSection() {
   const featureLinks = [
     { label: "PEMETAAN DESA KALONGAN", href: "/peta" },
-    { label: "BUKU SAKU MANUAL PROSEDUR", href: "#" },
-    { label: "TAS SIAGA BENCANA", href: "#" },
-    { label: "GALERI DOKUMENTASI", href: "#" },
+    { label: "BUKU SAKU MANUAL PROSEDUR", href: "/mitigasi/manual-prosedur" },
+    { label: "TAS SIAGA BENCANA", href: "/mitigasi/tas-siaga" },
+    { label: "GALERI DOKUMENTASI", href: "/galeri" },
   ];
 
   return (

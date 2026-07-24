@@ -14,19 +14,19 @@ const features = [
     num: "(02)",
     title: "MITIGASI PANDUAN KEBENCANAAN",
     image: "/assets/home/bukusaku_home.webp",
-    href: "#"
+    href: "/mitigasi"
   },
   {
     num: "(03)",
     title: "PENCEGAHAN PRA & PASCA BENCANA",
     image: "/assets/home/tassiagabencana_home.webp",
-    href: "#"
+    href: "/mitigasi/manual-prosedur"
   },
   {
     num: "(04)",
     title: "GALERI KEGIATAN & SOSIALISASI",
     image: "/assets/home/dokumentasikegiatan_home.webp",
-    href: "#"
+    href: "/galeri"
   },
 ];
 
