@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function AboutContentSection() {
   return (
-    <section className="w-full bg-[#FAE3C7] text-[#3B2215] px-[50px] py-[50px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
+    <section className="w-full bg-[#FAE3C7] text-[#3B2215] px-[20px] md:px-[32px] xl:px-[50px] py-[50px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
       <div className="w-full max-w-[1440px] mx-auto flex flex-col relative">
         
         {/* Sub-bagian 1: Tujuan SAKA */}

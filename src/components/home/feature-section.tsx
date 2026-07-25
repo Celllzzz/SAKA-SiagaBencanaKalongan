@@ -32,7 +32,7 @@ const features = [
 
 export function FeatureSection() {
   return (
-    <section className="w-full bg-[#FAE3C7] text-[#3B2215] p-[50px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
+    <section className="w-full bg-[#FAE3C7] text-[#3B2215] py-[50px] px-[20px] md:px-[32px] xl:px-[50px] overflow-hidden" data-theme="light" data-bg="#FAE3C7">
       <div className="max-w-[1440px] mx-auto relative flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col relative w-full mb-[50px]">
@@ -47,10 +47,10 @@ export function FeatureSection() {
         {/* Grid Container */}
         <div className="flex flex-col w-full gap-[50px]">
           {/* Row 1 */}
-          <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-[50px]">
+          <div className="flex flex-col md:flex-row justify-between items-start w-full gap-[50px]">
             {/* Item 01 (Short) */}
-            <Link href={features[0].href} className="flex flex-col w-full lg:w-[48%] shrink-0 group">
-              <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/2] lg:aspect-[628/415]">
+            <Link href={features[0].href} className="flex flex-col w-full md:w-[48%] shrink-0 group">
+              <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/2] md:aspect-[628/415]">
                 <Image src={features[0].image} alt={features[0].title} fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
               <div className="flex flex-row justify-between items-start w-full mt-4 gap-4 group-hover:opacity-70 transition-opacity duration-300">
@@ -60,8 +60,8 @@ export function FeatureSection() {
             </Link>
 
             {/* Item 02 (Tall) */}
-            <Link href={features[1].href} className="flex flex-col w-full lg:w-[48%] shrink-0 group">
-              <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/4] lg:aspect-[662/883]">
+            <Link href={features[1].href} className="flex flex-col w-full md:w-[48%] shrink-0 group">
+              <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/4] md:aspect-[662/883]">
                 <Image src={features[1].image} alt={features[1].title} fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
               <div className="flex flex-row justify-between items-start w-full mt-4 gap-4 group-hover:opacity-70 transition-opacity duration-300">
@@ -72,10 +72,10 @@ export function FeatureSection() {
           </div>
 
           {/* Row 2 */}
-          <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-[50px]">
+          <div className="flex flex-col md:flex-row justify-between items-start w-full gap-[50px]">
             {/* Item 03 (Tall) */}
-            <Link href={features[2].href} className="flex flex-col w-full lg:w-[48%] shrink-0 group">
-              <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/4] lg:aspect-[662/883]">
+            <Link href={features[2].href} className="flex flex-col w-full md:w-[48%] shrink-0 group">
+              <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/4] md:aspect-[662/883]">
                 <Image src={features[2].image} alt={features[2].title} fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
               <div className="flex flex-row justify-between items-start w-full mt-4 gap-4 group-hover:opacity-70 transition-opacity duration-300">
@@ -85,8 +85,8 @@ export function FeatureSection() {
             </Link>
 
             {/* Item 04 (Short) */}
-            <Link href={features[3].href} className="flex flex-col w-full lg:w-[48%] shrink-0 group">
-              <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/2] lg:aspect-[628/415]">
+            <Link href={features[3].href} className="flex flex-col w-full md:w-[48%] shrink-0 group">
+              <div className="relative w-full overflow-hidden bg-gray-200 aspect-[3/2] md:aspect-[628/415]">
                 <Image src={features[3].image} alt={features[3].title} fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
               </div>
               <div className="flex flex-row justify-between items-start w-full mt-4 gap-4 group-hover:opacity-70 transition-opacity duration-300">

@@ -34,7 +34,7 @@ export function MitigasiCard({ data, isLast }: MitigasiCardProps) {
       <div className="w-full h-[2px] bg-[#3B2215]/50 -rotate-[0.1deg]" />
 
       {/* Content Container */}
-      <div className="w-full flex flex-col xl:flex-row items-center xl:items-start xl:justify-between gap-[50px] xl:gap-[116px] p-[50px] xl:p-0 xl:pl-[50px]">
+      <div className="w-full flex flex-col xl:flex-row items-center xl:items-start xl:justify-between gap-[50px] xl:gap-[116px] py-[50px] px-[20px] md:px-[32px] xl:px-[50px] xl:p-0 xl:pl-[50px]">
         
         {/* Text Section (Left) */}
         <div className="flex flex-col items-start gap-[16px] w-full xl:max-w-[690px] xl:py-[50px] xl:pr-[50px]">

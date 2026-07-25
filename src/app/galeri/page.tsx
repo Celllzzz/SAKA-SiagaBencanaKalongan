@@ -63,7 +63,7 @@ export default function GaleriPage() {
         {/* The scrolling track */}
         <div 
           ref={trackRef}
-          className="flex flex-row items-end gap-[16px] px-[50px] absolute left-0"
+          className="flex flex-row items-end gap-[16px] px-[20px] md:px-[32px] xl:px-[50px] absolute left-0"
           style={{ transform: `translateX(-${setWidth}px)`, willChange: 'transform' }}
         >
           {duplicatedData.map((item, index) => (
@@ -116,14 +116,14 @@ export default function GaleriPage() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="flex xl:hidden flex-col w-full px-[50px] pt-[130px] pb-[30px] gap-[30px]"
+        className="flex xl:hidden flex-col w-full px-[20px] md:px-[32px] xl:px-[50px] pt-[100px] md:pt-[120px] pb-[30px] gap-[30px]"
       >
         <div className="flex flex-col gap-2 overflow-hidden">
           <motion.h1 
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-            className="font-[Inter] font-medium text-[36px] leading-[110%] tracking-[-0.045em] text-[#3B2215] uppercase"
+            className="font-[Inter] font-medium text-[28px] min-[400px]:text-[32px] sm:text-[36px] leading-[110%] tracking-[-0.045em] text-[#3B2215] uppercase whitespace-nowrap"
           >
             GALERI DOKUMENTASI
           </motion.h1>
@@ -132,12 +132,13 @@ export default function GaleriPage() {
         <div className="flex flex-col gap-[30px] w-full">
           {galeriData.map((item) => (
             <div key={item.id} className="flex flex-col gap-[12px] w-full">
-              <div className="relative w-full overflow-hidden">
-                <img
+              <div className={`relative w-full overflow-hidden bg-gray-200 ${item.heightType === 'tall' ? 'aspect-[3/4]' : 'aspect-[3/2]'}`}>
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1280px) 100vw, 50vw"
                 />
               </div>
               <h3 className="font-[Inter] font-semibold text-[16px] leading-[100%] tracking-[-0.05em] text-[#3B2215] uppercase">

@@ -8,27 +8,27 @@ import { galeriData } from "@/data/galeri-data";
 
 export function GallerySection() {
   return (
-    <section className="w-full bg-[#FFF3E5] text-[#3B2215] p-[50px] overflow-hidden" data-theme="light" data-bg="#FFF3E5">
+    <section className="w-full bg-[#FFF3E5] text-[#3B2215] py-[50px] px-[20px] md:px-[32px] xl:px-[50px] overflow-hidden" data-theme="light" data-bg="#FFF3E5">
       <div className="max-w-[1440px] mx-auto relative flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col relative w-full mb-[50px]">
-          <h2 className="text-[8vw] sm:text-[36px] md:text-[48px] lg:text-[64px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase whitespace-nowrap">
+          <h2 className="text-[24px] min-[400px]:text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase whitespace-nowrap">
             GALERI FOTO
           </h2>
-          <h2 className="text-[8vw] sm:text-[36px] md:text-[48px] lg:text-[64px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase w-full text-left md:text-right mt-2 md:mt-0 whitespace-nowrap">
+          <h2 className="text-[24px] min-[400px]:text-[28px] sm:text-[36px] md:text-[48px] lg:text-[64px] xl:text-[86px] font-[Inter] font-medium leading-none tracking-[-0.045em] uppercase w-full text-left md:text-right mt-2 md:mt-0 whitespace-nowrap">
             DOKUM KEGIATAN
           </h2>
         </div>
 
         {/* Grid Container */}
-        <div className="flex flex-col lg:flex-row flex-wrap justify-between items-start w-full gap-[50px] lg:gap-y-[50px] mb-[50px]">
+        <div className="flex flex-col md:flex-row flex-wrap justify-between items-start w-full gap-[50px] md:gap-y-[50px] mb-[50px]">
           {galeriData.slice(0, 4).map((item, index) => {
             const num = `(0${index + 1})`;
             const isTall = item.heightType === 'tall';
-            const aspectClass = isTall ? "aspect-[3/4] lg:aspect-[662/883]" : "aspect-[3/2] lg:aspect-[628/415]";
+            const aspectClass = isTall ? "aspect-[3/4] md:aspect-[662/883]" : "aspect-[3/2] md:aspect-[628/415]";
             
             return (
-              <div key={item.id} className="flex flex-col w-full lg:w-[48%] shrink-0">
+              <div key={item.id} className="flex flex-col w-full md:w-[48%] shrink-0">
                 <div className={`relative w-full overflow-hidden bg-gray-200 ${aspectClass}`}>
                   <Image src={item.image} alt={item.title} fill className="object-cover object-center" />
                 </div>

@@ -12,7 +12,7 @@ const EMERGENCY_CONTACTS = [
 
 export function ContactHero() {
   return (
-    <section className="w-full bg-[#FAE3C7] text-[#3B2215] pt-[120px] pb-[50px] px-[50px] xl:min-h-[100vh] flex flex-col justify-center" data-theme="light" data-bg="#FAE3C7">
+    <section className="w-full bg-[#FAE3C7] text-[#3B2215] pt-[120px] pb-[50px] px-[20px] md:px-[32px] xl:px-[50px] xl:min-h-[100vh] flex flex-col justify-center" data-theme="light" data-bg="#FAE3C7">
       <div className="w-full max-w-[1340px] mx-auto flex flex-col gap-[50px] md:gap-[80px]">
 
         {/* Header / Hero */}

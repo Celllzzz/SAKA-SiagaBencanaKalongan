@@ -19,7 +19,7 @@ const MapComponent = dynamic(
 export function MapSection() {
   return (
     <section className="w-full bg-[#FAE3C7] flex justify-center" data-theme="light" data-bg="#FAE3C7">
-      <div className="w-full max-w-[1440px] flex flex-col p-[50px] overflow-hidden">
+      <div className="w-full max-w-[1440px] flex flex-col py-[50px] px-[20px] md:px-[32px] xl:px-[50px] overflow-hidden">
         {/* Header Map Section */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end mb-[46px] shrink-0">
           <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[86px] leading-none tracking-[-0.045em] text-black uppercase break-words">

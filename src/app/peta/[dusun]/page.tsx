@@ -38,7 +38,7 @@ export default async function PetaDetailPage({ params }: { params: Promise<{ dus
       <DetailHeader title={dusunData.name} />
       
       <section 
-        className="w-full max-w-[1440px] mx-auto p-[50px] flex flex-col gap-[50px]"
+        className="w-full max-w-[1440px] mx-auto py-[50px] px-[20px] md:px-[32px] xl:px-[50px] flex flex-col gap-[50px]"
         data-theme="light"
         data-bg="#FAE3C7"
       >

@@ -2,7 +2,7 @@ import { FileText } from "lucide-react";
 
 export function MitigasiPdfSection({ pdfUrl }: { pdfUrl?: string }) {
   return (
-    <section className="w-full bg-[#3B2215] flex flex-col items-center p-[50px] gap-[30px] md:gap-[50px]" data-theme="dark" data-bg="#3B2215">
+    <section className="w-full bg-[#3B2215] flex flex-col items-center py-[50px] px-[20px] md:px-[32px] xl:px-[50px] gap-[30px] md:gap-[50px]" data-theme="dark" data-bg="#3B2215">
       
       {/* Title */}
       <h2 className="font-[Inter] font-medium text-[clamp(20px,6.5vw,106px)] leading-none text-center tracking-[-0.045em] uppercase text-[#FFFFFF] w-full max-w-[1340px] mx-auto whitespace-nowrap">

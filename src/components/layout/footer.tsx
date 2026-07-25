@@ -8,7 +8,7 @@ export function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer className="w-full h-auto xl:h-[100svh] bg-[#FAE3C7] text-[#3B2215] flex flex-col pt-[50px] pb-[50px] px-[50px] xl:overflow-hidden justify-between" data-theme="light" data-bg="#FAE3C7">
+    <footer className="w-full h-auto xl:h-[100svh] bg-[#FAE3C7] text-[#3B2215] flex flex-col pt-[50px] pb-[50px] px-[20px] md:px-[32px] xl:px-[50px] xl:overflow-hidden justify-between" data-theme="light" data-bg="#FAE3C7">
       
       {/* Top Section */}
       <div className="flex flex-col xl:flex-row justify-between items-start w-full gap-[50px] xl:gap-0 mb-[40px] xl:mb-[60px]">

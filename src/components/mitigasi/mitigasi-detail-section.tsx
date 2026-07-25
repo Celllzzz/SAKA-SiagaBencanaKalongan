@@ -13,7 +13,7 @@ export function MitigasiDetailSection({ data, isLast }: MitigasiDetailSectionPro
       <div className="w-full h-[2px] bg-[#3B2215]/50 -rotate-[0.1deg]" />
 
       {/* Content Container */}
-      <div className="w-full max-w-[1440px] flex flex-col items-start p-[50px] gap-[16px]">
+      <div className="w-full max-w-[1440px] flex flex-col items-start py-[50px] px-[20px] md:px-[32px] xl:px-[50px] gap-[16px]">
         
         {/* Title */}
         <div className="flex flex-row items-start gap-[4px] lg:gap-[8px] shrink-0">

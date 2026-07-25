@@ -33,7 +33,7 @@ export function ComplaintForm() {
   };
 
   return (
-    <section className="w-full bg-[#3B2215] text-white py-[50px] md:py-[100px] px-[50px] xl:min-h-[100vh] flex flex-col justify-center" data-theme="dark" data-bg="#3B2215">
+    <section className="w-full bg-[#3B2215] text-white py-[50px] md:py-[100px] px-[20px] md:px-[32px] xl:px-[50px] xl:min-h-[100vh] flex flex-col justify-center" data-theme="dark" data-bg="#3B2215">
       <div className="w-full max-w-[1340px] mx-auto flex flex-col xl:flex-row gap-[50px] xl:gap-[100px]">
         
         {/* Left Side: Form Information */}

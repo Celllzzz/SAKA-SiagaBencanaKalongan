@@ -19,7 +19,7 @@ export function DetailHeader({ title }: { title: string }) {
       </div>
 
       {/* Title Overlay */}
-      <div className="absolute z-10 w-full px-[50px] flex justify-center items-center pointer-events-none mt-[40px] xl:mt-[60px]">
+      <div className="absolute z-10 w-full px-[20px] md:px-[32px] xl:px-[50px] flex justify-center items-center pointer-events-none mt-[40px] xl:mt-[60px]">
         <h1 className="font-[Inter] font-extrabold text-[40px] sm:text-[50px] md:text-[70px] xl:text-[130px] leading-none tracking-[-0.09em] uppercase text-white drop-shadow-lg">
           {title}
         </h1>

@@ -91,7 +91,7 @@ function DesktopTeamSection() {
     <div className="w-full bg-[#FAE3C7] text-[#3B2215]" data-theme="light" data-bg="#FAE3C7">
 
       {/* Static Header */}
-      <div className="w-full max-w-[1440px] mx-auto px-[50px] py-[50px] flex flex-row items-center justify-between">
+      <div className="w-full max-w-[1440px] mx-auto px-[20px] md:px-[32px] xl:px-[50px] py-[50px] flex flex-row items-center justify-between">
         <h2 className="font-[Inter] font-medium text-[90px] leading-none tracking-[-0.045em] capitalize">
           Orang Orang
           <br />
@@ -113,7 +113,7 @@ function DesktopTeamSection() {
       >
         {/* Sticky Container */}
         <div className="sticky top-[90px] h-[calc(100vh-90px)] w-full overflow-hidden flex flex-col">
-          <div className="w-full max-w-[1440px] mx-auto flex flex-row flex-1 overflow-hidden px-[50px] py-[50px] gap-[50px]">
+          <div className="w-full max-w-[1440px] mx-auto flex flex-row flex-1 overflow-hidden px-[20px] md:px-[32px] xl:px-[50px] py-[50px] gap-[50px]">
 
             {/* Name List (scrolling via translateY) */}
             <div className="flex-1 overflow-hidden relative min-w-0">
@@ -188,7 +188,7 @@ export function TeamSection() {
 
       {/* Mobile / Tablet: Grid cards (original layout) */}
       <section
-        className="xl:hidden w-full bg-[#FAE3C7] text-[#3B2215] px-[50px] py-[50px] overflow-hidden"
+        className="xl:hidden w-full bg-[#FAE3C7] text-[#3B2215] px-[20px] md:px-[32px] xl:px-[50px] py-[50px] overflow-hidden"
         data-theme="light"
         data-bg="#FAE3C7"
       >

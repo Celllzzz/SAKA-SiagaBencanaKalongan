@@ -29,7 +29,7 @@ export function MitigasiDetailHeader({ titleTop, titleBottom, heroImage, pdfUrl 
   };
 
   return (
-    <section className="w-full h-auto min-h-[100svh] bg-[#FAE3C7] text-[#3B2215] pt-[130px] pb-[50px] px-[50px] flex flex-col items-center" data-theme="light" data-bg="#FAE3C7">
+    <section className="w-full h-auto min-h-[100svh] bg-[#FAE3C7] text-[#3B2215] pt-[130px] pb-[50px] px-[20px] md:px-[32px] xl:px-[50px] flex flex-col items-center" data-theme="light" data-bg="#FAE3C7">
       
       {/* Title & Button Container */}
       <div className="w-full max-w-[1340px] flex flex-col items-start gap-[20px] mb-[50px] animate-fade-in-up">
