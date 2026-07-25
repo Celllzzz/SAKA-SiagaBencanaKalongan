@@ -556,19 +556,6 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
         <FitBounds coords={kavling} />
         <RecenterButton coords={kavling} />
 
-        {/* BATAS ADMINISTRASI */}
-        {layers.batas && kavling.length > 0 && (
-          <Polygon
-            positions={kavling}
-            pathOptions={{
-              color: "#ffffff",
-              fillColor: "transparent",
-              weight: 3,
-              dashArray: "5, 5"
-            }}
-          />
-        )}
-
         {/* RISIKO LONGSOR */}
         {layers.risiko && risiko.length > 0 && risiko.map((r, i) => {
           const colors = getRisikoColor(r.tingkat);
@@ -599,6 +586,19 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
             <Popup><div className="font-[Inter] text-sm font-semibold text-center">Jalur Evakuasi</div></Popup>
           </Polyline>
         ))}
+
+        {/* BATAS ADMINISTRASI */}
+        {layers.batas && kavling.length > 0 && (
+          <Polygon
+            positions={kavling}
+            pathOptions={{
+              color: "#ffffff",
+              fillColor: "transparent",
+              weight: 3,
+              dashArray: "5, 5"
+            }}
+          />
+        )}
         {layers.evakuasi && evakuasi.length > 0 && getEvakuasiArrows(evakuasi).map((arrow, idx) => (
           <Marker key={`ev-arrow-${idx}`} position={arrow.pos} icon={createArrowIcon(arrow.angle)} zIndexOffset={150} interactive={false} />
         ))}

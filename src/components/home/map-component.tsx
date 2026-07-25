@@ -173,17 +173,6 @@ export default function MapComponent() {
         <FitBounds coords={polygonCoords} />
         <RecenterButton coords={polygonCoords} />
         
-        <Polygon 
-          positions={polygonCoords} 
-          pathOptions={{ 
-            color: "#ffffff", 
-            fillColor: "#000000",
-            fillOpacity: 0.25,
-            weight: 2,
-            dashArray: "5, 5" // Dashed line for boundary
-          }} 
-        />
-        
         {affectedDusuns.map((dusun, idx) => {
           const style = dusunColors[dusun.name] || { color: "#ef4444", fillColor: "#ef4444" };
           return (
@@ -206,6 +195,18 @@ export default function MapComponent() {
             </Polygon>
           );
         })}
+
+        {/* BATAS DESA (Village Boundary) rendered last to be on top */}
+        <Polygon 
+          positions={polygonCoords} 
+          pathOptions={{ 
+            color: "#ffffff", 
+            fillColor: "#000000",
+            fillOpacity: 0.25,
+            weight: 2,
+            dashArray: "5, 5" // Dashed line for boundary
+          }} 
+        />
       </MapContainer>
     </>
   );

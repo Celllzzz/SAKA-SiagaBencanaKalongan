@@ -31,10 +31,10 @@ export function MitigasiCard({ data, isLast }: MitigasiCardProps) {
     <div className="w-full relative flex flex-col items-center">
       
       {/* Separator Line */}
-      <div className="w-full h-[2px] bg-[#3B2215]/50 -rotate-[0.1deg]" />
+      <div className="w-full h-[2px] bg-[#3B2215]/50" />
 
       {/* Content Container */}
-      <div className="w-full flex flex-col xl:flex-row items-center xl:items-start xl:justify-between gap-[50px] xl:gap-[116px] py-[50px] px-[20px] md:px-[32px] xl:py-0 xl:pl-[50px] xl:pr-0">
+      <div className="w-full flex flex-col xl:flex-row items-center xl:items-stretch xl:justify-between gap-[50px] xl:gap-[116px] py-[50px] px-[20px] md:px-[32px] xl:py-0 xl:pl-[50px] xl:pr-0">
         
         {/* Text Section (Left) */}
         <div className="flex flex-col items-start gap-[16px] w-full xl:max-w-[690px] xl:py-[50px] xl:pr-[50px]">
@@ -93,7 +93,7 @@ export function MitigasiCard({ data, isLast }: MitigasiCardProps) {
         </div>
 
         {/* Image Section (Right) */}
-        <div className="w-full max-w-[700px] xl:w-[700px] h-[250px] sm:h-[430px] relative overflow-hidden shrink-0">
+        <div className="w-full max-w-[700px] xl:w-[700px] h-[250px] sm:h-[430px] xl:h-auto relative overflow-hidden shrink-0">
           <Image 
             src={data.image}
             alt={data.title}
@@ -107,7 +107,7 @@ export function MitigasiCard({ data, isLast }: MitigasiCardProps) {
 
       {/* If it's the last item, we add a final separator line at the bottom */}
       {isLast && (
-        <div className="w-full h-[2px] bg-[#3B2215]/50 -rotate-[0.1deg]" />
+        <div className="w-full h-[2px] bg-[#3B2215]/50" />
       )}
     </div>
   );
