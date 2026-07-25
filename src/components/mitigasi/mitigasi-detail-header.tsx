@@ -48,7 +48,7 @@ export function MitigasiDetailHeader({ titleTop, titleBottom, heroImage, pdfUrl 
         <div className="w-full flex flex-col xl:flex-row items-start xl:items-center justify-between gap-[30px] xl:gap-[50px]">
           
           {/* Title */}
-          <div className="flex flex-col w-full xl:shrink-0">
+          <div className="flex flex-col flex-1">
             <h1 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize text-[#3B2215]">
               {titleTop}
             </h1>
