@@ -1,17 +1,4 @@
-"use client";
-
 import { FileText } from "lucide-react";
-import dynamic from "next/dynamic";
-
-// Memuat PDFViewer hanya di sisi klien (Client-Side Rendering) untuk mencegah error SSR
-const PDFViewer = dynamic(() => import("./pdf-viewer"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full max-w-[1340px] mx-auto h-[400px] bg-[#FAE3C7] rounded-xl flex items-center justify-center border-[4px] border-[#FAE3C7]">
-      <p className="font-[Inter] text-[#3B2215] font-medium">Memuat komponen pembaca PDF...</p>
-    </div>
-  )
-});
 
 export function MitigasiPdfSection({ pdfUrl }: { pdfUrl?: string }) {
   return (
@@ -24,7 +11,30 @@ export function MitigasiPdfSection({ pdfUrl }: { pdfUrl?: string }) {
 
       {/* PDF Viewer / Placeholder */}
       {pdfUrl ? (
-        <PDFViewer pdfUrl={pdfUrl} />
+        <div className="w-full max-w-[1340px] mx-auto flex flex-col gap-[20px]">
+          
+          {/* Desktop & Tablet: Iframe */}
+          <div className="hidden md:block w-full h-[65vh] md:h-[75vh] max-h-[800px] bg-[#FAE3C7] overflow-hidden rounded-xl border-[4px] border-[#FAE3C7]">
+            <iframe 
+              src={pdfUrl} 
+              className="w-full h-full border-none"
+              title="Pratinjau Dokumen PDF"
+            />
+          </div>
+
+          {/* Mobile: Link Button to read PDF */}
+          <div className="flex md:hidden w-full flex-col items-center justify-center">
+            <a 
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FAE3C7] text-[#3B2215] font-[Inter] font-bold text-[14px] px-[32px] py-[16px] rounded-full uppercase hover:bg-white transition-colors"
+            >
+              Baca Dokumen Lengkap
+            </a>
+          </div>
+
+        </div>
       ) : (
         <div className="w-full max-w-[1340px] mx-auto h-[65vh] md:h-[75vh] max-h-[800px] bg-[#FAE3C7]/20 border-2 border-dashed border-[#FAE3C7]/50 flex flex-col items-center justify-center gap-4">
           <FileText className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] text-[#FAE3C7]/50" />
