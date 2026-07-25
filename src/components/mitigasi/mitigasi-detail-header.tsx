@@ -29,7 +29,7 @@ export function MitigasiDetailHeader({ titleTop, titleBottom, heroImage, pdfUrl 
   };
 
   return (
-    <section className="w-full h-auto min-h-[100svh] bg-[#FAE3C7] text-[#3B2215] pt-[130px] pb-[50px] px-[20px] md:px-[32px] xl:px-[50px] flex flex-col items-center" data-theme="light" data-bg="#FAE3C7">
+    <section className="w-full h-auto min-h-[100svh] bg-[#FAE3C7] text-[#3B2215] pt-[100px] md:pt-[120px] xl:pt-[130px] pb-[50px] px-[20px] md:px-[32px] xl:px-[50px] flex flex-col items-center" data-theme="light" data-bg="#FAE3C7">
       
       {/* Title & Button Container */}
       <div className="w-full max-w-[1340px] flex flex-col items-start gap-[20px] mb-[50px] animate-fade-in-up">
@@ -45,10 +45,10 @@ export function MitigasiDetailHeader({ titleTop, titleBottom, heroImage, pdfUrl 
           </span>
         </Link>
 
-        <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-[30px] md:gap-[50px]">
+        <div className="w-full flex flex-col xl:flex-row items-start xl:items-center justify-between gap-[30px] xl:gap-[50px]">
           
           {/* Title */}
-          <div className="flex flex-col shrink-0">
+          <div className="flex flex-col w-full xl:shrink-0">
             <h1 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize text-[#3B2215]">
               {titleTop}
             </h1>
