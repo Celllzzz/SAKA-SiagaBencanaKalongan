@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Polygon, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Polygon, useMap, Popup } from "react-leaflet";
 import proj4 from "proj4";
 import "leaflet/dist/leaflet.css";
 
@@ -64,6 +64,13 @@ function RecenterButton({ coords }: { coords: [number, number][][] }) {
     </div>
   );
 }
+
+const dusunColors: Record<string, { color: string, fillColor: string }> = {
+  Dampu: { color: "#3b82f6", fillColor: "#3b82f6" },
+  Bandungan: { color: "#eab308", fillColor: "#eab308" },
+  Glepung: { color: "#22c55e", fillColor: "#22c55e" },
+  TompoGunung: { color: "#a855f7", fillColor: "#a855f7" },
+};
 
 export default function MapComponent() {
   const [polygonCoords, setPolygonCoords] = useState<[number, number][][]>([]);
@@ -154,13 +161,14 @@ export default function MapComponent() {
         center={center}
         zoom={14}
         zoomSnap={0.1}
-        scrollWheelZoom={true}
-        style={{ width: "100%", height: "100%" }}
+        scrollWheelZoom={false}
+        style={{ width: "100%", height: "100%", backgroundColor: "#FAE3C7" }}
       >
         {/* Esri World Imagery (Satellite) */}
         <TileLayer
           attribution='&copy; <a href="https://www.google.com/intl/id_id/help/terms_maps/">Google Maps</a>'
           url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+          opacity={0.6}
         />
         <FitBounds coords={polygonCoords} />
         <RecenterButton coords={polygonCoords} />
@@ -169,24 +177,35 @@ export default function MapComponent() {
           positions={polygonCoords} 
           pathOptions={{ 
             color: "#ffffff", 
-            fillColor: "transparent", 
+            fillColor: "#000000",
+            fillOpacity: 0.25,
             weight: 2,
             dashArray: "5, 5" // Dashed line for boundary
           }} 
         />
         
-        {affectedDusuns.map((dusun, idx) => (
-          <Polygon 
-            key={idx}
-            positions={dusun.coords}
-            pathOptions={{
-              color: "#ef4444", 
-              fillColor: "rgba(239, 68, 68, 0.15)", 
-              weight: 2,
-              dashArray: "4, 4"
-            }}
-          />
-        ))}
+        {affectedDusuns.map((dusun, idx) => {
+          const style = dusunColors[dusun.name] || { color: "#ef4444", fillColor: "#ef4444" };
+          return (
+            <Polygon 
+              key={idx}
+              positions={dusun.coords}
+              pathOptions={{
+                color: style.color, 
+                fillColor: style.fillColor, 
+                fillOpacity: 0.35,
+                weight: 2,
+                dashArray: "4, 4"
+              }}
+            >
+              <Popup>
+                <div className="font-[Inter] text-sm font-bold text-center whitespace-nowrap">
+                  Dusun {dusun.name === "TompoGunung" ? "Tompo Gunung" : dusun.name}
+                </div>
+              </Popup>
+            </Polygon>
+          );
+        })}
       </MapContainer>
     </>
   );

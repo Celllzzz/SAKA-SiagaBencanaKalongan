@@ -12,7 +12,7 @@ export function OtherDusun({ currentSlug }: { currentSlug: string }) {
   const otherDusuns = allDusuns.filter(d => d.slug !== currentSlug);
 
   return (
-    <section className="w-full bg-[#3B2215] py-[50px] px-[20px] md:px-[50px] flex flex-col items-center gap-[50px]">
+    <section className="w-full bg-[#3B2215] py-[50px] px-[50px] flex flex-col items-center gap-[50px]">
       <h2 className="font-[Inter] font-medium text-[40px] md:text-[60px] lg:text-[106px] leading-none text-center tracking-[-0.045em] uppercase text-white w-full max-w-[1340px]">
         Lihat Peta Dusun Lain
       </h2>

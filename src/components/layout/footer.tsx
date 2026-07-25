@@ -70,7 +70,7 @@ export function Footer() {
         <div className="flex flex-col justify-between items-start w-full xl:w-[444px] shrink-0 gap-[30px] xl:gap-[40px]">
           <div className="flex flex-col gap-[15px] xl:gap-[15px] w-full">
             <span className="font-[Inter] font-semibold text-[14px] md:text-[16px] leading-none tracking-[-0.09em] uppercase text-[#3B2215]/80">
-              (Info lainnya)
+              (Siaga Bencana Kalongan)
             </span>
             <p className="font-[Inter] font-medium text-[16px] xl:text-[24px] leading-[1.35] tracking-[-0.045em]">
               SAKA (Siaga Bencana Kalongan) merupakan salah satu luaran yang diinisiasi oleh Tim Kuliah Kerja Nyata (KKN) Tematik Universitas Diponegoro di Desa Kalongan, Kecamatan Ungaran Timur, Kabupaten Semarang.

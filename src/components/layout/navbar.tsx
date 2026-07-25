@@ -76,10 +76,10 @@ export function Navbar({ initialTheme = 'dark' }: { initialTheme?: 'light' | 'da
       className={`fixed top-0 left-0 z-[9999] w-full transition-all duration-200 pointer-events-auto ${navStyle.isHidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}
       style={{ backgroundColor: navStyle.bg, color: navStyle.textColor }}
     >
-      <div className="h-[90px] px-[50px] w-full max-w-[1440px] mx-auto flex items-center justify-between">
+      <div className="h-[70px] xl:h-[90px] px-[50px] w-full max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Link href="/" onClick={(e) => handleScrollToTop(e, "/")} className="font-[Inter] font-extrabold text-[36px] md:text-[46px] xl:text-[58px] leading-none tracking-[-0.09em]">
+          <Link href="/" onClick={(e) => handleScrollToTop(e, "/")} className="font-[Inter] font-extrabold text-[28px] md:text-[40px] xl:text-[58px] leading-none tracking-[-0.09em]">
             SAKA
           </Link>
         </div>

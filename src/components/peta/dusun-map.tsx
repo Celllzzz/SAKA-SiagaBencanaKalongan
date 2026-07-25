@@ -92,6 +92,16 @@ const svgStrings: Record<string, string> = {
   default: `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="black" stroke="white" stroke-width="1"/></svg>`,
 };
 
+const createArrowIcon = (angle: number) => {
+  const svg = `<svg viewBox="0 0 24 24" style="transform: rotate(${angle}deg);"><path d="M12 2L20 18L12 14L4 18Z" fill="black" stroke="white" stroke-width="1.5"/></svg>`;
+  return L.divIcon({
+    html: svg,
+    className: "custom-leaflet-icon",
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
+  });
+};
+
 const svgIcons: Record<string, any> = Object.fromEntries(
   Object.entries(svgStrings).map(([key, svg]) => [key, createCustomIcon(svg)])
 );
@@ -183,8 +193,9 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
       }
     }).catch(e => console.error(e));
 
-    safeFetchJson(`/maps/${folderName}/tingkat risiko longsor ${filePrefix}.json`).then(async data => {
-      if (!data) {
+    const fileNameRisiko = dusunSlug === "glepung" ? "tingkat risiko longsor.json" : `tingkat risiko longsor ${filePrefix}.json`;
+    safeFetchJson(`/maps/${folderName}/${fileNameRisiko}`).then(async data => {
+      if (!data && dusunSlug !== "glepung") {
         data = await safeFetchJson(`/maps/${folderName}/tingkat risiko longsor.json`);
       }
       if (data?.features) {
@@ -307,6 +318,38 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
       activeKerentanan.set(info.key, { svg: svgStrings[info.key], label: info.label });
     }
   });
+
+  const getEvakuasiArrows = (paths: [number, number][][]) => {
+    const arrows: { pos: [number, number], angle: number }[] = [];
+    paths.forEach(path => {
+      if (path.length > 1) {
+        // Arrow at the end of the line
+        const p1 = path[path.length - 2];
+        const p2 = path[path.length - 1];
+        const dy = p2[0] - p1[0];
+        const dx = p2[1] - p1[1];
+        const cssAngle = 90 - (Math.atan2(dy, dx) * (180 / Math.PI));
+        
+        // Put it at 80% of the last segment
+        const posLat = p1[0] + (dy * 0.8);
+        const posLng = p1[1] + (dx * 0.8);
+        arrows.push({ pos: [posLat, posLng], angle: cssAngle });
+
+        // If path is somewhat long, also put one near the start
+        if (path.length > 2) {
+          const pS1 = path[0];
+          const pS2 = path[1];
+          const dyS = pS2[0] - pS1[0];
+          const dxS = pS2[1] - pS1[1];
+          const angleS = 90 - (Math.atan2(dyS, dxS) * (180 / Math.PI));
+          const posLatS = pS1[0] + (dyS * 0.5);
+          const posLngS = pS1[1] + (dxS * 0.5);
+          arrows.push({ pos: [posLatS, posLngS], angle: angleS });
+        }
+      }
+    });
+    return arrows;
+  };
 
   const legendContent = (
     <div className="flex flex-col gap-5 overflow-y-auto pr-2 pb-2 custom-scrollbar" style={{ flex: 1 }}>
@@ -552,9 +595,12 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
 
         {/* JALUR EVAKUASI */}
         {layers.evakuasi && evakuasi.length > 0 && evakuasi.map((path, idx) => (
-          <Polyline key={idx} positions={path} pathOptions={{ color: "black", weight: 4 }}>
+          <Polyline key={`ev-line-${idx}`} positions={path} pathOptions={{ color: "black", weight: 4 }}>
             <Popup><div className="font-[Inter] text-sm font-semibold text-center">Jalur Evakuasi</div></Popup>
           </Polyline>
+        ))}
+        {layers.evakuasi && evakuasi.length > 0 && getEvakuasiArrows(evakuasi).map((arrow, idx) => (
+          <Marker key={`ev-arrow-${idx}`} position={arrow.pos} icon={createArrowIcon(arrow.angle)} zIndexOffset={150} interactive={false} />
         ))}
 
         {/* FASILITAS / TITIK KUMPUL */}
