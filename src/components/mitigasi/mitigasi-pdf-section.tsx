@@ -14,7 +14,7 @@ export function MitigasiPdfSection({ pdfUrl }: { pdfUrl?: string }) {
         <div className="w-full max-w-[1340px] mx-auto flex flex-col gap-[20px]">
           
           {/* Desktop & Tablet: Iframe */}
-          <div className="hidden md:block w-full h-[65vh] md:h-[75vh] max-h-[800px] bg-[#FAE3C7] overflow-hidden rounded-xl">
+          <div className="hidden md:block w-full h-[65vh] md:h-[75vh] max-h-[800px] bg-[#FAE3C7] overflow-hidden">
             <iframe 
               src={pdfUrl} 
               className="w-full h-full border-none"
