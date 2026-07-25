@@ -12,16 +12,16 @@ const MAPS = [
 
 export function PetaSection() {
   return (
-    <section className="w-full bg-[#FAE3C7] text-[#3B2215] pt-[180px] pb-[50px] px-[50px] min-h-screen flex flex-col" data-theme="light" data-bg="#FAE3C7">
+    <section className="w-full bg-[#FAE3C7] text-[#3B2215] pt-[100px] md:pt-[140px] xl:pt-[180px] pb-[50px] px-[50px] min-h-screen flex flex-col" data-theme="light" data-bg="#FAE3C7">
       <div className="w-full max-w-[1340px] mx-auto flex flex-col gap-[50px]">
 
         {/* Header */}
         <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-[30px] xl:gap-[50px] animate-fade-in-up">
           <div className="flex flex-col">
-            <h1 className="font-[Inter] font-medium text-[32px] sm:text-[40px] md:text-[70px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize">
+            <h1 className="font-[Inter] font-medium text-[24px] min-[400px]:text-[28px] sm:text-[36px] md:text-[60px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize whitespace-nowrap">
               PETA KEBENCANAAN
             </h1>
-            <h1 className="font-[Inter] font-medium text-[32px] sm:text-[40px] md:text-[70px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize">
+            <h1 className="font-[Inter] font-medium text-[24px] min-[400px]:text-[28px] sm:text-[36px] md:text-[60px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize whitespace-nowrap">
               DUSUN RAWAN <span className="inline-block ml-2 md:ml-4">→</span>
             </h1>
           </div>

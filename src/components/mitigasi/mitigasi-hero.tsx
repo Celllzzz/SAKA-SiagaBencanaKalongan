@@ -1,13 +1,13 @@
 export function MitigasiHero() {
   return (
-    <section className="w-full bg-[#FAE3C7] text-[#3B2215] pt-[120px] md:pt-[180px] pb-[50px] px-[50px] flex flex-col" data-theme="light" data-bg="#FAE3C7">
+    <section className="w-full bg-[#FAE3C7] text-[#3B2215] pt-[100px] md:pt-[140px] xl:pt-[180px] pb-[50px] px-[50px] flex flex-col" data-theme="light" data-bg="#FAE3C7">
       <div className="w-full max-w-[1340px] mx-auto flex flex-col xl:flex-row items-start xl:items-center justify-between gap-[30px] xl:gap-[50px] animate-fade-in-up">
         
         <div className="flex flex-col shrink-0">
-          <h1 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize text-[#3B2215]">
+          <h1 className="font-[Inter] font-medium text-[28px] min-[400px]:text-[32px] sm:text-[40px] md:text-[60px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize text-[#3B2215] whitespace-nowrap">
             Mitigasi
           </h1>
-          <h1 className="font-[Inter] font-medium text-[40px] md:text-[60px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize text-[#3B2215]">
+          <h1 className="font-[Inter] font-medium text-[28px] min-[400px]:text-[32px] sm:text-[40px] md:text-[60px] xl:text-[90px] leading-none tracking-[-0.045em] capitalize text-[#3B2215] whitespace-nowrap">
             Bencana Longsor
           </h1>
         </div>
