@@ -29,7 +29,7 @@ export function MapAccordion({ mapItems }: { mapItems: MapDetail[] }) {
 
   return (
     <div className="flex flex-col gap-[50px] mt-[50px]">
-      {mapItems.map((mapItem) => {
+      {mapItems.map((mapItem, index) => {
         const isOpen = openId === mapItem.id;
 
         return (
@@ -100,8 +100,10 @@ export function MapAccordion({ mapItems }: { mapItems: MapDetail[] }) {
               </div>
             </div>
 
-            {/* Garis Pemisah (Selalu Tampil) */}
-            <div className="w-full h-[1.25px] border-t-[2px] border-[rgba(59,34,21,0.5)] transform -rotate-[0.1deg] mt-[50px]" />
+            {/* Garis Pemisah (Tidak Tampil untuk Item Terakhir) */}
+            {index !== mapItems.length - 1 && (
+              <div className="w-full h-[1.25px] border-t-[2px] border-[rgba(59,34,21,0.5)] mt-[50px]" />
+            )}
           </div>
         );
       })}

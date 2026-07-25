@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Polygon, Polyline, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Polygon, Polyline, Marker, Popup, useMap, Pane } from "react-leaflet";
 import proj4 from "proj4";
 import "leaflet/dist/leaflet.css";
 
@@ -556,6 +556,12 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
         <FitBounds coords={kavling} />
         <RecenterButton coords={kavling} />
 
+        {/* Define strict zIndex panes for layers so they don't overlap wrongly when toggled */}
+        <Pane name="pane-risiko" style={{ zIndex: 401 }} />
+        <Pane name="pane-jalan" style={{ zIndex: 402 }} />
+        <Pane name="pane-evakuasi" style={{ zIndex: 403 }} />
+        <Pane name="pane-batas" style={{ zIndex: 404 }} />
+
         {/* RISIKO LONGSOR */}
         {layers.risiko && risiko.length > 0 && risiko.map((r, i) => {
           const colors = getRisikoColor(r.tingkat);
@@ -564,6 +570,7 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
               key={`risiko-${i}`}
               positions={r.coords}
               pathOptions={{
+                pane: "pane-risiko",
                 color: colors.stroke,
                 fillColor: colors.fill,
                 fillOpacity: 0.5,
@@ -577,12 +584,12 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
 
         {/* JALAN UTAMA */}
         {layers.jalan && jalan.length > 0 && jalan.map((path, idx) => (
-          <Polyline key={idx} positions={path} pathOptions={{ color: "#ef4444", weight: 3 }} />
+          <Polyline key={idx} positions={path} pathOptions={{ pane: "pane-jalan", color: "#ef4444", weight: 3 }} />
         ))}
 
         {/* JALUR EVAKUASI */}
         {layers.evakuasi && evakuasi.length > 0 && evakuasi.map((path, idx) => (
-          <Polyline key={`ev-line-${idx}`} positions={path} pathOptions={{ color: "black", weight: 4 }}>
+          <Polyline key={`ev-line-${idx}`} positions={path} pathOptions={{ pane: "pane-evakuasi", color: "black", weight: 4 }}>
             <Popup><div className="font-[Inter] text-sm font-semibold text-center">Jalur Evakuasi</div></Popup>
           </Polyline>
         ))}
@@ -592,6 +599,7 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
           <Polygon
             positions={kavling}
             pathOptions={{
+              pane: "pane-batas",
               color: "#ffffff",
               fillColor: "transparent",
               weight: 3,
