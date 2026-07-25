@@ -114,12 +114,10 @@ export function Navbar({ initialTheme = 'dark' }: { initialTheme?: 'light' | 'da
           {/* Mobile Hamburger Menu */}
           <div className="xl:hidden ml-4">
             <Sheet>
-              <SheetTrigger className={`inline-flex items-center justify-center rounded-md p-2 transition-colors ${isLight ? "text-[#3B2215] hover:bg-[#3B2215]/10" : "text-white hover:bg-white/20"
-                }`}>
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
+              <SheetTrigger className={`p-2 -mr-2 focus:outline-none transition-colors ${isLight ? "text-[#3B2215]" : "text-white"}`}>
+                <Menu className="w-[28px] h-[28px] md:w-[32px] md:h-[32px]" strokeWidth={1.5} />
               </SheetTrigger>
-              <SheetContent side="right" showCloseButton={false} className="bg-[#111111] text-white border-none w-full sm:max-w-md h-[100dvh] flex flex-col pt-8 pb-10 px-8 shadow-2xl z-[9999]">
+              <SheetContent side="right" showCloseButton={false} className="bg-[#111111] text-white border-none w-full sm:max-w-md h-[100dvh] flex flex-col pt-8 pb-10 px-[20px] md:px-[32px] shadow-2xl z-[9999]">
                 <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
                 {/* Top Bar: Logo & Close Icon */}
                 <div className="flex justify-between items-start mb-16">
