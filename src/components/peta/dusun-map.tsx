@@ -255,11 +255,18 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
       };
 
       if (titikData?.features) {
-        const wkid = titikData.spatialReference?.wkid || 32749;
-        titikData.features.forEach((f: FeaturePoint) => {
-          if (!isFinite(f.geometry?.x) || !isFinite(f.geometry?.y)) return;
-          const baseCoord = convertCoord([f.geometry.x, f.geometry.y], wkid);
-          const nama = f.attributes.PALANG || "Titik Kumpul";
+        let wkid = 32749;
+        if (titikData.spatialReference?.wkid) wkid = titikData.spatialReference.wkid;
+        else if (titikData.crs?.properties?.name?.includes("32748")) wkid = 32748;
+
+        titikData.features.forEach((f: any) => {
+          const x = f.geometry?.coordinates ? f.geometry.coordinates[0] : f.geometry?.x;
+          const y = f.geometry?.coordinates ? f.geometry.coordinates[1] : f.geometry?.y;
+          const attrs = f.properties || f.attributes || {};
+          
+          if (!isFinite(x) || !isFinite(y)) return;
+          const baseCoord = convertCoord([x, y], wkid);
+          const nama = attrs.PALANG || "Titik Kumpul";
           if (!isDuplicate(baseCoord, nama)) {
             combined.push({ coord: baseCoord, nama: nama, kategori: nama });
           }
@@ -267,14 +274,21 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
       }
 
       if (kapasitasData?.features) {
-        const wkid = kapasitasData.spatialReference?.wkid || 32749;
-        kapasitasData.features.forEach((f: FeaturePoint) => {
-          if (!f.attributes.Ket || f.attributes.Ket.trim() === "") return;
-          if (!isFinite(f.geometry?.x) || !isFinite(f.geometry?.y)) return;
-          const baseCoord = convertCoord([f.geometry.x, f.geometry.y], wkid);
-          const nama = f.attributes.FID_ || f.attributes.Ket;
+        let wkid = 32749;
+        if (kapasitasData.spatialReference?.wkid) wkid = kapasitasData.spatialReference.wkid;
+        else if (kapasitasData.crs?.properties?.name?.includes("32748")) wkid = 32748;
+
+        kapasitasData.features.forEach((f: any) => {
+          const attrs = f.properties || f.attributes || {};
+          if (!attrs.Ket || attrs.Ket.trim() === "") return;
+          const x = f.geometry?.coordinates ? f.geometry.coordinates[0] : f.geometry?.x;
+          const y = f.geometry?.coordinates ? f.geometry.coordinates[1] : f.geometry?.y;
+          
+          if (!isFinite(x) || !isFinite(y)) return;
+          const baseCoord = convertCoord([x, y], wkid);
+          const nama = attrs.FID_ || attrs.Ket;
           if (!isDuplicate(baseCoord, nama)) {
-            combined.push({ coord: baseCoord, nama: nama, kategori: f.attributes.Ket });
+            combined.push({ coord: baseCoord, nama: nama, kategori: attrs.Ket });
           }
         });
       }
