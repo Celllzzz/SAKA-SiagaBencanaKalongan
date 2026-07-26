@@ -28,7 +28,7 @@ const aboutData = [
     id: "tim-kami",
     number: "04",
     title: "Tim Kami",
-    content: "SAKA lahir dari kolaborasi lintas disiplin ilmu — mahasiswa Teknik Geologi, K3, Teknologi Pangan, Teknik Komputer, dan berbagai jurusan lain yang bersatu dalam program KKN-T UNDIP untuk satu misi: membantu Desa Kalongan lebih siap menghadapi bencana longsor.",
+    content: "SAKA lahir dari kolaborasi lintas disiplin ilmu — mahasiswa Teknik Geologi, K3, Teknologi Pangan, Teknik Komputer, Teknik Lingkungan, dan Ekonomi yang bersatu dalam program KKN-T UNDIP untuk satu misi: membantu Desa Kalongan lebih siap menghadapi bencana longsor.",
     image: "/assets/home/timkami1.webp",
   }
 ];
