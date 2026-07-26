@@ -579,59 +579,61 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
         <RecenterButton coords={kavling} />
 
         {/* Define strict zIndex panes for layers so they don't overlap wrongly when toggled */}
-        <Pane name="pane-risiko" style={{ zIndex: 401 }} />
-        <Pane name="pane-jalan" style={{ zIndex: 402 }} />
-        <Pane name="pane-evakuasi" style={{ zIndex: 403 }} />
-        <Pane name="pane-batas" style={{ zIndex: 404 }} />
 
         {/* RISIKO LONGSOR */}
-        {layers.risiko && risiko.length > 0 && risiko.map((r, i) => {
-          const colors = getRisikoColor(r.tingkat);
-          return (
-            <Polygon
-              key={`risiko-${i}`}
-              positions={r.coords}
-              pathOptions={{
-                pane: "pane-risiko",
-                color: colors.stroke,
-                fillColor: colors.fill,
-                fillOpacity: 0.5,
-                weight: 1.5,
-              }}
-            >
-              <Popup>Risiko Longsor: <b>{r.tingkat}</b></Popup>
-            </Polygon>
-          );
-        })}
+        <Pane name="pane-risiko" style={{ zIndex: 401 }}>
+          {layers.risiko && risiko.length > 0 && risiko.map((r, i) => {
+            const colors = getRisikoColor(r.tingkat);
+            return (
+              <Polygon
+                key={`risiko-${i}`}
+                positions={r.coords}
+                pathOptions={{
+                  color: colors.stroke,
+                  fillColor: colors.fill,
+                  fillOpacity: 0.5,
+                  weight: 1.5,
+                }}
+              >
+                <Popup>Risiko Longsor: <b>{r.tingkat}</b></Popup>
+              </Polygon>
+            );
+          })}
+        </Pane>
 
         {/* JALAN UTAMA */}
-        {layers.jalan && jalan.length > 0 && jalan.map((path, idx) => (
-          <Polyline key={idx} positions={path} pathOptions={{ pane: "pane-jalan", color: "#ef4444", weight: 3 }} />
-        ))}
+        <Pane name="pane-jalan" style={{ zIndex: 402 }}>
+          {layers.jalan && jalan.length > 0 && jalan.map((path, idx) => (
+            <Polyline key={idx} positions={path} pathOptions={{ color: "#ef4444", weight: 3 }} />
+          ))}
+        </Pane>
 
         {/* JALUR EVAKUASI */}
-        {layers.evakuasi && evakuasi.length > 0 && evakuasi.map((path, idx) => (
-          <Polyline key={`ev-line-${idx}`} positions={path} pathOptions={{ pane: "pane-evakuasi", color: "black", weight: 4 }}>
-            <Popup><div className="font-[Inter] text-sm font-semibold text-center">Jalur Evakuasi</div></Popup>
-          </Polyline>
-        ))}
+        <Pane name="pane-evakuasi" style={{ zIndex: 403 }}>
+          {layers.evakuasi && evakuasi.length > 0 && evakuasi.map((path, idx) => (
+            <Polyline key={`ev-line-${idx}`} positions={path} pathOptions={{ color: "black", weight: 4 }}>
+              <Popup><div className="font-[Inter] text-sm font-semibold text-center">Jalur Evakuasi</div></Popup>
+            </Polyline>
+          ))}
+          {layers.evakuasi && evakuasi.length > 0 && getEvakuasiArrows(evakuasi).map((arrow, idx) => (
+            <Marker key={`ev-arrow-${idx}`} position={arrow.pos} icon={createArrowIcon(arrow.angle)} zIndexOffset={150} interactive={false} />
+          ))}
+        </Pane>
 
         {/* BATAS ADMINISTRASI */}
-        {layers.batas && kavling.length > 0 && (
-          <Polygon
-            positions={kavling}
-            pathOptions={{
-              pane: "pane-batas",
-              color: "#ffffff",
-              fillColor: "transparent",
-              weight: 3,
-              dashArray: "5, 5"
-            }}
-          />
-        )}
-        {layers.evakuasi && evakuasi.length > 0 && getEvakuasiArrows(evakuasi).map((arrow, idx) => (
-          <Marker key={`ev-arrow-${idx}`} position={arrow.pos} icon={createArrowIcon(arrow.angle)} zIndexOffset={150} interactive={false} />
-        ))}
+        <Pane name="pane-batas" style={{ zIndex: 404 }}>
+          {layers.batas && kavling.length > 0 && (
+            <Polygon
+              positions={kavling}
+              pathOptions={{
+                color: "#ffffff",
+                fillColor: "transparent",
+                weight: 3,
+                dashArray: "5, 5"
+              }}
+            />
+          )}
+        </Pane>
 
         {/* FASILITAS / TITIK KUMPUL */}
         {titikKumpul.length > 0 && titikKumpul.map((point, idx) => {
