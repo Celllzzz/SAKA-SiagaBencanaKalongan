@@ -15,7 +15,8 @@ export const mitigasiDataList: MitigasiItem[] = [
     title: "Manual Prosedur Kebencanaan",
     description: "Dari mengenali tanda awal, evakuasi mandiri, hingga titik kumpul aman — panduan lengkap prosedur mitigasi yang perlu diketahui setiap warga.",
     image: "/assets/mitigasi/kebencanaan.webp",
-    detailSlug: "/mitigasi/manual-prosedur"
+    detailSlug: "/mitigasi/manual-prosedur",
+    pdfUrl: "/download/mitigasi/ManualProsedurKebencanaan.pdf"
   },
   {
     id: "tas-siaga",
@@ -23,7 +24,8 @@ export const mitigasiDataList: MitigasiItem[] = [
     title: "Tas Siaga Bencana",
     description: "Barang dan bekal apa saja yang perlu ada di tas siagamu? Simak daftar lengkapnya, lengkap dengan alasan kenapa tiap barang itu penting.",
     image: "/assets/mitigasi/TasSiagaBencana.webp",
-    detailSlug: "/mitigasi/tas-siaga"
+    detailSlug: "/mitigasi/tas-siaga",
+    pdfUrl: "/download/mitigasi/TasSiagaBencana.pdf"
   },
   {
     id: "pangan-darurat",

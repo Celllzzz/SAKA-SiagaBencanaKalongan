@@ -1,0 +1,929 @@
+{
+  "type" : "FeatureCollection",
+  "crs" : {
+    "type" : "name",
+    "properties" : {
+      "name" : "EPSG:32749"
+    }
+  },
+  "features" : [
+    {
+      "type" : "Feature",
+      "id" : 0,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439628.81705345202,
+          9211471.8643280398
+        ]
+      },
+      "properties" : {
+        "FID" : 0,
+        "PALANG" : "Titik Kumpul",
+        "X" : 439628.81705299998,
+        "Y" : 439628.81705299998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 1,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          438935.15345270798,
+          9211600.05219955
+        ]
+      },
+      "properties" : {
+        "FID" : 1,
+        "PALANG" : "Rekomendasi Titik Kumpul (Halaman Masjid Baitussalaam)",
+        "X" : 438935.15345300001,
+        "Y" : 438935.15345300001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 2,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          438962.86187934299,
+          9211533.1570129804
+        ]
+      },
+      "properties" : {
+        "FID" : 2,
+        "PALANG" : "Rekomendasi Titik Kumpul (Lapangan Takraw Punsae)",
+        "X" : 438962.86187899997,
+        "Y" : 438962.86187899997
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 3,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          438996.64085128502,
+          9211551.5491555091
+        ]
+      },
+      "properties" : {
+        "FID" : 3,
+        "PALANG" : "Rekomendasi Titik Kumpul (Lapangan Voli Pringkurung)",
+        "X" : 438996.64085099997,
+        "Y" : 438996.64085099997
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 4,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439049.30557364703,
+          9211622.7415471394
+        ]
+      },
+      "properties" : {
+        "FID" : 4,
+        "PALANG" : "Rekomendasi Titik Kumpul (Lapangan Badminton Pringkurung)",
+        "X" : 439049.305574,
+        "Y" : 439049.305574
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 5,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          438918.90999999997,
+          9211600.2300000004
+        ]
+      },
+      "properties" : {
+        "FID" : 5,
+        "PALANG" : "Masjid Baitussalaam",
+        "X" : 438918.90999999997,
+        "Y" : 438918.90999999997
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 6,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          438932.88,
+          9211712.0199999996
+        ]
+      },
+      "properties" : {
+        "FID" : 6,
+        "PALANG" : "Ketua RT 1 RW 20",
+        "X" : 438932.88,
+        "Y" : 438932.88
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 7,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          438963.79999999999,
+          9211765.8000000007
+        ]
+      },
+      "properties" : {
+        "FID" : 7,
+        "PALANG" : "Ketua RT 2 RW 20",
+        "X" : 438963.79999999999,
+        "Y" : 438963.79999999999
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 8,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439103.76000000001,
+          9211947.1500000004
+        ]
+      },
+      "properties" : {
+        "FID" : 8,
+        "PALANG" : "Ketua RT 3 RW 20",
+        "X" : 439103.76000000001,
+        "Y" : 439103.76000000001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 9,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439039.10999999999,
+          9211884.4299999997
+        ]
+      },
+      "properties" : {
+        "FID" : 9,
+        "PALANG" : "Ketua RT 4 RW 20",
+        "X" : 439039.10999999999,
+        "Y" : 439039.10999999999
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 10,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439014.87,
+          9211896.9900000002
+        ]
+      },
+      "properties" : {
+        "FID" : 10,
+        "PALANG" : "Ketua RT 5 RW 20",
+        "X" : 439014.87,
+        "Y" : 439014.87
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 11,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439033.53999999998,
+          9211929.2599999998
+        ]
+      },
+      "properties" : {
+        "FID" : 11,
+        "PALANG" : "Ketua RW 20",
+        "X" : 439033.53999999998,
+        "Y" : 439033.53999999998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 12,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439068.46999999997,
+          9211958.1699999999
+        ]
+      },
+      "properties" : {
+        "FID" : 12,
+        "PALANG" : "Mushola Al-Ikhlas",
+        "X" : 439068.46999999997,
+        "Y" : 439068.46999999997
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 13,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439351.69,
+          9211362.4399999995
+        ]
+      },
+      "properties" : {
+        "FID" : 13,
+        "PALANG" : "Kantor Urusan Agama",
+        "X" : 439351.69,
+        "Y" : 439351.69
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 14,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439469.03999999998,
+          9211466.9900000002
+        ]
+      },
+      "properties" : {
+        "FID" : 14,
+        "PALANG" : "Masjid Baitul Mutaqin",
+        "X" : 439469.03999999998,
+        "Y" : 439469.03999999998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 15,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439460.96000000002,
+          9211556.3499999996
+        ]
+      },
+      "properties" : {
+        "FID" : 15,
+        "PALANG" : "GKJ Glepung",
+        "X" : 439460.96000000002,
+        "Y" : 439460.96000000002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 16,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439237.31,
+          9211589.5500000007
+        ]
+      },
+      "properties" : {
+        "FID" : 16,
+        "PALANG" : "SDN 03 Kalongan",
+        "X" : 439237.31,
+        "Y" : 439237.31
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 17,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439720.88,
+          9211714.1899999995
+        ]
+      },
+      "properties" : {
+        "FID" : 17,
+        "PALANG" : "Posyandu Permata Bunda",
+        "X" : 439720.88,
+        "Y" : 439720.88
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 18,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439726.09000000003,
+          9211720.0299999993
+        ]
+      },
+      "properties" : {
+        "FID" : 18,
+        "PALANG" : "Kepala Dusun Glepung",
+        "X" : 439726.09000000003,
+        "Y" : 439726.09000000003
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 19,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439603.19,
+          9211638.5099999998
+        ]
+      },
+      "properties" : {
+        "FID" : 19,
+        "PALANG" : "Masjid Auli'a",
+        "X" : 439603.19,
+        "Y" : 439603.19
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 20,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439673.67999999999,
+          9211689.5700000003
+        ]
+      },
+      "properties" : {
+        "FID" : 20,
+        "PALANG" : "Ketua RW 9",
+        "X" : 439673.67999999999,
+        "Y" : 439673.67999999999
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 21,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439370.08000000002,
+          9211630.5500000007
+        ]
+      },
+      "properties" : {
+        "FID" : 21,
+        "PALANG" : "Ketua RT 1 RW 9",
+        "X" : 439370.08000000002,
+        "Y" : 439370.08000000002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 22,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439914.34999999998,
+          9211522.4900000002
+        ]
+      },
+      "properties" : {
+        "FID" : 22,
+        "PALANG" : "Ketua RT 2 RW 9",
+        "X" : 439914.34999999998,
+        "Y" : 439914.34999999998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 23,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439431.96999999997,
+          9211691.1199999992
+        ]
+      },
+      "properties" : {
+        "FID" : 23,
+        "PALANG" : "Ketua RT 3 RW 9",
+        "X" : 439431.96999999997,
+        "Y" : 439431.96999999997
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 24,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439699.45000000001,
+          9211681.3100000005
+        ]
+      },
+      "properties" : {
+        "FID" : 24,
+        "PALANG" : "Ketua RT 4 RW 9",
+        "X" : 439699.45000000001,
+        "Y" : 439699.45000000001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 25,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439646.83000000002,
+          9211565.1600000001
+        ]
+      },
+      "properties" : {
+        "FID" : 25,
+        "PALANG" : "Ketua RT 5 RW 9",
+        "X" : 439646.83000000002,
+        "Y" : 439646.83000000002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 26,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439814.19,
+          9211666.6999999993
+        ]
+      },
+      "properties" : {
+        "FID" : 26,
+        "PALANG" : "Ketua RT 6 RW 9",
+        "X" : 439814.19,
+        "Y" : 439814.19
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 27,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439822.42999999999,
+          9211701.4100000001
+        ]
+      },
+      "properties" : {
+        "FID" : 27,
+        "PALANG" : "Ketua RT 7 RW 9",
+        "X" : 439822.42999999999,
+        "Y" : 439822.42999999999
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 28,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439618.41999999998,
+          9211468.0899999999
+        ]
+      },
+      "properties" : {
+        "FID" : 28,
+        "PALANG" : "Ketua RT 8 RW 9",
+        "X" : 439618.41999999998,
+        "Y" : 439618.41999999998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 29,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439112.51000000001,
+          9211552.25
+        ]
+      },
+      "properties" : {
+        "FID" : 29,
+        "PALANG" : "Puskesmas Kalongan",
+        "X" : 439112.51000000001,
+        "Y" : 439112.51000000001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 30,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439050.40999999997,
+          9211668.8699999992
+        ]
+      },
+      "properties" : {
+        "FID" : 30,
+        "PALANG" : "Ketua RT 1 RW 12",
+        "X" : 439050.40999999997,
+        "Y" : 439050.40999999997
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 31,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439062.77000000002,
+          9211595.1799999997
+        ]
+      },
+      "properties" : {
+        "FID" : 31,
+        "PALANG" : "Ketua RT 2 RW 12",
+        "X" : 439062.77000000002,
+        "Y" : 439062.77000000002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 32,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439001.02000000002,
+          9211678.0199999996
+        ]
+      },
+      "properties" : {
+        "FID" : 32,
+        "PALANG" : "Ketua RT 3 RW 12",
+        "X" : 439001.02000000002,
+        "Y" : 439001.02000000002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 33,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439007.56,
+          9211591.7300000004
+        ]
+      },
+      "properties" : {
+        "FID" : 33,
+        "PALANG" : "Posyandu",
+        "X" : 439007.56,
+        "Y" : 439007.56
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 34,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439068.64000000001,
+          9211564.1699999999
+        ]
+      },
+      "properties" : {
+        "FID" : 34,
+        "PALANG" : "Masjid Al-Ikhlas",
+        "X" : 439068.64000000001,
+        "Y" : 439068.64000000001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 35,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439249.37,
+          9211761.2300000004
+        ]
+      },
+      "properties" : {
+        "FID" : 35,
+        "PALANG" : "Ketua RW 18",
+        "X" : 439249.37,
+        "Y" : 439249.37
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 36,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439093.28999999998,
+          9211721.1199999992
+        ]
+      },
+      "properties" : {
+        "FID" : 36,
+        "PALANG" : "Ketua RT 1 RW 18",
+        "X" : 439093.28999999998,
+        "Y" : 439093.28999999998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 37,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439185.07000000001,
+          9211665.9600000009
+        ]
+      },
+      "properties" : {
+        "FID" : 37,
+        "PALANG" : "Ketua RT 2 RW 18",
+        "X" : 439185.07000000001,
+        "Y" : 439185.07000000001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 38,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439145.37,
+          9211776.4600000009
+        ]
+      },
+      "properties" : {
+        "FID" : 38,
+        "PALANG" : "Ketua RT 3 RW 18",
+        "X" : 439145.37,
+        "Y" : 439145.37
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 39,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439699.45000000001,
+          9211681.3100000005
+        ]
+      },
+      "properties" : {
+        "FID" : 39,
+        "PALANG" : "Ketua RT 4 RW 18",
+        "X" : 439699.45000000001,
+        "Y" : 439699.45000000001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 40,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439646.83000000002,
+          9211565.1600000001
+        ]
+      },
+      "properties" : {
+        "FID" : 40,
+        "PALANG" : "Ketua RT 5 RW 18",
+        "X" : 439646.83000000002,
+        "Y" : 439646.83000000002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 41,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439381.48999999999,
+          9211835.0899999999
+        ]
+      },
+      "properties" : {
+        "FID" : 41,
+        "PALANG" : "Ketua RT 6 RW 18",
+        "X" : 439381.48999999999,
+        "Y" : 439381.48999999999
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 42,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439221.75,
+          9211779.6199999992
+        ]
+      },
+      "properties" : {
+        "FID" : 42,
+        "PALANG" : "Posyandu RW 18",
+        "X" : 439221.75,
+        "Y" : 439221.75
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 43,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439231.27000000002,
+          9211767.3499999996
+        ]
+      },
+      "properties" : {
+        "FID" : 43,
+        "PALANG" : "Masjid Griya Kalongan Indah",
+        "X" : 439231.27000000002,
+        "Y" : 439231.27000000002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 44,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          438979.95000000001,
+          9211598.1500000004
+        ]
+      },
+      "properties" : {
+        "FID" : 44,
+        "PALANG" : "Ketua RW 12",
+        "X" : 438979.95000000001,
+        "Y" : 438979.95000000001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 45,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439087.75,
+          9211481.5899999999
+        ]
+      },
+      "properties" : {
+        "FID" : 45,
+        "PALANG" : "Kantor Kecamatan Ungaran Timur",
+        "X" : 439087.75,
+        "Y" : 439087.75
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 46,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439178.53999999998,
+          9211490.2899999991
+        ]
+      },
+      "properties" : {
+        "FID" : 46,
+        "PALANG" : "Alun Alun Kalongan",
+        "X" : 439178.53999999998,
+        "Y" : 439178.53999999998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 47,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439257.33000000002,
+          9211519.8699999992
+        ]
+      },
+      "properties" : {
+        "FID" : 47,
+        "PALANG" : "TK Ananda 2",
+        "X" : 439257.33000000002,
+        "Y" : 439257.33000000002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 48,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439888.23999999999,
+          9211554.6999999993
+        ]
+      },
+      "properties" : {
+        "FID" : 48,
+        "PALANG" : "Mushola An-Nur",
+        "X" : 439888.23999999999,
+        "Y" : 439888.23999999999
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 49,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439710.84000000003,
+          9211646.6199999992
+        ]
+      },
+      "properties" : {
+        "FID" : 49,
+        "PALANG" : "Mushola Ridhotullah",
+        "X" : 439710.84000000003,
+        "Y" : 439710.84000000003
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 50,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439792.3048324883,
+          9211414.689583106
+        ]
+      },
+      "properties" : {
+        "FID" : 50,
+        "PALANG" : "Longsor",
+        "X" : 439792.30483199999,
+        "Y" : 439792.30483199999
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 51,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439078.04260307929,
+          9211978.2987735309
+        ]
+      },
+      "properties" : {
+        "FID" : 51,
+        "PALANG" : "Longsor",
+        "X" : 439078.04260300001,
+        "Y" : 439078.04260300001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 52,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439029.4805249467,
+          9211984.2374893483
+        ]
+      },
+      "properties" : {
+        "FID" : 52,
+        "PALANG" : "Longsor",
+        "X" : 439029.48052500002,
+        "Y" : 439029.48052500002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 53,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          439204.43100699369,
+          9211484.3005903605
+        ]
+      },
+      "properties" : {
+        "FID" : 53,
+        "PALANG" : "Rekomendasi Titik Kumpul (Alun-Alun Kalongan)",
+        "X" : 439204.43100699998,
+        "Y" : 439204.43100699998
+      }
+    }
+  ]
+}

@@ -199,6 +199,7 @@ export default function MapComponent() {
         {/* BATAS DESA (Village Boundary) rendered last to be on top */}
         <Polygon 
           positions={polygonCoords} 
+          interactive={false}
           pathOptions={{ 
             color: "#ffffff", 
             fillColor: "#000000",

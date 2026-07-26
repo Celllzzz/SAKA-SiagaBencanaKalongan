@@ -1,0 +1,385 @@
+{
+  "type" : "FeatureCollection",
+  "crs" : {
+    "type" : "name",
+    "properties" : {
+      "name" : "EPSG:32749"
+    }
+  },
+  "features" : [
+    {
+      "type" : "Feature",
+      "id" : 0,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437225.19665321702,
+          9211979.8230381496
+        ]
+      },
+      "properties" : {
+        "FID" : 0,
+        "PALANG" : "Palang Jalur Evakuasi",
+        "X" : 437225.19665300002,
+        "Y" : 9211979.8230380006
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 1,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437329.29194414499,
+          9211928.5662628692
+        ]
+      },
+      "properties" : {
+        "FID" : 1,
+        "PALANG" : "Palang Jalur Evakuasi",
+        "X" : 437329.291944,
+        "Y" : 9211928.5662629995
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 2,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437351.32864155201,
+          9211860.1834010892
+        ]
+      },
+      "properties" : {
+        "FID" : 2,
+        "PALANG" : "Palang Jalur Evakuasi",
+        "X" : 437351.32864199998,
+        "Y" : 9211860.1834009998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 3,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437405.74205455702,
+          9211872.7205833998
+        ]
+      },
+      "properties" : {
+        "FID" : 3,
+        "PALANG" : "Palang Jalur Evakuasi",
+        "X" : 437405.74205499998,
+        "Y" : 9211872.7205829993
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 4,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437337.02351922501,
+          9211819.3387396298
+        ]
+      },
+      "properties" : {
+        "FID" : 4,
+        "PALANG" : "Palang Jalur Evakuasi",
+        "X" : 437337.02351899998,
+        "Y" : 9211819.3387400005
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 5,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437381.753831334,
+          9211956.6889813803
+        ]
+      },
+      "properties" : {
+        "FID" : 5,
+        "PALANG" : "EWS",
+        "X" : 437381.75383100001,
+        "Y" : 9211956.6889810003
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 6,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437366.60431175801,
+          9211902.0242219698
+        ]
+      },
+      "properties" : {
+        "FID" : 6,
+        "PALANG" : "EWS",
+        "X" : 437366.60431199998,
+        "Y" : 9211902.0242219996
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 7,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437368.35319259402,
+          9211898.6434613504
+        ]
+      },
+      "properties" : {
+        "FID" : 7,
+        "PALANG" : "Titik Kumpul Sementara",
+        "X" : 437368.35319300002,
+        "Y" : 9211898.6434610002
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 8,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437408.11237730202,
+          9211785.9175976794
+        ]
+      },
+      "properties" : {
+        "FID" : 8,
+        "PALANG" : "Titik Tempat Evakuasi",
+        "X" : 437408.11237699998,
+        "Y" : 9211785.9175979998
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 9,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437512.58000000002,
+          9211801.8200000003
+        ]
+      },
+      "properties" : {
+        "FID" : 9,
+        "PALANG" : "Ketua RT 1",
+        "X" : 437512.58000000002,
+        "Y" : 9211801.8200000003
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 10,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437255.87,
+          9211777.5500000007
+        ]
+      },
+      "properties" : {
+        "FID" : 10,
+        "PALANG" : "Ketua RT 2",
+        "X" : 437255.87,
+        "Y" : 9211777.5500000007
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 11,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437235.69,
+          9211978.0500000007
+        ]
+      },
+      "properties" : {
+        "FID" : 11,
+        "PALANG" : "Ketua RT 3",
+        "X" : 437235.69,
+        "Y" : 9211978.0500000007
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 12,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437153.21000000002,
+          9211949.0800000001
+        ]
+      },
+      "properties" : {
+        "FID" : 12,
+        "PALANG" : "Ketua RT 4",
+        "X" : 437153.21000000002,
+        "Y" : 9211949.0800000001
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 13,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437216.06,
+          9211974.6500000004
+        ]
+      },
+      "properties" : {
+        "FID" : 13,
+        "PALANG" : "Ketua RW 1",
+        "X" : 437216.06,
+        "Y" : 9211974.6500000004
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 14,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437423.06,
+          9211767.6199999992
+        ]
+      },
+      "properties" : {
+        "FID" : 14,
+        "PALANG" : "Kepala Dusun",
+        "X" : 437423.06,
+        "Y" : 9211767.6199999992
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 15,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437428.64000000001,
+          9211712.3499999996
+        ]
+      },
+      "properties" : {
+        "FID" : 15,
+        "PALANG" : "Masjid Nurul Huda",
+        "X" : 437428.64000000001,
+        "Y" : 9211712.3499999996
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 16,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437215.15000000002,
+          9211966.9700000007
+        ]
+      },
+      "properties" : {
+        "FID" : 16,
+        "PALANG" : "TPQ Annur Muslim",
+        "X" : 437215.15000000002,
+        "Y" : 9211966.9700000007
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 17,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437560.38,
+          9211590.9000000004
+        ]
+      },
+      "properties" : {
+        "FID" : 17,
+        "PALANG" : "GKJ Pepathan Dampu",
+        "X" : 437560.38,
+        "Y" : 9211590.9000000004
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 18,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437174.19,
+          9211851.1500000004
+        ]
+      },
+      "properties" : {
+        "FID" : 18,
+        "PALANG" : "Ma'had 'Aly Bani Ahmad",
+        "X" : 437174.19,
+        "Y" : 9211851.1500000004
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 19,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437208.27000000002,
+          9211821.0999999996
+        ]
+      },
+      "properties" : {
+        "FID" : 19,
+        "PALANG" : "Makam",
+        "X" : 437208.27000000002,
+        "Y" : 9211821.0999999996
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 20,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437650.52000000002,
+          9211630.9299999997
+        ]
+      },
+      "properties" : {
+        "FID" : 20,
+        "PALANG" : "Sanggar Budaya Condrowinoto",
+        "X" : 437650.52000000002,
+        "Y" : 9211630.9299999997
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 21,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          437366.68782613002,
+          9211959.8764982298
+        ]
+      },
+      "properties" : {
+        "FID" : 21,
+        "PALANG" : "Longsor",
+        "X" : 437366.68782599998,
+        "Y" : 9211959.8764980007
+      }
+    }
+  ]
+}

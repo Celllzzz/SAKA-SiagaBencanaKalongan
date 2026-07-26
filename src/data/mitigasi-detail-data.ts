@@ -30,6 +30,7 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
     titleTop: "Manual prosedur",
     titleBottom: "Kebencanaan",
     heroImage: "/assets/mitigasi/kebencanaan.webp", // using same image from main page as placeholder for banner
+    pdfUrl: "/download/mitigasi/ManualProsedurKebencanaan.pdf",
     sections: [
       {
         number: "01",

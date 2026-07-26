@@ -231,8 +231,16 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
       }
     }).catch(e => console.error(e));
 
+    const fetchTitikKumpul = async () => {
+      let tk = await safeFetchJson(`/maps/${folderName}/TitikKumpul${folderName}.json`);
+      if (!tk) {
+        tk = await safeFetchJson(`/maps/${folderName}/titik kumpul ${filePrefix}.json`);
+      }
+      return tk;
+    };
+
     Promise.all([
-      safeFetchJson(`/maps/${folderName}/titik kumpul ${filePrefix}.json`),
+      fetchTitikKumpul(),
       safeFetchJson(`/maps/${folderName}/kapasitas ${filePrefix}.json`)
     ]).then(([titikData, kapasitasData]) => {
       const combined: any[] = [];
