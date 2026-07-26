@@ -115,7 +115,7 @@ const getIconTypeAndLabel = (kategori: string, nama: string) => {
   if (text.includes("makam") || text.includes("pemakaman")) return { key: 'pemakaman', label: 'Pemakaman' };
   if (text.includes("ews") || text.includes("warning")) return { key: 'ews', label: 'EWS' };
   if (text.includes("longsor")) return { key: 'longsor', label: 'Titik Longsor' };
-  if (text.includes("titik kumpul") || text.includes("kumpul")) return { key: 'titikKumpul', label: 'Titik Kumpul' };
+  if (text.includes("titik kumpul") || text.includes("kumpul") || text.includes("tempat evakuasi")) return { key: 'titikKumpul', label: 'Titik Kumpul' };
   return { key: 'default', label: 'Titik Lainnya' };
 };
 
@@ -136,7 +136,7 @@ export default function DusunMap({ dusunSlug }: { dusunSlug: string }) {
   const [layers, setLayers] = useState({
     batas: true,
     risiko: true,
-    jalan: false,
+    jalan: true,
     evakuasi: false,
     fasilitas: false,
     titikKumpul: false,
