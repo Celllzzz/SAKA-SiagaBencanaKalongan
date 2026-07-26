@@ -108,6 +108,7 @@ const svgIcons: Record<string, any> = Object.fromEntries(
 
 const getIconTypeAndLabel = (kategori: string, nama: string) => {
   const text = (kategori + " " + nama).toLowerCase();
+  if (text.includes("titik kumpul") || text.includes("kumpul") || text.includes("tempat evakuasi")) return { key: 'titikKumpul', label: 'Titik Kumpul' };
   if (text.includes("kepala dusun")) return { key: 'kepalaDusun', label: 'Kepala Dusun' };
   if (text.includes("rt")) return { key: 'ketuaRT', label: 'Ketua RT' };
   if (text.includes("rw")) return { key: 'ketuaRW', label: 'Ketua RW' };
@@ -115,7 +116,6 @@ const getIconTypeAndLabel = (kategori: string, nama: string) => {
   if (text.includes("makam") || text.includes("pemakaman")) return { key: 'pemakaman', label: 'Pemakaman' };
   if (text.includes("ews") || text.includes("warning")) return { key: 'ews', label: 'EWS' };
   if (text.includes("longsor")) return { key: 'longsor', label: 'Titik Longsor' };
-  if (text.includes("titik kumpul") || text.includes("kumpul") || text.includes("tempat evakuasi")) return { key: 'titikKumpul', label: 'Titik Kumpul' };
   return { key: 'default', label: 'Titik Lainnya' };
 };
 
