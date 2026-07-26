@@ -20,7 +20,7 @@ export const dusunDataList: DusunData[] = [
       {
         id: "01",
         title: "PETA GEOLOGI",
-        definition: "Peta geologi menyajikan informasi persebaran, jenis, dan struktur batuan di permukaan bumi. Peta geologi menjadi dasar analisis sumber daya alam, tata ruang, hingga mitigasi bencana. Dalam konteks kebencanaan, peta geologi membantu mengidentifikasi karakteristik batuan—seperti tingkat pelapukan, kekompakan, dan serapan air—yang sangat memengaruhi kestabilan lereng.",
+        definition: "Peta geologi menunjukkan jenis dan persebaran batuan di suatu wilayah. Informasi ini bermanfaat untuk mengenali potensi sumber daya alam, mendukung perencanaan desa, dan membantu mengurangi risiko bencana. Jenis batuan dapat memengaruhi kestabilan lereng sehingga penting untuk mengetahui daerah yang lebih berpotensi mengalami longsor.",
         description: "Dusun Dampu tersusun atas batupasir tuf dan breksi. Breksi segar membuat lereng lebih stabil, namun jika breksi melapuk dan retak, resapan air hujan akan menurunkan kekuatannya. Potensi longsor di Dusun Dampu sangat dipengaruhi oleh tingkat pelapukan batuan, kemiringan lereng, dan kondisi drainase.",
         file: "/download/PetaGeologi/PetaGeologi_Dampu.pdf" 
       },
@@ -90,7 +90,7 @@ export const dusunDataList: DusunData[] = [
       {
         id: "01",
         title: "PETA GEOLOGI",
-        definition: "Peta geologi menyajikan informasi persebaran, jenis, dan struktur batuan di permukaan bumi. Peta geologi menjadi dasar analisis sumber daya alam, tata ruang, hingga mitigasi bencana. Dalam konteks kebencanaan, peta geologi membantu mengidentifikasi karakteristik batuan—seperti tingkat pelapukan, kekompakan, dan serapan air—yang sangat memengaruhi kestabilan lereng.",
+        definition: "Peta geologi menunjukkan jenis dan persebaran batuan di suatu wilayah. Informasi ini bermanfaat untuk mengenali potensi sumber daya alam, mendukung perencanaan desa, dan membantu mengurangi risiko bencana. Jenis batuan dapat memengaruhi kestabilan lereng sehingga penting untuk mengetahui daerah yang lebih berpotensi mengalami longsor.",
         description: "Dusun Bandungan tersusun atas batupasir tuf dengan karakteristik mirip Dusun Glepung. Kerentanan longsor di Dusun Bandungan bergantung pada tingkat pelapukan batuan, curah hujan, dan topografi. Lereng terjal dengan batuan yang telah melapuk memiliki risiko longsor tinggi, sedangkan area yang landai relatif lebih aman.",
         file: "/download/PetaGeologi/PetaGeologi_Bandungan.pdf" 
       },
@@ -159,7 +159,7 @@ export const dusunDataList: DusunData[] = [
       {
         id: "01",
         title: "PETA GEOLOGI",
-        definition: "Peta geologi menyajikan informasi persebaran, jenis, dan struktur batuan di permukaan bumi. Peta geologi menjadi dasar analisis sumber daya alam, tata ruang, hingga mitigasi bencana. Dalam konteks kebencanaan, peta geologi membantu mengidentifikasi karakteristik batuan—seperti tingkat pelapukan, kekompakan, dan serapan air—yang sangat memengaruhi kestabilan lereng.",
+        definition: "Peta geologi menunjukkan jenis dan persebaran batuan di suatu wilayah. Informasi ini bermanfaat untuk mengenali potensi sumber daya alam, mendukung perencanaan desa, dan membantu mengurangi risiko bencana. Jenis batuan dapat memengaruhi kestabilan lereng sehingga penting untuk mengetahui daerah yang lebih berpotensi mengalami longsor.",
         description: "Dusun Glepung didominasi oleh batupasir tuf vulkanik yang mudah melapuk menjadi material gembur. Kondisi pelapukan tersebut melemahkan kestabilan lereng, sementara resapan air hujan berpotensi memicu pergerakan tanah, terutama di lereng curam. Oleh karena itu, Dusun Glepung membutuhkan kewaspadaan ekstra saat musim hujan.",
         file: "/download/PetaGeologi/PetaGeologi_Glepung.pdf" 
       },
@@ -228,7 +228,7 @@ export const dusunDataList: DusunData[] = [
       {
         id: "01",
         title: "PETA GEOLOGI",
-        definition: "Peta geologi menyajikan informasi persebaran, jenis, dan struktur batuan di permukaan bumi. Peta geologi menjadi dasar analisis sumber daya alam, tata ruang, hingga mitigasi bencana. Dalam konteks kebencanaan, peta geologi membantu mengidentifikasi karakteristik batuan—seperti tingkat pelapukan, kekompakan, dan serapan air—yang sangat memengaruhi kestabilan lereng.",
+        definition: "Peta geologi menunjukkan jenis dan persebaran batuan di suatu wilayah. Informasi ini bermanfaat untuk mengenali potensi sumber daya alam, mendukung perencanaan desa, dan membantu mengurangi risiko bencana. Jenis batuan dapat memengaruhi kestabilan lereng sehingga penting untuk mengetahui daerah yang lebih berpotensi mengalami longsor.",
         description: "Serupa dengan Dusun Dampu, litologi Dusun Tompogunung terdiri dari batupasir tuf dan breksi. Area dengan breksi segar cenderung lebih stabil, sementara batuan yang telah melapuk sangat rentan longsor, terutama saat hujan lebat. Kerawanan longsor di Dusun Tompogunung sangat ditentukan oleh tingkat pelapukan batuan dan morfologi lerengnya.",
         file: "/download/PetaGeologi/PetaGeologi_TompoGunung.pdf" 
       },
