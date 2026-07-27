@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SAKA (Siaga Bencana Kalongan)
 
-## Getting Started
+SAKA adalah portal sistem informasi terpadu yang dirancang untuk mitigasi, edukasi, dan kesiapsiagaan terhadap ancaman bencana tanah longsor di Desa Kalongan. Sistem ini secara khusus difokuskan pada 4 dusun rawan longsor: **Dusun Dampu**, **Dusun Bandungan**, **Dusun Glepung**, dan **Dusun Tompo Gunung**.
 
-First, run the development server:
+Website ini dibangun oleh tim mahasiswa KKN-T UNDIP dari berbagai lintas disiplin ilmu (Teknik Geologi, K3, Teknologi Pangan, Teknik Komputer, Teknik Lingkungan, dan Ekonomi) untuk membantu masyarakat dan perangkat desa dalam menghadapi dan meminimalisir risiko bencana.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Fitur Utama
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Peta Interaktif Kebencanaan**: Visualisasi peta spasial (Peta Geologi, Peta Pelapukan, Peta Ancaman, dan Peta Evakuasi) untuk setiap dusun rawan menggunakan interaksi interaktif berbasis *Leaflet*.
+- **Panduan Mitigasi & Kesiapsiagaan**: Dokumen edukasi terpadu seperti Manual Prosedur Kebencanaan, Panduan Tas Siaga Bencana, serta strategi pemulihan pascabencana (ekonomi dan administrasi).
+- **Galeri Dokumentasi**: Rekam jejak kegiatan sosialisasi, observasi lapangan, dan pemetaan di Desa Kalongan.
+- **Form Pengaduan Terintegrasi**: Fasilitas pelaporan non-darurat untuk kerusakan struktural fisik (seperti retakan tanah atau talud rusak) yang langsung terhubung ke sistem penerimaan laporan desa.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Arsitektur & Teknologi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Proyek ini dikembangkan dengan pendekatan modern untuk memastikan performa yang cepat, aksesibilitas tinggi di perangkat seluler (*mobile-first*), dan biaya operasional yang minim (berbasis statis):
 
-## Learn More
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [Shadcn UI](https://ui.shadcn.com/)
+- **Pemetaan**: `react-leaflet` untuk komponen GIS interaktif
+- **Deployment**: Mode *Static Site Generation* (SSG) penuh (`output: 'export'`)
+- **Manajemen Data**: Konten dikelola murni menggunakan JSON dan TypeScript (*Headless / No Backend Database*).
 
-To learn more about Next.js, take a look at the following resources:
+## Menjalankan Proyek secara Lokal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Pastikan Anda telah menginstal [Node.js](https://nodejs.org/).
+2. *Clone* repositori ini.
+3. Jalankan perintah instalasi dependensi:
+   ```bash
+   npm install
+   ```
+4. Jalankan server pengembangan (development server):
+   ```bash
+   npm run dev
+   ```
+5. Buka [http://localhost:3000](http://localhost:3000) di *browser* Anda untuk melihat hasilnya.

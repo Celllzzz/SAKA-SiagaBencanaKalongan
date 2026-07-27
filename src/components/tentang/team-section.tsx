@@ -33,7 +33,7 @@ const TEAM_MEMBERS = [
   { name: "Caca", fullName: "Salsa Khairun Nissa", role: "K3", image: "salsa.webp" },
   { name: "Jasmine", fullName: "Jasmine Hani Alifya", role: "K3", image: "jasmine.webp" },
   { name: "Hardika", fullName: "Hardika Megantriadya Nugroho", role: "K3", image: "hardika.webp" },
-  { name: "Yogi Bali", fullName: "I Made Ananta Yogisvara", role: "K3", image: "yogi bali.webp" },
+  { name: "Yogisvara", fullName: "I Made Ananta Yogisvara", role: "K3", image: "yogi bali.webp" },
   { name: "Rafi", fullName: "Rafi Raihan Putra Adrian", role: "K3", image: "rafi raihan.webp" },
 
   // Teknik Lingkungan
