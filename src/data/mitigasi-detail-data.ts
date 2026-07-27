@@ -1,4 +1,4 @@
-export type ContentBlock = 
+export type ContentBlock =
   | { type: 'text'; content: string }
   | { type: 'heading'; content: string }
   | { type: 'list'; title?: string; items: string[]; listType?: 'disc' | 'decimal' }
@@ -40,49 +40,61 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
             subtitle: "A. Tas Siaga Bencana",
             blocks: [
               { type: 'text', content: "Tas Siaga Bencana adalah perlengkapan darurat keluarga yang disiapkan untuk menghadapi situasi bencana. Tas ini untuk mendukung kelangsungan hidup sementara dan mempermudah proses evakuasi masyarakat." },
-              { type: 'list', title: "DAFTAR ISI TAS SIAGA BENCANA", listType: 'disc', items: [
-                "Dokumen Penting: Surat-surat penting seperti surat tanah, surat kendaraan, ijazah, dan akta kelahiran",
-                "Sandang: Pakaian untuk kebutuhan tiga hari",
-                "Pangan: Makanan ringan yang tahan lama",
-                "Kesehatan: Siapkan kotak P3K berisi obat pribadi dan obat umum",
-                "Media Komunikasi dan Penerangan: Bawa telepon genggam untuk memantau informasi. Siapkan senter untuk penerangan.",
-                "Kebutuhan Finansial: Uang tunai secukupnya perlu disiapkan untuk memenuhi kebutuhan."
-              ]},
-              { type: 'list', title: "CARA PENYIMPANAN TAS SIAGA BENCANA", listType: 'disc', items: [
-                "Simpan ditempat yang mudah dijangkau, misalnya di dekat pintu keluar rumah atau dekat jalur evakuasi.",
-                "Tas diperiksa dan diperbarui secara berkala, minimal 3 bulan sekali.",
-                "Gunakan tas punggung yang ringan, tahan air, dan nyaman dibawa.",
-                "Sertakan daftar isi di dalam tas agar mudah diperiksa saat pengecekan berkala."
-              ]}
+              {
+                type: 'list', title: "DAFTAR ISI TAS SIAGA BENCANA", listType: 'disc', items: [
+                  "Dokumen Penting: Surat-surat penting seperti surat tanah, surat kendaraan, ijazah, dan akta kelahiran",
+                  "Sandang: Pakaian untuk kebutuhan tiga hari",
+                  "Pangan: Makanan ringan yang tahan lama",
+                  "Kesehatan: Siapkan kotak P3K berisi obat pribadi dan obat umum",
+                  "Media Komunikasi dan Penerangan: Bawa telepon genggam untuk memantau informasi. Siapkan senter untuk penerangan.",
+                  "Kebutuhan Finansial: Uang tunai secukupnya perlu disiapkan untuk memenuhi kebutuhan."
+                ]
+              },
+              {
+                type: 'list', title: "CARA PENYIMPANAN TAS SIAGA BENCANA", listType: 'disc', items: [
+                  "Simpan ditempat yang mudah dijangkau, misalnya di dekat pintu keluar rumah atau dekat jalur evakuasi.",
+                  "Tas diperiksa dan diperbarui secara berkala, minimal 3 bulan sekali.",
+                  "Gunakan tas punggung yang ringan, tahan air, dan nyaman dibawa.",
+                  "Sertakan daftar isi di dalam tas agar mudah diperiksa saat pengecekan berkala."
+                ]
+              }
             ]
           },
           {
             subtitle: "B. Pengelolaan Lingkungan",
             blocks: [
               { type: 'text', content: "Sampah yang menumpuk dapat menyumbat saluran drainase sehingga aliran air hujan terhambat, menyebabkan genangan dan meningkatkan rembesan air ke lereng. Kondisi tersebut dapat mengurangi kestabilan tanah dan meningkatkan risiko longsor." },
-              { type: 'list', title: "HAL YANG DIHINDARI", listType: 'decimal', items: [
-                "Membuang sampah ke sungai, saluran drainase, atau lereng.",
-                "Menumpuk sampah di dekat tebing maupun lahan kosong.",
-                "Membakar sampah sembarangan.",
-                "Mencampurkan limbah B3 dengan sampah rumah tangga."
-              ]},
-              { type: 'list', title: "MITIGASI PENGELOLAAN SAMPAH", listType: 'disc', items: [
-                "SEBELUM LONGSOR: Jaga kebersihan lingkungan dengan membuang dan memilah sampah serta membersihkan saluran drainase secara rutin.",
-                "SAAT HUJAN LEBAT: Pastikan saluran air tetap lancar, hindari area berbahaya, dan segera laporkan penyumbatan yang berpotensi memicu longsor.",
-                "SETELAH LONGSOR: Bersihkan lingkungan secara aman menggunakan APD dan laporkan material atau puing yang memerlukan penanganan khusus."
-              ]},
+              {
+                type: 'list', title: "HAL YANG DIHINDARI", listType: 'decimal', items: [
+                  "Membuang sampah ke sungai, saluran drainase, atau lereng.",
+                  "Menumpuk sampah di dekat tebing maupun lahan kosong.",
+                  "Membakar sampah sembarangan.",
+                  "Mencampurkan limbah B3 dengan sampah rumah tangga."
+                ]
+              },
+              {
+                type: 'list', title: "MITIGASI PENGELOLAAN SAMPAH", listType: 'disc', items: [
+                  "SEBELUM LONGSOR: Jaga kebersihan lingkungan dengan membuang dan memilah sampah serta membersihkan saluran drainase secara rutin.",
+                  "SAAT HUJAN LEBAT: Pastikan saluran air tetap lancar, hindari area berbahaya, dan segera laporkan penyumbatan yang berpotensi memicu longsor.",
+                  "SETELAH LONGSOR: Bersihkan lingkungan secara aman menggunakan APD dan laporkan material atau puing yang memerlukan penanganan khusus."
+                ]
+              },
               { type: 'text', content: "Drainase berfungsi mengalirkan air hujan agar tidak menggenang maupun meresap berlebihan ke dalam lereng. Drainase yang terawat membantu mengurangi risiko erosi, genangan, dan tanah longsor, serta melindungi jalan maupun bangunan dari luapan air." },
-              { type: 'list', title: "HAL YANG DIHINDARI", listType: 'decimal', items: [
-                "Membuang sampah ke saluran drainase.",
-                "Menutup atau mengubah jalur drainase tanpa perencanaan.",
-                "Membiarkan lumpur menumpuk terlalu lama.",
-                "Mengabaikan kerusakan saluran."
-              ]},
-              { type: 'list', title: "MITIGASI PENGELOLAAN DRAINASE", listType: 'disc', items: [
-                "SEBELUM LONGSOR: Bersihkan dan rawat saluran drainase secara rutin agar aliran air tetap lancar.",
-                "SAAT HUJAN LEBAT: Pantau kondisi drainase dan segera laporkan penyumbatan atau kerusakan yang berpotensi memicu longsor.",
-                "SETELAH LONGSOR: Periksa dan bersihkan drainase secara aman setelah kondisi dinyatakan aman serta laporkan kerusakan yang ditemukan."
-              ]}
+              {
+                type: 'list', title: "HAL YANG DIHINDARI", listType: 'decimal', items: [
+                  "Membuang sampah ke saluran drainase.",
+                  "Menutup atau mengubah jalur drainase tanpa perencanaan.",
+                  "Membiarkan lumpur menumpuk terlalu lama.",
+                  "Mengabaikan kerusakan saluran."
+                ]
+              },
+              {
+                type: 'list', title: "MITIGASI PENGELOLAAN DRAINASE", listType: 'disc', items: [
+                  "SEBELUM LONGSOR: Bersihkan dan rawat saluran drainase secara rutin agar aliran air tetap lancar.",
+                  "SAAT HUJAN LEBAT: Pantau kondisi drainase dan segera laporkan penyumbatan atau kerusakan yang berpotensi memicu longsor.",
+                  "SETELAH LONGSOR: Periksa dan bersihkan drainase secara aman setelah kondisi dinyatakan aman serta laporkan kerusakan yang ditemukan."
+                ]
+              }
             ]
           }
         ]
@@ -116,7 +128,7 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
     titleTop: "Tas siaga",
     titleBottom: "bencana",
     heroImage: "/assets/mitigasi/TasSiagaBencana.webp",
-    pdfUrl: "/assets/pdf/tas-siaga.pdf",
+    pdfUrl: "/download/mitigasi/TasSiagaBencana.pdf",
     sections: [
       {
         number: "01",
@@ -126,27 +138,33 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
             blocks: [
               { type: 'text', content: "Tas yang disiapkan setiap anggota keluarga untuk berjaga-jaga apabila terjadi bencana atau kondisi darurat lainnya." },
               { type: 'heading', content: "KENAPA PENTING?" },
-              { type: 'list', listType: 'disc', items: [
-                "Membantu keluarga bertahan selama 1x24 jam pertama pascabencana",
-                "Mengurangi kepanikan, menghemat waktu evakuasi",
-                "Warga lebih tenang saat bencana datang karena sudah siap untuk pergi ke titik kumpul"
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Membantu keluarga bertahan selama 1x24 jam pertama pascabencana",
+                  "Mengurangi kepanikan, menghemat waktu evakuasi",
+                  "Warga lebih tenang saat bencana datang karena sudah siap untuk pergi ke titik kumpul"
+                ]
+              },
               { type: 'heading', content: "DAFTAR ISI TAS SIAGA BENCANA" },
-              { type: 'list', listType: 'disc', items: [
-                "Dokumen Penting: Surat-surat penting seperti surat tanah, surat kendaraan, ijazah, dan akta kelahiran",
-                "Sandang: Pakaian untuk kebutuhan tiga hari",
-                "Pangan: Makanan ringan yang tahan lama",
-                "Kesehatan: Siapkan kotak P3K berisi obat pribadi dan obat umum",
-                "Media Komunikasi dan Penerangan: Bawa telepon genggam untuk memantau informasi. Siapkan senter untuk penerangan.",
-                "Kebutuhan Finansial: Uang tunai secukupnya perlu disiapkan untuk memenuhi kebutuhan."
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Dokumen Penting: Surat-surat penting seperti surat tanah, surat kendaraan, ijazah, dan akta kelahiran",
+                  "Sandang: Pakaian untuk kebutuhan tiga hari",
+                  "Pangan: Makanan ringan yang tahan lama",
+                  "Kesehatan: Siapkan kotak P3K berisi obat pribadi dan obat umum",
+                  "Media Komunikasi dan Penerangan: Bawa telepon genggam untuk memantau informasi. Siapkan senter untuk penerangan.",
+                  "Kebutuhan Finansial: Uang tunai secukupnya perlu disiapkan untuk memenuhi kebutuhan."
+                ]
+              },
               { type: 'heading', content: "CARA PENYIMPANAN TAS SIAGA BENCANA" },
-              { type: 'list', listType: 'disc', items: [
-                "Simpan ditempat yang mudah dijangkau, misalnya di dekat pintu keluar rumah atau dekat jalur evakuasi.",
-                "Tas diperiksa dan diperbarui secara berkala, minimal 3 bulan sekali.",
-                "Gunakan tas punggung yang ringan, tahan air, dan nyaman dibawa.",
-                "Sertakan daftar isi di dalam tas agar mudah diperiksa saat pengecekan berkala."
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Simpan ditempat yang mudah dijangkau, misalnya di dekat pintu keluar rumah atau dekat jalur evakuasi.",
+                  "Tas diperiksa dan diperbarui secara berkala, minimal 3 bulan sekali.",
+                  "Gunakan tas punggung yang ringan, tahan air, dan nyaman dibawa.",
+                  "Sertakan daftar isi di dalam tas agar mudah diperiksa saat pengecekan berkala."
+                ]
+              }
             ]
           }
         ]
@@ -157,18 +175,20 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
         subsections: [
           {
             blocks: [
-              { type: 'list', listType: 'disc', items: [
-                "Kasa Steril",
-                "Plester",
-                "Kapas",
-                "Gunting",
-                "Peniti",
-                "Sarung Tangan Sekali pakai",
-                "Buku Panduan",
-                "Buku Catatan",
-                "Betadien",
-                "Aquades / Larutan Pencuci"
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Kasa Steril",
+                  "Plester",
+                  "Kapas",
+                  "Gunting",
+                  "Peniti",
+                  "Sarung Tangan Sekali pakai",
+                  "Buku Panduan",
+                  "Buku Catatan",
+                  "Betadien",
+                  "Aquades / Larutan Pencuci"
+                ]
+              }
             ]
           }
         ]
@@ -179,14 +199,16 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
         subsections: [
           {
             blocks: [
-              { type: 'list', listType: 'decimal', items: [
-                "Pastikan Keamanan : Aman Diri Aman Korban Aman Lingkungan, Periksa keadaan korban dengan cepat.",
-                "Tentukan apakah korban sadar, bernapas, dan ada pendarahan ataupun luka serius.",
-                "Panggil bantuan orang lain atau hubungi layanan darurat (119 atau 112) jika diperlukan.",
-                "Lakukan tindakan pertolongan sesuai kondisi korban dan kemampuan (misal, tekan luka berdarah, bantu napas dan posisikan korban dengan aman).",
-                "Lindungi korban dari ancaman, panas, kedinginan, dan rasa tidak nyaman, serta berikan dukungan psikologis seperlunya.",
-                "Serahkan korban kepada tenaga medis dan berikan informasi yang jelas terkait kondisi yang dialami korban."
-              ]}
+              {
+                type: 'list', listType: 'decimal', items: [
+                  "Pastikan Keamanan : Aman Diri Aman Korban Aman Lingkungan, Periksa keadaan korban dengan cepat.",
+                  "Tentukan apakah korban sadar, bernapas, dan ada pendarahan ataupun luka serius.",
+                  "Panggil bantuan orang lain atau hubungi layanan darurat (119 atau 112) jika diperlukan.",
+                  "Lakukan tindakan pertolongan sesuai kondisi korban dan kemampuan (misal, tekan luka berdarah, bantu napas dan posisikan korban dengan aman).",
+                  "Lindungi korban dari ancaman, panas, kedinginan, dan rasa tidak nyaman, serta berikan dukungan psikologis seperlunya.",
+                  "Serahkan korban kepada tenaga medis dan berikan informasi yang jelas terkait kondisi yang dialami korban."
+                ]
+              }
             ]
           }
         ]
@@ -222,18 +244,22 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'heading', content: "Kondisi saat Bencana Longsor Terjadi :" },
-              { type: 'list', listType: 'disc', items: [
-                "Akses jalan dapat terputus",
-                "Distribusi bantuan dapat terlambat",
-                "Aktivitas memasak menjadi terbatas",
-                "Keluarga membutuhkan cadangan pangan yang siap dikonsumsi"
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Akses jalan dapat terputus",
+                  "Distribusi bantuan dapat terlambat",
+                  "Aktivitas memasak menjadi terbatas",
+                  "Keluarga membutuhkan cadangan pangan yang siap dikonsumsi"
+                ]
+              },
               { type: 'heading', content: "Mengapa harus disiapkan sebelum bencana?" },
-              { type: 'list', listType: 'disc', items: [
-                "Memenuhi kebutuhan energi awal",
-                "Mengurangi risiko kekurangan pangan",
-                "Membantu proses evakuasi dan pemulihan"
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Memenuhi kebutuhan energi awal",
+                  "Mengurangi risiko kekurangan pangan",
+                  "Membantu proses evakuasi dan pemulihan"
+                ]
+              },
               { type: 'text', content: "Beberapa jenis pangan yang direkomendasikan untuk mengisi Pouch Pangan Darurat antara lain biskuit tinggi energi sebagai sumber karbohidrat, susu UHT sebagai sumber protein dan kalsium, tuna atau luncheon dalam kemasan sebagai sumber protein hewani, kacang panggang sebagai sumber lemak sehat dan protein, serta energy bar atau cokelat sebagai sumber energi cepat. Pemilihan pangan tersebut didasarkan pada kemudahan konsumsi, nilai gizi, serta umur simpan yang relatif panjang sehingga sesuai untuk kondisi darurat." },
               { type: 'text', content: "Dengan adanya Pouch Pangan Darurat, masyarakat diharapkan memiliki cadangan pangan yang siap digunakan ketika bencana terjadi. Persiapan sederhana ini dapat membantu memenuhi kebutuhan gizi pada fase awal bencana, mendukung proses evakuasi, serta meningkatkan kesiapsiagaan keluarga dalam menghadapi risiko bencana longsor. Program ini juga menjadi salah satu upaya untuk memperkuat kapasitas masyarakat dalam mewujudkan Desa Tangguh Bencana melalui pengelolaan logistik pangan yang lebih terencana dan berkelanjutan." }
             ]
@@ -285,12 +311,14 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
               { type: 'heading', content: "2. Air Keruh" },
               { type: 'text', content: "Air keruh biasanya mengandung lumpur, pasir halus, atau partikel tersuspensi akibat terbawanya material saat hujan deras atau longsor. Air seperti ini tidak boleh langsung digunakan untuk minum." },
               { type: 'heading', content: "Langkah penanganannya yaitu:" },
-              { type: 'list', listType: 'disc', items: [
-                "Endapkan air selama 30–60 menit agar partikel mengendap.",
-                "Ambil bagian air yang lebih jernih secara perlahan.",
-                "Saring menggunakan kain bersih yang dilipat beberapa lapis.",
-                "Rebus hingga mendidih sebelum digunakan."
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Endapkan air selama 30–60 menit agar partikel mengendap.",
+                  "Ambil bagian air yang lebih jernih secara perlahan.",
+                  "Saring menggunakan kain bersih yang dilipat beberapa lapis.",
+                  "Rebus hingga mendidih sebelum digunakan."
+                ]
+              },
               { type: 'heading', content: "3. Air Berbau atau Berwarna" },
               { type: 'text', content: "Air yang berbau menyengat atau mengalami perubahan warna dapat mengindikasikan adanya pencemaran bahan organik maupun zat kimia. Air dengan kondisi seperti ini sebaiknya tidak langsung dikonsumsi." },
               { type: 'text', content: "Apabila tersedia, lakukan penjernihan atau desinfeksi sesuai petunjuk. Namun, apabila bau dan warna tidak berubah setelah pengolahan sederhana, masyarakat dianjurkan menggunakan sumber air lain yang lebih aman." },
@@ -308,11 +336,13 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Dalam kondisi darurat, masyarakat tidak selalu memiliki alat penjernih air khusus. Oleh karena itu, beberapa metode sederhana berikut dapat dilakukan menggunakan peralatan yang umumnya tersedia di rumah." },
-              { type: 'list', listType: 'disc', items: [
-                "Mengendapkan Air",
-                "Menyaring Air",
-                "Merebus Air"
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Mengendapkan Air",
+                  "Menyaring Air",
+                  "Merebus Air"
+                ]
+              }
             ]
           }
         ]
@@ -324,13 +354,15 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Air yang telah diolah dapat kembali tercemar apabila penyimpanannya tidak dilakukan dengan benar. Oleh sebab itu, masyarakat perlu memperhatikan beberapa hal berikut:" },
-              { type: 'list', listType: 'disc', items: [
-                "Gunakan wadah yang bersih dan memiliki penutup.",
-                "Simpan air di tempat yang teduh dan terlindung dari debu.",
-                "Gunakan gayung atau keran yang bersih saat mengambil air.",
-                "Hindari mencelupkan tangan langsung ke dalam wadah penyimpanan.",
-                "Bersihkan wadah penyimpanan secara berkala."
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Gunakan wadah yang bersih dan memiliki penutup.",
+                  "Simpan air di tempat yang teduh dan terlindung dari debu.",
+                  "Gunakan gayung atau keran yang bersih saat mengambil air.",
+                  "Hindari mencelupkan tangan langsung ke dalam wadah penyimpanan.",
+                  "Bersihkan wadah penyimpanan secara berkala."
+                ]
+              },
               { type: 'text', content: "Penyimpanan yang baik membantu menjaga kualitas air tetap aman hingga digunakan." }
             ]
           }
@@ -343,14 +375,16 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Masyarakat sebaiknya tidak menggunakan air apabila memiliki ciri-ciri berikut:" },
-              { type: 'list', listType: 'disc', items: [
-                "Berbau menyengat.",
-                "Berwarna hitam, hijau pekat, atau berubah warna secara drastis.",
-                "Berminyak di permukaan.",
-                "Berbusa secara tidak wajar.",
-                "Berasal dari sumur yang terendam banjir.",
-                "Diduga tercemar limbah atau bahan kimia."
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Berbau menyengat.",
+                  "Berwarna hitam, hijau pekat, atau berubah warna secara drastis.",
+                  "Berminyak di permukaan.",
+                  "Berbusa secara tidak wajar.",
+                  "Berasal dari sumur yang terendam banjir.",
+                  "Diduga tercemar limbah atau bahan kimia."
+                ]
+              },
               { type: 'text', content: "Apabila menemukan kondisi tersebut, hentikan penggunaan air untuk minum maupun memasak dan segera cari sumber air alternatif." }
             ]
           }
@@ -383,12 +417,14 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Setiap aktivitas manusia menghasilkan sampah dengan karakteristik yang berbeda-beda. Beberapa sumber utama sampah antara lain:" },
-              { type: 'list', listType: 'disc', items: [
-                "Sampah Rumah Tangga, Sampah yang berasal dari kegiatan sehari-hari di rumah, seperti sisa makanan, plastik kemasan, botol minuman, kertas bekas, dan daun kering.",
-                "Sampah Sekolah, Sampah yang dihasilkan dari aktivitas belajar mengajar, misalnya kertas bekas, alat tulis, kemasan makanan, dan sampah kantin.",
-                "Sampah Perkantoran, Sampah yang berasal dari kegiatan administrasi maupun operasional kantor, seperti dokumen bekas, kardus, plastik kemasan, dan limbah konsumsi.",
-                "Sampah Industri, Sampah yang dihasilkan dari proses produksi barang atau jasa, baik berupa limbah padat maupun sisa bahan produksi yang memerlukan pengelolaan khusus."
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Sampah Rumah Tangga, Sampah yang berasal dari kegiatan sehari-hari di rumah, seperti sisa makanan, plastik kemasan, botol minuman, kertas bekas, dan daun kering.",
+                  "Sampah Sekolah, Sampah yang dihasilkan dari aktivitas belajar mengajar, misalnya kertas bekas, alat tulis, kemasan makanan, dan sampah kantin.",
+                  "Sampah Perkantoran, Sampah yang berasal dari kegiatan administrasi maupun operasional kantor, seperti dokumen bekas, kardus, plastik kemasan, dan limbah konsumsi.",
+                  "Sampah Industri, Sampah yang dihasilkan dari proses produksi barang atau jasa, baik berupa limbah padat maupun sisa bahan produksi yang memerlukan pengelolaan khusus."
+                ]
+              }
             ]
           }
         ]
@@ -400,11 +436,13 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Pemilahan sampah dapat dilakukan dengan menggunakan tempat sampah sesuai warna agar proses pengelolaan menjadi lebih mudah." },
-              { type: 'list', listType: 'disc', items: [
-                "🟢 Hijau : Sampah Organik",
-                "🟡 Kuning : Sampah Anorganik",
-                "🔴 Merah : Sampah B3"
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "🟢 Hijau : Sampah Organik",
+                  "🟡 Kuning : Sampah Anorganik",
+                  "🔴 Merah : Sampah B3"
+                ]
+              },
               { type: 'text', content: "Dengan memilah sampah sejak dari sumbernya, proses daur ulang menjadi lebih efektif dan jumlah sampah yang berakhir di tempat pembuangan akhir dapat dikurangi." }
             ]
           }
@@ -417,14 +455,16 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Pengelolaan sampah yang baik memberikan banyak manfaat, di antaranya:" },
-              { type: 'list', listType: 'disc', items: [
-                "Mengurangi pencemaran lingkungan.",
-                "Menjaga kebersihan dan kesehatan lingkungan.",
-                "Menghemat penggunaan sumber daya alam.",
-                "Mengurangi penggunaan bahan baku baru.",
-                "Meningkatkan nilai ekonomi melalui produk hasil daur ulang.",
-                "Mendukung terciptanya lingkungan yang bersih dan berkelanjutan."
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Mengurangi pencemaran lingkungan.",
+                  "Menjaga kebersihan dan kesehatan lingkungan.",
+                  "Menghemat penggunaan sumber daya alam.",
+                  "Mengurangi penggunaan bahan baku baru.",
+                  "Meningkatkan nilai ekonomi melalui produk hasil daur ulang.",
+                  "Mendukung terciptanya lingkungan yang bersih dan berkelanjutan."
+                ]
+              }
             ]
           }
         ]
@@ -436,12 +476,14 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Sampah yang dikelola dengan benar dapat menghasilkan berbagai produk yang bermanfaat, seperti:" },
-              { type: 'list', listType: 'disc', items: [
-                "Kompos sebagai pupuk alami untuk menyuburkan tanah.",
-                "Produk daur ulang, seperti pot tanaman, tas, atau kerajinan.",
-                "Energi biogas sebagai sumber energi alternatif.",
-                "Bahan baku industri yang dapat digunakan kembali dalam proses produksi."
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Kompos sebagai pupuk alami untuk menyuburkan tanah.",
+                  "Produk daur ulang, seperti pot tanaman, tas, atau kerajinan.",
+                  "Energi biogas sebagai sumber energi alternatif.",
+                  "Bahan baku industri yang dapat digunakan kembali dalam proses produksi."
+                ]
+              }
             ]
           }
         ]
@@ -462,11 +504,13 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Bencana alam dapat memberikan dampak destruktif secara langsung pada ekonomi keluarga, seperti berkurangnya pendapatan utama, kerusakan aset produktif, pengeluaran mendadak yang tidak terduga, hingga hilangnya dokumen penting keluarga. Desa Kalongan memiliki tingkat kerentanan yang cukup tinggi akibat faktor demografis dan iklim" },
-              { type: 'list', listType: 'disc', items: [
-                "Fakta Demografi dan Iklim: Desa Kalongan dihuni oleh 14.243 jiwa (4.003 Kepala Keluarga) dengan rata-rata curah hujan mencapai 2.500 mm/tahun, terutama pada musim penghujan antara bulan Oktober hingga April",
-                "Tingkat Kesejahteraan: Sebagian besar warga desa berada pada kategori keluarga prasejahtera, yaitu sebesar 45% atau mencapai 1.930 KK.",
-                "Mata Pencaharian: Sebagian besar populasi pekerja berprofesi sebagai petani (982 warga) dan pedagang (954 warga), yang mana mereka sangat rentan mengalami kehilangan pendapatan secara drastis jika terjadi bencana seperti longsor."
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Fakta Demografi dan Iklim: Desa Kalongan dihuni oleh 14.243 jiwa (4.003 Kepala Keluarga) dengan rata-rata curah hujan mencapai 2.500 mm/tahun, terutama pada musim penghujan antara bulan Oktober hingga April",
+                  "Tingkat Kesejahteraan: Sebagian besar warga desa berada pada kategori keluarga prasejahtera, yaitu sebesar 45% atau mencapai 1.930 KK.",
+                  "Mata Pencaharian: Sebagian besar populasi pekerja berprofesi sebagai petani (982 warga) dan pedagang (954 warga), yang mana mereka sangat rentan mengalami kehilangan pendapatan secara drastis jika terjadi bencana seperti longsor."
+                ]
+              }
             ]
           }
         ]
@@ -480,11 +524,13 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
               { type: 'text', content: "Kapasitas keluarga yang kuat merupakan kunci utama dalam mengurangi kerentanan dan risiko bencana. Pembentukan kapasitas ini mencakup aspek finansial (tabungan dan dana darurat), produktif (keterampilan dan usaha), sosial (gotong royong), dan pengetahuan (literasi bencana dan keuangan)." },
               { type: 'heading', content: "Pentingnya Dana Darurat" },
               { type: 'text', content: "Dana darurat merupakan benteng pertahanan pertama finansial keluarga saat krisis terjadi. Prinsip utama pengelolaan dana darurat adalah harus mudah diakses, disimpan secara terpisah dari rekening pengeluaran harian, dan mutlak hanya digunakan untuk kondisi darurat." },
-              { type: 'list', listType: 'disc', items: [
-                "Membantu keluarga menghindari jebakan utang berbunga tinggi disaat pendapatan mendadak terhenti.",
-                "Memberikan waktu luang (buying time) untuk masa pemulihan tanpa harus khawatir kelaparan.",
-                "Memungkinkan keluarga untuk fokus menyelamatkan jiwa dan memulihkan kesehatan fisik maupun mental pascabencana."
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Membantu keluarga menghindari jebakan utang berbunga tinggi disaat pendapatan mendadak terhenti.",
+                  "Memberikan waktu luang (buying time) untuk masa pemulihan tanpa harus khawatir kelaparan.",
+                  "Memungkinkan keluarga untuk fokus menyelamatkan jiwa dan memulihkan kesehatan fisik maupun mental pascabencana."
+                ]
+              },
               { type: 'heading', content: "Strategi Menghindari Jebakan Utang" },
               { type: 'text', content: "Apabila sudah terdesak pascabencana, hindari mengambil pinjaman baru untuk sekadar menutup utang lama (gali lubang tutup lubang). Warga disarankan untuk melakukan negosiasi (restrukturisasi) tagihan kepada kreditur resmi dengan alasan Force Majeure, menjual aset non-esensial secara mandiri dengan harga wajar pasar, dan memfokuskan sisa uang murni untuk kebutuhan dasar hidup." }
             ]
@@ -498,12 +544,14 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Keluarga tidak boleh bertumpu hanya pada satu keran sumber penghasilan. Strategi diversifikasi pendapatan harus diterapkan, misalnya jika suami berprofesi sebagai petani, maka juga diselingi dengan beternak, atau ibu rumah tangga dapat membantu membuka usaha makanan dan jasa rumahan. Selain itu, hindari berbagai jebakan gaya hidup konsumtif yang merusak kestabilan finansial:" },
-              { type: 'list', listType: 'disc', items: [
-                "FOMO & YOLO: Memaksakan diri mengikuti tren dan mengejar apresiasi instan (seperti gawai baru atau kafe viral) dengan cara berhutang.",
-                "Lifestyle Creep: Pengeluaran dan standar hidup yang secara otomatis meningkat seiring dengan bertambahnya gaji atau penghasilan bulanan.",
-                "Doom Spending: Kebiasaan berbelanja daring secara impulsif sebagai pelarian instan dari tekanan atau stres harian.",
-                "The Latte Factor: Pengeluaran kecil harian seperti jajan kopi atau langganan aplikasi yang diam-diam menggerus saldo dalam jumlah besar setiap bulannya."
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "FOMO & YOLO: Memaksakan diri mengikuti tren dan mengejar apresiasi instan (seperti gawai baru atau kafe viral) dengan cara berhutang.",
+                  "Lifestyle Creep: Pengeluaran dan standar hidup yang secara otomatis meningkat seiring dengan bertambahnya gaji atau penghasilan bulanan.",
+                  "Doom Spending: Kebiasaan berbelanja daring secara impulsif sebagai pelarian instan dari tekanan atau stres harian.",
+                  "The Latte Factor: Pengeluaran kecil harian seperti jajan kopi atau langganan aplikasi yang diam-diam menggerus saldo dalam jumlah besar setiap bulannya."
+                ]
+              }
             ]
           }
         ]
@@ -533,12 +581,14 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
               { type: 'image', src: "/assets/mitigasi/DetailEkonomi/05_ekonomi.webp", alt: "Tabel Besaran Bantuan Stimulan Perbaikan Rumah" },
               { type: 'heading', content: "Ancaman Penipuan Penyaluran Dana Bansos" },
               { type: 'text', content: "Distribusi dana bansos rawan dieksploitasi oleh kejahatan ekonomi yang memanfaatkan kepanikan warga. Berikut adalah beberapa tipologi kejahatan yang sering terjadi :" },
-              { type: 'list', listType: 'disc', items: [
-                "Kejahatan Siber & Phishing: Modus pengiriman pesan tautan (link) atau aplikasi APK berkedok \"pendaftaran bansos\" yang dirancang untuk meretas perangkat gawai dan menguras saldo dompet digital.",
-                "Pencurian Identitas: Permintaan foto selfie dengan memegang KTP dan KK oleh oknum berkedok petugas lapangan, namun datanya digunakan untuk mencairkan utang Pinjol ilegal atas nama korban.",
-                "Pungutan Liar (Pungli): Praktik penyunatan dana bantuan tunai secara sepihak oleh oknum akar rumput dengan dalih biaya pelicin administrasi atau pungutan \"uang lelah\" .",
-                "Skema Advance Fee Fraud: Menjanjikan kuota bansos yang terbatas jika korban mau membayar uang transfer pelicin pendaftaran di awal."
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Kejahatan Siber & Phishing: Modus pengiriman pesan tautan (link) atau aplikasi APK berkedok \"pendaftaran bansos\" yang dirancang untuk meretas perangkat gawai dan menguras saldo dompet digital.",
+                  "Pencurian Identitas: Permintaan foto selfie dengan memegang KTP dan KK oleh oknum berkedok petugas lapangan, namun datanya digunakan untuk mencairkan utang Pinjol ilegal atas nama korban.",
+                  "Pungutan Liar (Pungli): Praktik penyunatan dana bantuan tunai secara sepihak oleh oknum akar rumput dengan dalih biaya pelicin administrasi atau pungutan \"uang lelah\" .",
+                  "Skema Advance Fee Fraud: Menjanjikan kuota bansos yang terbatas jika korban mau membayar uang transfer pelicin pendaftaran di awal."
+                ]
+              }
             ]
           }
         ]
@@ -550,17 +600,21 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
           {
             blocks: [
               { type: 'text', content: "Dokumen administrasi yang utuh sangat dibutuhkan untuk memperlancar klaim bantuan dari pemerintah, mempermudah pengurusan layanan kesehatan dasar pascabencana, dan mengakses layanan perbankan/asuransi ." },
-              { type: 'list', listType: 'disc', items: [
-                "Dokumen Identitas Diri: KTP, Kartu Keluarga (KK), Akta Kelahiran anak, dan Akta Nikah.",
-                "Dokumen Kepemilikan & Finansial: Sertifikat kepemilikan tanah/rumah, BPKB, STNK, buku tabungan bank, kartu ATM debit/kredit, serta buku polis asuransi.",
-                "Dokumen Medis & Pendidikan: Kartu kepesertaan BPJS, catatan riwayat rekam medis, ijazah sekolah, serta rapor."
-              ]},
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Dokumen Identitas Diri: KTP, Kartu Keluarga (KK), Akta Kelahiran anak, dan Akta Nikah.",
+                  "Dokumen Kepemilikan & Finansial: Sertifikat kepemilikan tanah/rumah, BPKB, STNK, buku tabungan bank, kartu ATM debit/kredit, serta buku polis asuransi.",
+                  "Dokumen Medis & Pendidikan: Kartu kepesertaan BPJS, catatan riwayat rekam medis, ijazah sekolah, serta rapor."
+                ]
+              },
               { type: 'heading', content: "Strategi Mitigasi Penyelamatan Dokumen" },
               { type: 'text', content: "Banyak masyarakat prasejahtera rentan kehilangan dokumen karena penyimpanannya yang tidak memadai (seperti diletakkan di rak terbawah) dan tidak memiliki salinan cadangan. Langkah solutifnya meliputi:" },
-              { type: 'list', listType: 'disc', items: [
-                "Tas Siaga Bencana: Mengumpulkan seluruh dokumen fisik prioritas, lalu membungkusnya secara ketat dalam map kedap air/plastik. Kemudian map tersebut dimasukkan ke dalam satu tas tahan benturan yang diletakkan persis di dekat pintu keluar hunian agar siap dijinjing kapanpun instruksi evakuasi diumumkan.",
-                "Sistem Digitalisasi: Menggunakan kamera gawai untuk memfoto atau memindai dokumen fisik dengan pencahayaan memadai, lalu menyimpan berkas elektroniknya ke ruang komputasi awan (contoh: Google Drive). Salinan digital ini sangat penting karena terbebas dari ancaman fisik seperti lumpur longsor dan kobaran api."
-              ]}
+              {
+                type: 'list', listType: 'disc', items: [
+                  "Tas Siaga Bencana: Mengumpulkan seluruh dokumen fisik prioritas, lalu membungkusnya secara ketat dalam map kedap air/plastik. Kemudian map tersebut dimasukkan ke dalam satu tas tahan benturan yang diletakkan persis di dekat pintu keluar hunian agar siap dijinjing kapanpun instruksi evakuasi diumumkan.",
+                  "Sistem Digitalisasi: Menggunakan kamera gawai untuk memfoto atau memindai dokumen fisik dengan pencahayaan memadai, lalu menyimpan berkas elektroniknya ke ruang komputasi awan (contoh: Google Drive). Salinan digital ini sangat penting karena terbebas dari ancaman fisik seperti lumpur longsor dan kobaran api."
+                ]
+              }
             ]
           }
         ]
