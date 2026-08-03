@@ -6,6 +6,7 @@ export interface MitigasiItem {
   image: string;
   detailSlug: string;
   pdfUrl?: string;
+  flipbookUrl?: string;
 }
 
 export const mitigasiDataList: MitigasiItem[] = [
@@ -16,7 +17,8 @@ export const mitigasiDataList: MitigasiItem[] = [
     description: "Dari mengenali tanda awal, evakuasi mandiri, hingga titik kumpul aman — panduan lengkap prosedur mitigasi yang perlu diketahui setiap warga.",
     image: "/assets/mitigasi/kebencanaan.webp",
     detailSlug: "/mitigasi/manual-prosedur",
-    pdfUrl: "/download/mitigasi/ManualProsedurKebencanaan.pdf"
+    pdfUrl: "/download/mitigasi/ManualProsedurKebencanaan.pdf",
+    flipbookUrl: "https://heyzine.com/flip-book/8a3d78e314.html"
   },
   {
     id: "tas-siaga",
@@ -34,7 +36,7 @@ export const mitigasiDataList: MitigasiItem[] = [
     description: "Wadah penyimpanan pangan darurat berukuran ringkas yang berisi cadangan pangan praktis untuk 1 orang selama ±36 jam pertama dan ditempatkan di dalam Tas Siaga Bencana keluarga.",
     image: "/assets/mitigasi/PanganDarurat_Detail.webp",
     detailSlug: "/mitigasi/pangan-darurat",
-    pdfUrl: "/download/mitigasi/PanganDarurat.pdf"
+    pdfUrl: "/download/mitigasi/PanganDaruratFix.pdf"
   },
   {
     id: "air-bersih",

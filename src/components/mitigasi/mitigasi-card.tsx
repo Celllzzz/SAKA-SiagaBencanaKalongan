@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { Download, BookOpen } from "lucide-react";
 import { MitigasiItem } from "@/data/mitigasi-data";
 
 interface MitigasiCardProps {
@@ -86,6 +86,21 @@ export function MitigasiCard({ data, isLast }: MitigasiCardProps) {
                     Unduh berkas
                   </span>
                 </button>
+              )}
+
+              {/* Flipbook Button */}
+              {data.flipbookUrl && (
+                <Link 
+                  href={data.flipbookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-row justify-center items-center px-[24px] py-[8px] bg-[#FAE3C7] border-[2px] border-[#3B2215] rounded-[20px] hover:bg-[#3B2215] hover:text-[#FAE3C7] transition-colors group"
+                >
+                  <BookOpen className="w-[20px] h-[20px] mr-2 text-[#3B2215] group-hover:text-[#FAE3C7]" />
+                  <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] uppercase group-hover:text-[#FAE3C7] text-[#3B2215]">
+                    BACA VERSI FLIPBOOK
+                  </span>
+                </Link>
               )}
             </div>
           </div>

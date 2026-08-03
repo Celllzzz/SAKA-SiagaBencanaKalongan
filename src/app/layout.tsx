@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${inter.variable} min-h-screen antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-screen font-sans">
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>

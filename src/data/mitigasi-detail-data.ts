@@ -21,6 +21,7 @@ export interface MitigasiDetailData {
   titleBottom: string;
   heroImage: string;
   pdfUrl?: string;
+  flipbookUrl?: string;
   sections: MitigasiDetailSection[];
 }
 
@@ -31,6 +32,7 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
     titleBottom: "Kebencanaan",
     heroImage: "/assets/mitigasi/kebencanaan.webp", // using same image from main page as placeholder for banner
     pdfUrl: "/download/mitigasi/ManualProsedurKebencanaan.pdf",
+    flipbookUrl: "https://heyzine.com/flip-book/8a3d78e314.html",
     sections: [
       {
         number: "01",
@@ -221,7 +223,7 @@ export const mitigasiDetailDataList: MitigasiDetailData[] = [
     titleTop: "Pangan",
     titleBottom: "Darurat",
     heroImage: "/assets/mitigasi/PanganDarurat_Detail.webp",
-    pdfUrl: "/download/mitigasi/PanganDarurat.pdf",
+    pdfUrl: "/download/mitigasi/PanganDaruratFix.pdf",
     sections: [
       {
         number: "01",

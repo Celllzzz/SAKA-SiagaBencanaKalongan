@@ -4,6 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const TEAM_MEMBERS = [
+  // DPL
+  { name: "Pak Dian", fullName: "Dr. Dian Agus Widiarso, S.T., M.T.", role: "DPL", image: "Pak Dian.webp" },
+  { name: "Mas Bagas", fullName: "Bagaskara Wahyu Purnomo Putra, S.T., M.Eng.", role: "DPL", image: "Mas Bagas.webp" },
+
   // Teknik Komputer
   { name: "Celino", fullName: "Celino Matande Wardana", role: "Teknik Komputer", image: "celino.webp" },
   { name: "Dhinda", fullName: "Dhinda Cahyani Ramadhani", role: "Teknik Komputer", image: "dhinda.webp" },

@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Download, ArrowLeft } from "lucide-react";
+import { Download, ArrowLeft, BookOpen } from "lucide-react";
 
 interface MitigasiDetailHeaderProps {
   titleTop: string;
   titleBottom: string;
   heroImage: string;
   pdfUrl?: string;
+  flipbookUrl?: string;
 }
 
-export function MitigasiDetailHeader({ titleTop, titleBottom, heroImage, pdfUrl }: MitigasiDetailHeaderProps) {
+export function MitigasiDetailHeader({ titleTop, titleBottom, heroImage, pdfUrl, flipbookUrl }: MitigasiDetailHeaderProps) {
   const handleDownload = (e: React.MouseEvent, fileUrl: string, title: string) => {
     e.stopPropagation();
     if (!fileUrl || fileUrl === "#") return;
@@ -57,30 +58,47 @@ export function MitigasiDetailHeader({ titleTop, titleBottom, heroImage, pdfUrl 
             </h1>
           </div>
 
-          {/* Download Button */}
-          {pdfUrl ? (
-            <button 
-              onClick={(e) => handleDownload(e, pdfUrl, `${titleTop} ${titleBottom}`)}
-              className="flex flex-row justify-center items-center px-[24px] py-[8px] border-[2px] border-[#3B2215] rounded-[20px] shrink-0 hover:bg-[#3B2215] hover:text-[#FAE3C7] transition-colors group"
-            >
-              <Download className="w-[20px] h-[20px] mr-2 text-[#3B2215] group-hover:text-[#FAE3C7]" />
-              <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] uppercase group-hover:text-[#FAE3C7] text-[#3B2215]">
-                Unduh berkas
-              </span>
-            </button>
-          ) : (
-            <button 
-              disabled
-              className="flex flex-row justify-center items-center px-[24px] py-[8px] border-[2px] border-[#3B2215] rounded-[20px] opacity-50 cursor-not-allowed shrink-0"
-              aria-label="Unduh berkas belum tersedia"
-            >
-              <Download className="w-[20px] h-[20px] mr-2 text-[#3B2215]" />
-              <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] text-[#3B2215] uppercase">
-                Unduh berkas
-              </span>
-            </button>
-          )}
+          {/* Buttons Row */}
+          <div className="flex flex-row flex-wrap items-center gap-[12px] sm:gap-[16px] shrink-0 mt-[20px] xl:mt-0">
+            {/* Download Button */}
+            {pdfUrl ? (
+              <button 
+                onClick={(e) => handleDownload(e, pdfUrl, `${titleTop} ${titleBottom}`)}
+                className="flex flex-row justify-center items-center px-[20px] py-[10px] sm:px-[24px] sm:py-[8px] border-[2px] border-[#3B2215] rounded-[20px] shrink-0 hover:bg-[#3B2215] hover:text-[#FAE3C7] transition-colors group"
+              >
+                <Download className="w-[20px] h-[20px] mr-2 text-[#3B2215] group-hover:text-[#FAE3C7]" />
+                <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] uppercase group-hover:text-[#FAE3C7] text-[#3B2215]">
+                  Unduh berkas
+                </span>
+              </button>
+            ) : (
+              <button 
+                disabled
+                className="flex flex-row justify-center items-center px-[20px] py-[10px] sm:px-[24px] sm:py-[8px] border-[2px] border-[#3B2215] rounded-[20px] opacity-50 cursor-not-allowed shrink-0"
+                aria-label="Unduh berkas belum tersedia"
+              >
+                <Download className="w-[20px] h-[20px] mr-2 text-[#3B2215]" />
+                <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] text-[#3B2215] uppercase">
+                  Unduh berkas
+                </span>
+              </button>
+            )}
 
+            {/* Flipbook Button */}
+            {flipbookUrl && (
+              <Link 
+                href={flipbookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-row justify-center items-center px-[20px] py-[10px] sm:px-[24px] sm:py-[8px] bg-[#FAE3C7] border-[2px] border-[#3B2215] rounded-[20px] shrink-0 hover:bg-[#3B2215] hover:text-[#FAE3C7] transition-colors group text-center"
+              >
+                <BookOpen className="w-[20px] h-[20px] mr-2 text-[#3B2215] group-hover:text-[#FAE3C7]" />
+                <span className="font-[Inter] font-semibold text-[14px] leading-[24px] tracking-[0.01em] uppercase group-hover:text-[#FAE3C7] text-[#3B2215]">
+                  BACA VERSI FLIPBOOK
+                </span>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
 

@@ -21,14 +21,14 @@ export function GallerySection() {
         </div>
 
         {/* Grid Container */}
-        <div className="flex flex-col md:flex-row flex-wrap justify-between items-start w-full gap-[50px] md:gap-y-[50px] mb-[50px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-[30px] md:gap-[40px] xl:gap-[60px] mb-[50px]">
           {galeriData.slice(0, 4).map((item, index) => {
             const num = `(0${index + 1})`;
             const isTall = item.heightType === 'tall';
             const aspectClass = isTall ? "aspect-[3/4] md:aspect-[662/883]" : "aspect-[3/2] md:aspect-[628/415]";
             
             return (
-              <div key={item.id} className="flex flex-col w-full md:w-[48%] shrink-0">
+              <div key={item.id} className="flex flex-col w-full shrink-0">
                 <div className={`relative w-full overflow-hidden bg-gray-200 ${aspectClass}`}>
                   <Image src={item.image} alt={item.title} fill className="object-cover object-center" />
                 </div>

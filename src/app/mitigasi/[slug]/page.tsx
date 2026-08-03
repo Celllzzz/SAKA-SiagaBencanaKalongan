@@ -29,6 +29,7 @@ export default async function MitigasiDetailPage({ params }: { params: Promise<{
           titleBottom={data.titleBottom}
           heroImage={data.heroImage}
           pdfUrl={data.pdfUrl}
+          flipbookUrl={data.flipbookUrl}
         />
 
         {/* Sections Container */}
