@@ -168,7 +168,7 @@ export default function GaleriPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/90 px-[20px] py-[40px]"
+            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black/90 px-[20px] py-[40px]"
           >
             {/* Close Button */}
             <button
