@@ -18,7 +18,7 @@ export function HeroSection() {
         alt="Foto Hero Siaga Bencana Kalongan"
         fill
         priority
-        className="object-cover object-center opacity-80 animate-zoom-out-slow"
+        className="object-cover object-center animate-zoom-out-slow"
       />
 
 

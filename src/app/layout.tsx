@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "lenis/dist/lenis.css";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
+import { GlobalLoader } from "@/components/global-loader";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({
       className={`${inter.variable} min-h-screen antialiased`}
     >
       <body className="min-h-screen font-sans">
+        <GlobalLoader />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>

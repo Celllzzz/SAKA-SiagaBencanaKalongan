@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ContactHero } from "@/components/hubungi-kami/contact-hero";
-import { ComplaintForm } from "@/components/hubungi-kami/complaint-form";
+// import { ComplaintForm } from "@/components/hubungi-kami/complaint-form";
 
 export const metadata = {
   title: 'Hubungi Kami | SAKA',
@@ -13,7 +13,7 @@ export default function HubungiKamiPage() {
     <main className="min-h-screen bg-[#FAE3C7] flex flex-col" data-theme="light">
       <Navbar initialTheme="light" />
       <ContactHero />
-      <ComplaintForm />
+      {/* <ComplaintForm /> */}
       <Footer />
     </main>
   );

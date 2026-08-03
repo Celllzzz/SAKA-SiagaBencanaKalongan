@@ -1,14 +1,15 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { galeriData } from "@/data/galeri-data";
 
 export default function GaleriPage() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const [selectedImage, setSelectedImage] = useState<{src: string, title: string} | null>(null);
 
   // We duplicate the array 4 times for a perfect seamless loop
   const duplicatedData = [...galeriData, ...galeriData, ...galeriData, ...galeriData];
@@ -71,12 +72,15 @@ export default function GaleriPage() {
               key={`${item.id}-${index}`} 
               className={`flex flex-col gap-[12px] w-[288px] shrink-0 ${item.heightType === 'tall' ? 'h-[460px]' : 'h-[225px]'}`}
             >
-              <div className="relative w-full flex-1 overflow-hidden">
+              <div 
+                className="relative w-full flex-1 overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImage({ src: item.image, title: item.title })}
+              >
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="288px"
                   priority={index < 8}
                 />
@@ -132,12 +136,15 @@ export default function GaleriPage() {
         <div className="flex flex-col gap-[30px] w-full">
           {galeriData.map((item) => (
             <div key={item.id} className="flex flex-col gap-[12px] w-full">
-              <div className={`relative w-full overflow-hidden bg-gray-200 ${item.heightType === 'tall' ? 'aspect-[3/4]' : 'aspect-[3/2]'}`}>
+              <div 
+                className={`relative w-full overflow-hidden bg-gray-200 cursor-pointer ${item.heightType === 'tall' ? 'aspect-[3/4]' : 'aspect-[3/2]'}`}
+                onClick={() => setSelectedImage({ src: item.image, title: item.title })}
+              >
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 1280px) 100vw, 50vw"
                 />
               </div>
@@ -153,6 +160,44 @@ export default function GaleriPage() {
       <div className="block xl:hidden">
         <Footer />
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/90 px-[20px] py-[40px]"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-[30px] right-[30px] md:top-[40px] md:right-[40px] text-white p-2 hover:bg-white/20 rounded-full transition-colors z-[110]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+
+            {/* Image Container */}
+            <div className="relative w-full max-w-[1000px] h-[60vh] md:h-[80vh] flex flex-col items-center gap-[20px]">
+              <div className="relative w-full flex-1">
+                <Image
+                  src={selectedImage.src}
+                  alt={selectedImage.title}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <h2 className="text-white text-[20px] md:text-[24px] font-[Inter] font-medium tracking-[-0.05em] uppercase text-center shrink-0">
+                {selectedImage.title}
+              </h2>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 }
